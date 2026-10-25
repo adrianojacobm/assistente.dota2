@@ -1,103 +1,13 @@
-# -*- coding: utf-8 -*-
-"""Counter-picks usando os resultados agregados reais da OpenDota."""
-import config
-import opendota_client as api
-from hero_data import HERO_IDS, ID_PARA_HEROI
+"""Heurísticas contextuais; não alteram a build estatística principal."""
 
+from collections.abc import Sequence
 
-# `roles` da OpenDota são arquétipos do herói, não posição de lane.
-# MID aceita os arquétipos que comumente ocupam mid; SUP exige Support.
-# Isto é um filtro aproximado, não uma classificação pro de posição 1-5.
-_ROLES_POR_MODO = {
-    "CARRY": {"Carry"},
-    "MID": {"Carry", "Nuker"},
-    "OFFLANE": {"Carry", "Nuker", "Initiator", "Durable", "Disabler"},
-    "SUP": {"Support"},
-}
-
-
-def _win_rate_meta(hero_stats_lista: list) -> dict:
-    saida = {}
-    for h in hero_stats_lista or []:
-        hid = h.get("id")
-        if hid is None:
-            continue
-        picks = _int(h.get("7_pick")) + _int(h.get("8_pick")) + _int(h.get("pro_pick"))
-        wins = _int(h.get("7_win")) + _int(h.get("8_win")) + _int(h.get("pro_win"))
-        saida[hid] = (wins / picks) if picks > 0 else 0.50
-    return saida
-
-
-def _int(valor):
-    try:
-        return int(valor or 0)
-    except (TypeError, ValueError):
-        return 0
-
-
-def calcular_counter_picks(lane1: str, lane2: str, ameaca: str, modo: str, catalogo_heroes: dict) -> str:
-    modo = modo if modo in _ROLES_POR_MODO else "CARRY"
-    alvos = list(dict.fromkeys(a for a in (lane1, lane2, ameaca) if a and a != "Nenhum"))
-    if not alvos:
-        return "Selecione pelo menos 1 inimigo (Lane 1/2 ou Ameaça) para calcular counter-picks."
-
-    wr_meta = _win_rate_meta(api.obter_hero_stats())
-    placar = {}  # hero_id -> [wins ponderadas, jogos ponderados, jogos sem peso]
-
-    for inimigo in alvos:
-        ini_id = HERO_IDS.get(inimigo)
-        if not ini_id:
-            continue
-        matchups = api.obter_matchups(ini_id) or []
-        peso_alvo = 1.5 if inimigo == ameaca else 1.0
-        for m in matchups:
-            if not isinstance(m, dict):
-                continue
-            hid = _int(m.get("hero_id"))
-            jogos = _int(m.get("games_played"))
-            vitorias_inimigo = _int(m.get("wins"))
-            if jogos < config.MIN_JOGOS_MATCHUP or hid not in ID_PARA_HEROI:
-                continue
-            # Na resposta /heroes/{id}/matchups, `wins` corresponde ao herói do
-            # endpoint (o inimigo selecionado); invertemos para obter o win rate
-            # do candidato contra ele. A agregação é ponderada por jogos reais.
-            vitorias_candidato = max(0, jogos - vitorias_inimigo)
-            entrada = placar.setdefault(hid, [0.0, 0.0, 0])
-            entrada[0] += vitorias_candidato * peso_alvo
-            entrada[1] += jogos * peso_alvo
-            entrada[2] += jogos
-
-    if not placar:
-        return "Sem dados suficientes de matchup retornados pela OpenDota para esses heróis."
-
-    roles_aceitas = _ROLES_POR_MODO[modo]
-    ranking = []
-    for hid, (wins_pond, jogos_pond, total_jogos) in placar.items():
-        roles = set(catalogo_heroes.get(hid, {}).get("roles", []) or [])
-        if roles and not roles.intersection(roles_aceitas):
-            continue
-        if jogos_pond <= 0:
-            continue
-        wr_confronto = (wins_pond / jogos_pond) * 100
-        wr_m = wr_meta.get(hid, 0.50) * 100
-        score = (wr_confronto * 0.7) + (wr_m * 0.3)
-        ranking.append((ID_PARA_HEROI[hid], wr_confronto, wr_m, total_jogos, score))
-
-    ranking.sort(key=lambda x: x[4], reverse=True)
-    top = ranking[:6]
-    if not top:
-        return f"Sem heróis do arquétipo apropriado para '{modo}' com amostra suficiente contra esses alvos."
-
-    linhas = [f"🎯 TOP PICKS ({modo}) — matchup agregado + meta atual:"]
-    for nome, wr_vs, wr_m, jogos, _ in top:
-        linhas.append(f"• {nome:<18} | vs alvos: {wr_vs:4.1f}% | meta geral: {wr_m:4.1f}% ({jogos} jogos)")
-    linhas.append("Nota: roles da OpenDota são arquétipos; o filtro MID é aproximado, não lane_role por partida.")
-    return "\n".join(linhas)
+from .modelos import Funcao
 
 
 # Heurísticas de itens situacionais para a secção Opções. A build core nunca é
 # alterada por estas regras: são sugestões independentes, filtradas pela função.
-_TAGS_COUNTER = {
+MOTIVOS_POR_PERFIL = {
     "evasion": {
         "Monkey King Bar": "true strike contra evasão",
         "Bloodthorn": "true strike/controle de alvo durante o ativo",
@@ -159,7 +69,7 @@ _TAGS_COUNTER = {
     },
 }
 
-_ITENS_POR_TAG_E_FUNCAO = {
+ITENS_POR_PERFIL_E_FUNCAO = {
     "CARRY": {
         "evasion": ["Monkey King Bar", "Bloodthorn"],
         "illusion": ["Battle Fury", "Mjollnir", "Gleipnir", "Shiva's Guard"],
@@ -197,12 +107,12 @@ _ITENS_POR_TAG_E_FUNCAO = {
 
 # Offlane é uma posição própria: parte das respostas de utilidade do mid se aplica,
 # mas ameaças físicas recebem respostas específicas de frontliner quando cadastradas.
-_ITENS_POR_TAG_E_FUNCAO["OFFLANE"] = {
-    tag: list(itens) for tag, itens in _ITENS_POR_TAG_E_FUNCAO["MID"].items()
+ITENS_POR_PERFIL_E_FUNCAO["OFFLANE"] = {
+    perfil: list(itens) for perfil, itens in ITENS_POR_PERFIL_E_FUNCAO["MID"].items()
 }
-_ITENS_POR_TAG_E_FUNCAO["OFFLANE"]["physical"] = ["Heaven's Halberd", "Shiva's Guard", "Ghost Scepter"]
+ITENS_POR_PERFIL_E_FUNCAO["OFFLANE"]["physical"] = ["Heaven's Halberd", "Shiva's Guard", "Ghost Scepter"]
 
-_TAGS_HEROIS = {
+PERFIS_HEROIS = {
     # Evasão ou ameaça de ataques físicos críticos
     "Phantom Assassin": {"evasion", "physical"},
     "Templar Assassin": {"evasion", "physical"},
@@ -241,7 +151,7 @@ _TAGS_HEROIS = {
 }
 
 # Contra PA, por exemplo, suporte recebe itens defensivos; MKB fica para uma core.
-_ITENS_ESPECIFICOS = {
+ITENS_ESPECIFICOS = {
     "Phantom Assassin": {
         "CARRY": ["Monkey King Bar", "Bloodthorn"],
         "MID": ["Monkey King Bar", "Bloodthorn"],
@@ -285,82 +195,96 @@ _ITENS_ESPECIFICOS = {
     },
 }
 
-_EARLY_LANE_MAGIC = {
+ADVERSARIOS_MAGICOS = {
     "Zeus", "Lina", "Skywrath Mage", "Pugna", "Leshrac", "Tinker", "Necrophos",
     "Batrider", "Jakiro", "Venomancer", "Invoker", "Queen of Pain", "Shadow Fiend",
 }
-_EARLY_LANE_PHYSICAL = {
+ADVERSARIOS_FISICOS = {
     "Phantom Assassin", "Ursa", "Troll Warlord", "Sven", "Juggernaut", "Drow Ranger",
     "Slardar", "Wraith King", "Clinkz", "Legion Commander", "Riki",
 }
-_EARLY_LANE_SUSTAIN = {"Huskar", "Bristleback", "Necrophos", "Alchemist", "Morphling", "Abaddon", "Dazzle", "Oracle"}
-_EARLY_LANE_INVIS = {"Riki", "Clinkz", "Bounty Hunter", "Nyx Assassin", "Weaver"}
+ADVERSARIOS_SUSTENTACAO = {
+    "Huskar", "Bristleback", "Necrophos", "Alchemist", "Morphling", "Abaddon", "Dazzle", "Oracle",
+}
+ADVERSARIOS_INVISIVEIS = {"Riki", "Clinkz", "Bounty Hunter", "Nyx Assassin", "Weaver"}
 
 
-def recomendar_itens_counter(lane_alvos=None, ameaca=None, modo="CARRY"):
+def recomendar_itens_counter(
+    adversarios_lane: Sequence[str] = (), ameaca: str | None = None, modo: str = "CARRY",
+) -> tuple[list[str], list[str]]:
     """Gera counters genéricos por inimigo, função e etapa (lane/jogo).
 
     Retorna (itens_para_overlay, explicações_para_painel). A build principal por
     frequência profissional não depende desta recomendação situacional.
     """
-    modo = str(modo or "CARRY").upper()
-    if modo not in _ITENS_POR_TAG_E_FUNCAO:
-        modo = "CARRY"
-    lane_alvos = list(dict.fromkeys(h for h in (lane_alvos or []) if h and h != "Nenhum"))
-    alvos = list(lane_alvos)
+    modo = Funcao.normalizar(modo).perfil_counter
+    adversarios_lane = list(dict.fromkeys(h for h in adversarios_lane if h and h != "Nenhum"))
+    alvos = list(adversarios_lane)
     if ameaca and ameaca != "Nenhum" and ameaca not in alvos:
         alvos.append(ameaca)
 
-    ranking = {}
-    detalhes = []
+    ranking: dict[str, int] = {}
+    detalhes: list[tuple[int, str]] = []
 
-    def adicionar(nome, peso, motivo):
+    def adicionar(nome: str, peso: int, motivo: str) -> None:
         if not nome:
             return
         ranking[nome] = max(ranking.get(nome, 0), peso)
         detalhes.append((peso, f"{nome}: {motivo}"))
 
-    for inimigo in lane_alvos:
+    for inimigo in adversarios_lane:
         # Lane: itens baratos de resposta imediata quando a habilidade do inimigo justifica.
-        if inimigo in _EARLY_LANE_MAGIC:
+        if inimigo in ADVERSARIOS_MAGICOS:
             adicionar("Magic Stick", 100, f"lane contra {inimigo}: cargas a partir de habilidades frequentes")
-            adicionar("Infused Raindrops", 95, f"lane contra {inimigo}: mitigação de dano mágico de alvo único")
-        if inimigo in _EARLY_LANE_PHYSICAL and modo == "SUP":
-            adicionar("Ghost Scepter", 88, f"lane contra {inimigo}: proteção temporária contra ataques físicos")
+            adicionar(
+                "Infused Raindrops", 95, f"lane contra {inimigo}: mitigação de dano mágico de alvo único",
+            )
+        if inimigo in ADVERSARIOS_FISICOS and modo == "SUP":
+            adicionar(
+                "Ghost Scepter", 88, f"lane contra {inimigo}: proteção temporária contra ataques físicos",
+            )
             adicionar("Force Staff", 83, f"lane contra {inimigo}: reposicionamento para sair do alcance")
-        if inimigo in _EARLY_LANE_SUSTAIN:
+        if inimigo in ADVERSARIOS_SUSTENTACAO:
             if modo == "SUP":
                 adicionar("Spirit Vessel", 82, f"jogo contra {inimigo}: reduzir cura/regeneração")
             elif modo == "MID":
                 adicionar("Spirit Vessel", 81, f"jogo contra {inimigo}: reduzir cura/regeneração")
-        if inimigo in _EARLY_LANE_INVIS:
-            adicionar("Dust of Appearance", 90, f"lane contra {inimigo}: revelar invisibilidade em uma rotação")
+        if inimigo in ADVERSARIOS_INVISIVEIS:
+            adicionar(
+                "Dust of Appearance", 90, f"lane contra {inimigo}: revelar invisibilidade em uma rotação",
+            )
 
     for inimigo in alvos:
         eh_ameaca = inimigo == ameaca
         peso_base = 75 if eh_ameaca else 60
-        perfil = _ITENS_ESPECIFICOS.get(inimigo, {}).get(modo, [])
+        perfil = ITENS_ESPECIFICOS.get(inimigo, {}).get(modo, [])
         if perfil:
-            for idx, nome in enumerate(perfil):
-                adicionar(nome, peso_base - idx, f"{inimigo} ({'ameaça do jogo' if eh_ameaca else 'inimigo de lane'}): counter específico para {modo}")
+            for indice, nome in enumerate(perfil):
+                contexto = "ameaça do jogo" if eh_ameaca else "inimigo de lane"
+                adicionar(
+                    nome, peso_base - indice, f"{inimigo} ({contexto}): counter específico para {modo}",
+                )
             continue
-        tags = _TAGS_HEROIS.get(inimigo, set())
-        for tag in tags:
-            itens = _ITENS_POR_TAG_E_FUNCAO[modo].get(tag, [])
-            for idx, nome in enumerate(itens[:4]):
-                motivo = _TAGS_COUNTER.get(tag, {}).get(nome, f"resposta situacional ao perfil de {inimigo}")
-                adicionar(nome, peso_base - idx - (0 if eh_ameaca else 8), f"{inimigo}: {motivo}")
+        perfis = PERFIS_HEROIS.get(inimigo, set())
+        for perfil_heroi in perfis:
+            itens = ITENS_POR_PERFIL_E_FUNCAO[modo].get(perfil_heroi, [])
+            for indice, nome in enumerate(itens[:4]):
+                motivo = MOTIVOS_POR_PERFIL.get(perfil_heroi, {}).get(
+                    nome, f"resposta situacional ao perfil de {inimigo}",
+                )
+                adicionar(nome, peso_base - indice - (0 if eh_ameaca else 8), f"{inimigo}: {motivo}")
 
     # Ordena por prioridade mais alta, preserva os primeiros itens dentro do tipo
     # de função e mantém a área Opções enxuta para caber na HUD.
     itens = [nome for nome, _ in sorted(ranking.items(), key=lambda par: (-par[1], par[0]))]
     # Não mostrar consumíveis de detecção quando não há invisível selecionado.
-    if not any("invisible" in _TAGS_HEROIS.get(a, set()) for a in alvos) and not any(a in _EARLY_LANE_INVIS for a in lane_alvos):
+    if (not any("invisible" in PERFIS_HEROIS.get(alvo, set()) for alvo in alvos)
+            and not any(alvo in ADVERSARIOS_INVISIVEIS for alvo in adversarios_lane)):
         itens = [nome for nome in itens if nome not in {"Dust of Appearance", "Gem of True Sight"}]
     detalhes_unicos = []
-    seen_details = set()
+    detalhes_vistos = set()
     for _, detalhe in sorted(detalhes, key=lambda par: (-par[0], par[1])):
-        if detalhe not in seen_details:
-            seen_details.add(detalhe)
+        if detalhe not in detalhes_vistos:
+            detalhes_vistos.add(detalhe)
             detalhes_unicos.append(detalhe)
     return itens[:8], detalhes_unicos[:12]

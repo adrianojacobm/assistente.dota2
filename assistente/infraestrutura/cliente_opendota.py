@@ -1,100 +1,115 @@
 # -*- coding: utf-8 -*-
 """Camada HTTP da OpenDota: cache, rate-limit e normalização de respostas."""
-import threading
-import time
-import json
+import logging
+import math
 import os
 import re
-from typing import Any
+import threading
+import time
+from pathlib import Path
 
 import requests
 
-import config
+from assistente import configuracao
+
+from .cache_json import gravar_json, ler_json
 
 _lock = threading.Lock()
 _ultima_chamada = 0.0
-_cache = {}  # chave -> (timestamp, dados)
-_CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache_opendota")
+_cache: dict[str, tuple[float, object]] = {}
+_CACHE_DIR = str(Path(__file__).resolve().parents[2] / "cache_opendota")
+REGISTRO = logging.getLogger(__name__)
 
 
-def _arquivo_cache(cache_key):
+def _arquivo_cache(cache_key: str | None) -> str | None:
     if not cache_key:
         return None
     seguro = re.sub(r"[^A-Za-z0-9_.-]+", "_", str(cache_key))[:180]
     return os.path.join(_CACHE_DIR, seguro + ".json")
 
 
-def _ler_cache_disco(cache_key, ttl):
+def _ler_cache_disco(cache_key: str, ttl: float) -> tuple[float, object] | None:
     caminho = _arquivo_cache(cache_key)
     if not caminho or ttl <= 0:
         return None
     try:
-        with open(caminho, "r", encoding="utf-8") as arquivo:
-            registro = json.load(arquivo)
+        registro = ler_json(Path(caminho))
+        if not isinstance(registro, dict):
+            return None
         carimbo = float(registro.get("timestamp", 0))
-        if time.time() - carimbo < ttl and "data" in registro:
+        if math.isfinite(carimbo) and 0 <= time.time() - carimbo < ttl and "data" in registro:
             return carimbo, registro["data"]
-    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+    except (ValueError, TypeError, OverflowError):
         return None
     return None
 
 
-def _gravar_cache_disco(cache_key, timestamp, dados):
+def _gravar_cache_disco(cache_key: str, timestamp: float, dados: object) -> None:
     caminho = _arquivo_cache(cache_key)
     if not caminho:
         return
-    try:
-        os.makedirs(_CACHE_DIR, exist_ok=True)
-        temporario = caminho + ".tmp"
-        with open(temporario, "w", encoding="utf-8") as arquivo:
-            json.dump({"timestamp": timestamp, "data": dados}, arquivo, ensure_ascii=False, separators=(",", ":"))
-        os.replace(temporario, caminho)
-    except (OSError, TypeError, ValueError):
-        # O cache persistente é apenas uma otimização; falhas de disco não
-        # podem impedir a consulta nem interromper a interface.
-        pass
+    gravar_json(Path(caminho), {"timestamp": timestamp, "data": dados})
 
 
-def _respeitar_rate_limit():
+def _respeitar_rate_limit() -> None:
     global _ultima_chamada
+    agora = time.monotonic()
+    espera = configuracao.INTERVALO_MIN_ENTRE_CHAMADAS_S - (agora - _ultima_chamada)
+    if espera > 0:
+        time.sleep(espera)
+    _ultima_chamada = time.monotonic()
+
+
+def _get(
+    path: str, params: dict[str, int | str] | None = None,
+    cache_key: str | None = None, ttl: float = 0, tipo_esperado: type[object] | None = None,
+) -> object:
+    # A API é limitada a aproximadamente uma chamada por segundo: uma trava
+    # simples também impede consultas simultâneas da mesma chave antes do cache.
     with _lock:
-        agora = time.time()
-        espera = config.INTERVALO_MIN_ENTRE_CHAMADAS_S - (agora - _ultima_chamada)
-        if espera > 0:
-            time.sleep(espera)
-        _ultima_chamada = time.time()
+        return _consultar(path, params, cache_key, ttl, tipo_esperado)
 
 
-def _get(path: str, params: dict = None, cache_key: str = None, ttl: float = 0):
+def _consultar(
+    path: str, params: dict[str, int | str] | None, cache_key: str | None, ttl: float,
+    tipo_esperado: type[object] | None,
+) -> object:
     """GET genérico. Retorna None em falha e nunca deixa a UI cair por rede."""
     if cache_key and ttl > 0:
         cacheado = _cache.get(cache_key)
-        if cacheado and (time.time() - cacheado[0]) < ttl:
+        if (cacheado and 0 <= (time.time() - cacheado[0]) < ttl
+                and (tipo_esperado is None or isinstance(cacheado[1], tipo_esperado))):
             return cacheado[1]
         cache_disco = _ler_cache_disco(cache_key, ttl)
-        if cache_disco:
+        if cache_disco and (tipo_esperado is None or isinstance(cache_disco[1], tipo_esperado)):
             _cache[cache_key] = cache_disco
             return cache_disco[1]
 
     _respeitar_rate_limit()
     try:
-        r = requests.get(
-            f"{config.OPENDOTA_BASE}{path}",
+        resposta = requests.get(
+            f"{configuracao.OPENDOTA_BASE}{path}",
             params=params,
-            headers=config.HEADERS_API,
-            timeout=config.TIMEOUT_REQUEST_S,
+            headers=configuracao.HEADERS_API,
+            timeout=configuracao.TIMEOUT_REQUEST_S,
         )
-        if r.status_code != 200:
-            print(f"[OpenDota] {path} -> HTTP {r.status_code}")
-            return None
-        dados = r.json()
+        try:
+            if resposta.status_code != 200:
+                REGISTRO.warning("OpenDota %s: HTTP %s", path, resposta.status_code)
+                return None
+            dados = resposta.json()
+        finally:
+            resposta.close()
     except requests.exceptions.RequestException as e:
-        print(f"[OpenDota] Falha de rede em {path}: {e}")
+        REGISTRO.warning("Falha de rede OpenDota %s: %s", path, e)
         return None
     except (ValueError, TypeError) as e:
-        print(f"[OpenDota] Resposta inválida em {path}: {e}")
+        REGISTRO.warning("Resposta OpenDota inválida em %s: %s", path, e)
         return None
 
+    if tipo_esperado is not None and not isinstance(dados, tipo_esperado):
+        REGISTRO.warning("Formato inesperado retornado pela OpenDota em %s.", path)
+        return None
     if cache_key and ttl > 0:
         timestamp = time.time()
         _cache[cache_key] = (timestamp, dados)
@@ -102,27 +117,34 @@ def _get(path: str, params: dict = None, cache_key: str = None, ttl: float = 0):
     return dados
 
 
-def obter_catalogo_itens():
+def obter_catalogo_itens() -> dict[int, str]:
     """Retorna {item_id: nome}, ignorando recipes."""
-    dados = _get("/constants/items", cache_key="constants_items", ttl=config.CACHE_TTL_CATALOGO_S)
+    dados = _get(
+        "/constants/items", cache_key="constants_items", ttl=configuracao.CACHE_TTL_CATALOGO_S,
+        tipo_esperado=dict,
+    )
     if not isinstance(dados, dict):
         return {}
-    catalogo = {}
+    catalogo: dict[int, str] = {}
     for chave, val in dados.items():
-        if isinstance(val, dict) and "id" in val and "dname" in val and not chave.startswith("recipe_"):
+        if (isinstance(val, dict) and "id" in val and isinstance(val.get("dname"), str)
+                and not str(chave).startswith("recipe_")):
             try:
                 catalogo[int(val["id"])] = val["dname"]
-            except (TypeError, ValueError):
+            except (TypeError, ValueError, OverflowError):
                 continue
     return catalogo
 
 
-def obter_catalogo_heroes():
+def obter_catalogo_heroes() -> dict[int, dict[str, object]]:
     """Retorna os papéis/atributos oficiais da base dotaconstants."""
-    dados = _get("/constants/heroes", cache_key="constants_heroes", ttl=config.CACHE_TTL_CATALOGO_S)
+    dados = _get(
+        "/constants/heroes", cache_key="constants_heroes", ttl=configuracao.CACHE_TTL_CATALOGO_S,
+        tipo_esperado=dict,
+    )
     if not isinstance(dados, dict):
         return {}
-    catalogo = {}
+    catalogo: dict[int, dict[str, object]] = {}
     for val in dados.values():
         if isinstance(val, dict) and "id" in val:
             try:
@@ -131,35 +153,40 @@ def obter_catalogo_heroes():
                     "primary_attr": val.get("primary_attr", ""),
                     "attack_type": val.get("attack_type", ""),
                 }
-            except (TypeError, ValueError):
+            except (TypeError, ValueError, OverflowError):
                 continue
     return catalogo
 
 
-def obter_hero_stats():
+def obter_hero_stats() -> object:
     """Lista do /heroStats (picks/wins agregados por herói)."""
-    return _get("/heroStats", cache_key="hero_stats", ttl=config.CACHE_TTL_CATALOGO_S)
+    return _get(
+        "/heroStats", cache_key="hero_stats", ttl=configuracao.CACHE_TTL_CATALOGO_S,
+        tipo_esperado=list,
+    )
 
 
-def obter_item_popularity(hero_id: int):
+def obter_item_popularity(hero_id: int) -> object:
     """Compras por fase agregadas por herói; o endpoint não filtra função nem matchup."""
     return _get(
         f"/heroes/{hero_id}/itemPopularity",
         cache_key=f"item_pop_{hero_id}",
-        ttl=config.CACHE_TTL_ITEM_POPULARITY_S,
+        ttl=configuracao.CACHE_TTL_ITEM_POPULARITY_S,
+        tipo_esperado=dict,
     )
 
 
-def obter_matchups(hero_id: int):
+def obter_matchups(hero_id: int) -> object:
     """Resultados agregados desse herói contra cada adversário."""
     return _get(
         f"/heroes/{hero_id}/matchups",
         cache_key=f"matchups_{hero_id}",
-        ttl=config.CACHE_TTL_MATCHUPS_S,
+        ttl=configuracao.CACHE_TTL_MATCHUPS_S,
+        tipo_esperado=list,
     )
 
 
-def _valor_percentil(valores: Any, percentil_alvo: float):
+def _valor_percentil(valores: object, percentil_alvo: float) -> float | None:
     """Interpola um ponto de uma curva de percentis [{percentile, value}, ...]."""
     if not isinstance(valores, list):
         return None
@@ -167,11 +194,15 @@ def _valor_percentil(valores: Any, percentil_alvo: float):
     for p in valores:
         if not isinstance(p, dict):
             continue
-        try:
-            pontos.append((float(p["percentile"]), float(p["value"])))
-        except (KeyError, TypeError, ValueError):
+        if isinstance(p.get("percentile"), bool) or isinstance(p.get("value"), bool):
             continue
-    if not pontos:
+        try:
+            percentil, valor = float(p["percentile"]), float(p["value"])
+            if math.isfinite(percentil) and math.isfinite(valor) and 0 <= percentil <= 1 and valor >= 0:
+                pontos.append((percentil, valor))
+        except (KeyError, TypeError, ValueError, OverflowError):
+            continue
+    if not pontos or not math.isfinite(percentil_alvo):
         return None
     pontos.sort(key=lambda x: x[0])
     alvo = min(max(float(percentil_alvo), pontos[0][0]), pontos[-1][0])
@@ -187,22 +218,27 @@ def _valor_percentil(valores: Any, percentil_alvo: float):
     return pontos[-1][1]
 
 
-def obter_benchmarks(hero_id: int, modo: str = "CARRY", percentil: float = None):
+def obter_benchmarks(
+    hero_id: int, modo: str = "CARRY", percentil: float | None = None,
+) -> dict[str, object] | None:
     """Retorna benchmarks já normalizados para os campos usados pelo overlay.
 
     A API devolve um objeto `result` contendo curvas de percentil, não os campos
-    `lh_min`/`gpm` esperados pelo overlay. CARRY/MID usam a curva core e SUP usa
-    support; o ponto padrão é o percentil 50.
+    `lh_min`/`gpm` esperados pelo overlay. Preserva o parâmetro core/support;
+    sua efetividade depende do contrato do provedor. O padrão é o percentil 50.
     """
     if percentil is None:
-        percentil = config.PERCENTIL_BENCHMARK
+        percentil = configuracao.PERCENTIL_BENCHMARK
+    if not math.isfinite(percentil) or not 0 <= percentil <= 1:
+        raise ValueError("O percentil precisa estar entre zero e um.")
     role_api = "support" if str(modo).upper() in ("SUP", "HARD_SUPPORT") else "core"
     cache_key = f"bench_{hero_id}_{role_api}_{percentil:.3f}"
     bruto = _get(
         "/benchmarks",
         params={"hero_id": hero_id, "role": role_api},
         cache_key=cache_key,
-        ttl=config.CACHE_TTL_BENCHMARKS_S,
+        ttl=configuracao.CACHE_TTL_BENCHMARKS_S,
+        tipo_esperado=dict,
     )
     if not isinstance(bruto, dict):
         return None
@@ -220,8 +256,10 @@ def obter_benchmarks(hero_id: int, modo: str = "CARRY", percentil: float = None)
         "dpm": "hero_damage_per_min",
         "heal_min": "hero_healing_per_min",
     }
-    normalizado = {chave: _valor_percentil(curvas.get(nome_api), percentil)
-                   for chave, nome_api in nomes_api.items()}
+    normalizado: dict[str, object] = {
+        chave: _valor_percentil(curvas.get(nome_api), percentil)
+        for chave, nome_api in nomes_api.items()
+    }
     normalizado["percentil"] = percentil
     normalizado["role"] = role_api
     normalizado["fonte"] = "OpenDota /benchmarks"
@@ -231,7 +269,7 @@ def obter_benchmarks(hero_id: int, modo: str = "CARRY", percentil: float = None)
     return normalizado
 
 
-def obter_partidas_heroi(hero_id: int, limit: int = 100, offset: int = 0):
+def obter_partidas_heroi(hero_id: int, limit: int = 100, offset: int = 0) -> object:
     """Página de partidas do herói, da mais recente para a mais antiga."""
     limit = max(1, min(int(limit), 100))
     offset = max(0, int(offset))
@@ -239,50 +277,60 @@ def obter_partidas_heroi(hero_id: int, limit: int = 100, offset: int = 0):
         f"/heroes/{hero_id}/matches",
         params={"limit": limit, "offset": offset},
         cache_key=f"hero_matches_{hero_id}_{limit}_{offset}",
-        ttl=config.CACHE_TTL_PARTIDAS_HEROI_S,
+        ttl=configuracao.CACHE_TTL_PARTIDAS_HEROI_S,
+        tipo_esperado=list,
     )
 
 
-def obter_catalogo_precos_itens():
+def obter_catalogo_precos_itens() -> dict[str, int]:
     """Mapa {nome do item: custo em ouro} usando o catálogo OpenDota atual."""
-    dados = _get("/constants/items", cache_key="constants_items", ttl=config.CACHE_TTL_CATALOGO_S)
+    dados = _get(
+        "/constants/items", cache_key="constants_items", ttl=configuracao.CACHE_TTL_CATALOGO_S,
+        tipo_esperado=dict,
+    )
     if not isinstance(dados, dict):
         return {}
     precos = {}
     for chave, val in dados.items():
-        if not isinstance(val, dict) or not val.get("dname") or str(chave).startswith("recipe_"):
+        if (not isinstance(val, dict) or not isinstance(val.get("dname"), str)
+                or not val["dname"] or str(chave).startswith("recipe_")):
             continue
         try:
             custo = int(val.get("cost"))
-        except (TypeError, ValueError):
+        except (TypeError, ValueError, OverflowError):
             continue
         if custo >= 0:
             precos[str(val["dname"])] = custo
     return precos
 
 
-def obter_detalhes_partida(match_id: int):
+def obter_detalhes_partida(match_id: int) -> object:
     """Detalhes parseados de uma partida, incluindo jogadores e purchase_log quando disponível."""
     return _get(
         f"/matches/{match_id}",
         cache_key=f"match_detail_{match_id}",
-        ttl=config.CACHE_TTL_DETALHE_PARTIDA_S,
+        ttl=configuracao.CACHE_TTL_DETALHE_PARTIDA_S,
+        tipo_esperado=dict,
     )
 
 
-def obter_catalogo_chaves_itens():
+def obter_catalogo_chaves_itens() -> dict[str, str]:
     """Mapeia a chave interna usada em purchase_log para o nome visível do item."""
-    dados = _get("/constants/items", cache_key="constants_items", ttl=config.CACHE_TTL_CATALOGO_S)
+    dados = _get(
+        "/constants/items", cache_key="constants_items", ttl=configuracao.CACHE_TTL_CATALOGO_S,
+        tipo_esperado=dict,
+    )
     if not isinstance(dados, dict):
         return {}
     return {
         str(chave): val.get("dname")
         for chave, val in dados.items()
-        if isinstance(val, dict) and val.get("dname") and not str(chave).startswith("recipe_")
+        if isinstance(val, dict) and isinstance(val.get("dname"), str)
+        and val["dname"] and not str(chave).startswith("recipe_")
     }
 
 
-def obter_catalogo_receitas_itens():
+def obter_catalogo_receitas_itens() -> dict[str, list[str]]:
     """Retorna {nome_item: [componentes]} usando o catálogo oficial.
 
     A receita (recipe_<item>) é preservada como token virtual nos upgrades pagos
@@ -291,14 +339,17 @@ def obter_catalogo_receitas_itens():
     ou mais componentes continuam sendo reconstruídos quando estes aparecem no log,
     inclusive em casos em que o replay omite a receita do purchase_log.
     """
-    dados = _get("/constants/items", cache_key="constants_items", ttl=config.CACHE_TTL_CATALOGO_S)
+    dados = _get(
+        "/constants/items", cache_key="constants_items", ttl=configuracao.CACHE_TTL_CATALOGO_S,
+        tipo_esperado=dict,
+    )
     if not isinstance(dados, dict):
         return {}
 
     nome_por_chave = {
         str(chave): val.get("dname")
         for chave, val in dados.items()
-        if isinstance(val, dict) and val.get("dname")
+        if isinstance(val, dict) and isinstance(val.get("dname"), str) and val["dname"]
     }
     receitas = {}
     for chave, val in dados.items():
@@ -306,7 +357,7 @@ def obter_catalogo_receitas_itens():
             continue
         nome = val.get("dname")
         componentes = val.get("components")
-        if not nome or not isinstance(componentes, list) or not componentes:
+        if not isinstance(nome, str) or not nome or not isinstance(componentes, list) or not componentes:
             continue
         nomes_componentes = []
         for comp in componentes:
@@ -327,7 +378,7 @@ def obter_catalogo_receitas_itens():
         recipe_val = dados.get(receita_key)
         try:
             recipe_cost = int((recipe_val or {}).get("cost", 0)) if isinstance(recipe_val, dict) else 0
-        except (TypeError, ValueError):
+        except (TypeError, ValueError, OverflowError):
             recipe_cost = 0
         if recipe_cost > 0 and len(nomes_componentes) <= 1:
             nomes_componentes.append(f"__RECIPE__:{nome}")
