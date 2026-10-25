@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dados de execução (arquivos já versionados exigem migração explícita)
+/cache/
+/cache_opendota/

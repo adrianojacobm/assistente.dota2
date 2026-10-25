@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Configurações centrais do Assistente de Dota 2."""
+"""Configurações centrais da aplicação."""
 
 PORTA_GSI = 4000
 SEM_SINAL_S = 90

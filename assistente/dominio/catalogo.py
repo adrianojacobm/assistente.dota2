@@ -4,7 +4,7 @@ Catálogo estático: IDs de heróis, mapa GSI->nome, lista de itens a ignorar.
 Isto é só identificação/tradução de nomes — não tem estatística aqui dentro.
 """
 
-HERO_IDS = {
+IDS_HEROIS: dict[str, int] = {
     'Anti-Mage': 1, 'Axe': 2, 'Bane': 3, 'Bloodseeker': 4, 'Crystal Maiden': 5, 'Drow Ranger': 6,
     'Earthshaker': 7, 'Juggernaut': 8, 'Mirana': 9, 'Morphling': 10, 'Shadow Fiend': 11, 'Phantom Lancer': 12,
     'Puck': 13, 'Pudge': 14, 'Razor': 15, 'Sand King': 16, 'Storm Spirit': 17, 'Sven': 18, 'Tiny': 19,
@@ -17,7 +17,8 @@ HERO_IDS = {
     'Clinkz': 56, 'Omniknight': 57, 'Enchantress': 58, 'Huskar': 59, 'Night Stalker': 60, 'Broodmother': 61,
     'Bounty Hunter': 62, 'Weaver': 63, 'Jakiro': 64, 'Batrider': 65, 'Chen': 66, 'Spectre': 67,
     'Ancient Apparition': 68, 'Doom': 69, 'Ursa': 70, 'Spirit Breaker': 71, 'Gyrocopter': 72, 'Alchemist': 73,
-    'Invoker': 74, 'Silencer': 75, 'Outworld Destroyer': 76, 'Lycan': 77, 'Brewmaster': 78, 'Shadow Demon': 79,
+    'Invoker': 74, 'Silencer': 75, 'Outworld Destroyer': 76, 'Lycan': 77,
+    'Brewmaster': 78, 'Shadow Demon': 79,
     'Lone Druid': 80, 'Chaos Knight': 81, 'Meepo': 82, 'Treant Protector': 83, 'Ogre Magi': 84, 'Undying': 85,
     'Rubick': 86, 'Disruptor': 87, 'Nyx Assassin': 88, 'Naga Siren': 89, 'Keeper of the Light': 90, 'Io': 91,
     'Visage': 92, 'Slark': 93, 'Medusa': 94, 'Troll Warlord': 95, 'Centaur Warrunner': 96, 'Magnus': 97,
@@ -28,8 +29,8 @@ HERO_IDS = {
     'Void Spirit': 126, 'Snapfire': 128, 'Mars': 129, 'Dawnbreaker': 135, 'Marci': 136, 'Primal Beast': 137,
     'Muerta': 138, 'Kez': 145
 }
-ID_PARA_HEROI = {v: k for k, v in HERO_IDS.items()}
-TODOS_HEROIS = ["Nenhum"] + sorted(HERO_IDS.keys())
+HEROIS_POR_ID = {identificador: nome for nome, identificador in IDS_HEROIS.items()}
+HEROIS_DISPONIVEIS = ["Nenhum"] + sorted(IDS_HEROIS)
 
 GSI_PARA_NOME = {
     "npc_dota_hero_abyssal_underlord": "Underlord", "npc_dota_hero_anti_mage": "Anti-Mage",
@@ -41,6 +42,11 @@ GSI_PARA_NOME = {
     "npc_dota_hero_skeleton_king": "Wraith King", "npc_dota_hero_treant": "Treant Protector",
     "npc_dota_hero_windrunner": "Windranger", "npc_dota_hero_wisp": "Io", "npc_dota_hero_zuus": "Zeus"
 }
+GSI_PARA_NOME.update({
+    "npc_dota_hero_antimage": "Anti-Mage",
+    "npc_dota_hero_queenofpain": "Queen of Pain",
+    "npc_dota_hero_vengefulspirit": "Vengeful Spirit",
+})
 
 # Componentes soltos: são ocultados nas fases após a saída; a lista inicial pode mostrá-los.
 COMPONENTES_SOLTOS = {
@@ -50,8 +56,9 @@ COMPONENTES_SOLTOS = {
     "Vitality Booster", "Energy Booster", "Point Booster", "Platemail", "Chainmail",
     "Blades of Attack", "Belt of Strength", "Band of Elvenskin", "Ring of Health", "Void Stone",
     "Mithril Hammer", "Blitz Knuckles", "Fluffy Hat", "Sage's Mask", "Ring of Regen", "Boots of Elvenskin",
-    "Crown", "Diadem", "Cornucopia", "Blight Stone", "Windlace", "Ring of Protection", "Iron Branch", "Gauntlets",
-    "Slippers", "Mantle", "Circlet", "Recipe", "Tango", "Healing Salve", "Clarity", "Observer Ward", "Sentry Ward",
+    "Crown", "Diadem", "Cornucopia", "Blight Stone", "Windlace", "Ring of Protection", "Iron Branch",
+    "Gauntlets", "Slippers", "Mantle", "Circlet", "Recipe", "Tango", "Healing Salve", "Clarity",
+    "Observer Ward", "Sentry Ward",
     "Morbid Mask", "Headdress", "Ring of Basilius", "Buckler", "Urn of Shadows",
     "Mantle of Intelligence", "Oblivion Staff", "Sobi Mask", "Circlet of Nobility",
     "Wind Lace"
@@ -64,7 +71,7 @@ def formatar_nome_heroi(nome_gsi: str) -> str:
     if nome_gsi in GSI_PARA_NOME:
         return GSI_PARA_NOME[nome_gsi]
     limpo = nome_gsi.replace("npc_dota_hero_", "").replace("_", " ").title()
-    for h in TODOS_HEROIS:
-        if limpo.lower() == h.lower():
-            return h
+    for heroi in HEROIS_DISPONIVEIS:
+        if limpo.lower() == heroi.lower():
+            return heroi
     return limpo
