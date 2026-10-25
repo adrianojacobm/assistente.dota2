@@ -1,1 +1,3482 @@
-[{"hero_id": 18, "position": "pos 1", "facet_id": 0, "build_id": 0, "num_matches": 14054, "num_wins": 7400, "pick_rate": 100.0, "build_data": {"sixslot": [{"item_id": 116, "pick_rate": 0.9524870081662956, "num_matches": 2566}, {"item_id": 603, "pick_rate": 0.8188567186340014, "num_matches": 2206}, {"item_id": 156, "pick_rate": 0.6982182628062361, "num_matches": 1881}, {"item_id": 135, "pick_rate": 0.5267260579064588, "num_matches": 1419}, {"item_id": 939, "pick_rate": 0.7991833704528583, "num_matches": 2153}, {"item_id": 154, "pick_rate": 0.025241276911655532, "num_matches": 68}, {"item_id": 63, "pick_rate": 0.3166295471417966, "num_matches": 853}, {"item_id": 225, "pick_rate": 0.0311804008908686, "num_matches": 84}, {"item_id": 112, "pick_rate": 0.0716406829992576, "num_matches": 193}, {"item_id": 114, "pick_rate": 0.005567928730512249, "num_matches": 15}, {"item_id": 600, "pick_rate": 0.01893095768374165, "num_matches": 51}, {"item_id": 123, "pick_rate": 0.021529324424647365, "num_matches": 58}, {"item_id": 133, "pick_rate": 0.03303637713437268, "num_matches": 89}, {"item_id": 247, "pick_rate": 0.014105419450631032, "num_matches": 38}, {"item_id": 108, "pick_rate": 0.014476614699331848, "num_matches": 39}, {"item_id": 139, "pick_rate": 0.05642167780252413, "num_matches": 152}, {"item_id": 1, "pick_rate": 0.14662212323682258, "num_matches": 395}, {"item_id": 252, "pick_rate": 0.05605048255382331, "num_matches": 151}, {"item_id": 119, "pick_rate": 0.0007423904974016332, "num_matches": 2}, {"item_id": 1097, "pick_rate": 0.009279881217520417, "num_matches": 25}, {"item_id": 143, "pick_rate": 0.0022271714922048997, "num_matches": 6}, {"item_id": 98, "pick_rate": 0.002969561989606533, "num_matches": 8}, {"item_id": 160, "pick_rate": 0.0033407572383073497, "num_matches": 9}, {"item_id": 41, "pick_rate": 0.0003711952487008166, "num_matches": 1}, {"item_id": 110, "pick_rate": 0.004454342984409799, "num_matches": 12}, {"item_id": 149, "pick_rate": 0.004825538233110616, "num_matches": 13}, {"item_id": 610, "pick_rate": 0.0014847809948032665, "num_matches": 4}, {"item_id": 152, "pick_rate": 0.005939123979213066, "num_matches": 16}, {"item_id": 604, "pick_rate": 0.0003711952487008166, "num_matches": 1}, {"item_id": 256, "pick_rate": 0.0007423904974016332, "num_matches": 2}, {"item_id": 168, "pick_rate": 0.0011135857461024498, "num_matches": 3}, {"item_id": 145, "pick_rate": 0.0011135857461024498, "num_matches": 3}, {"item_id": 26, "pick_rate": 0.005196733481811433, "num_matches": 14}, {"item_id": 147, "pick_rate": 0.0022271714922048997, "num_matches": 6}, {"item_id": 235, "pick_rate": 0.0003711952487008166, "num_matches": 1}, {"item_id": 75, "pick_rate": 0.0003711952487008166, "num_matches": 1}, {"item_id": 36, "pick_rate": 0.0003711952487008166, "num_matches": 1}, {"item_id": 100, "pick_rate": 0.0003711952487008166, "num_matches": 1}, {"item_id": 96, "pick_rate": 0.0011135857461024498, "num_matches": 3}, {"item_id": 65, "pick_rate": 0.0003711952487008166, "num_matches": 1}, {"item_id": 151, "pick_rate": 0.0007423904974016332, "num_matches": 2}, {"item_id": 37, "pick_rate": 0.0003711952487008166, "num_matches": 1}], "talents": [{"pr": 0.8124062031015508, "lvl": 10, "left": {"pr": 0.1875937968984492, "name": "special_bonus_unique_sven_gods_strength_slow_resist", "slot": 1, "wins": 1333, "count": 2625, "isInnate": false, "isTalent": true, "win_rate": 0.5078, "pick_rate": 0.1875937968984492, "ability_id": 1188, "description": [], "displayName": "+20% God's Strength Slow Resistance"}, "slot": 0, "wins": 6061, "count": 11368, "right": {"pr": 0.8124062031015508, "name": "special_bonus_unique_sven_5", "slot": 0, "wins": 6061, "count": 11368, "isInnate": false, "isTalent": true, "win_rate": 0.5332, "pick_rate": 0.8124062031015508, "ability_id": 673, "description": [], "displayName": "+5s Warcry Duration"}, "choice": "rt", "left_pr": 0.1875937968984492, "right_pr": 0.8124062031015508, "win_rate": 0.5332, "left_win_rate": 0.5078, "right_win_rate": 0.5332}, {"pr": 0.7500736377025037, "lvl": 15, "left": {"pr": 0.24992636229749632, "name": "special_bonus_unique_sven_8", "slot": 3, "wins": 1876, "count": 3394, "isInnate": false, "isTalent": true, "win_rate": 0.5527, "pick_rate": 0.24992636229749632, "ability_id": 763, "description": [], "displayName": "+25% Great Cleave Damage"}, "slot": 2, "wins": 5453, "count": 10186, "right": {"pr": 0.7500736377025037, "name": "special_bonus_unique_sven_3", "slot": 2, "wins": 5453, "count": 10186, "isInnate": false, "isTalent": true, "win_rate": 0.5353, "pick_rate": 0.7500736377025037, "ability_id": 6911, "description": [], "displayName": "-12s God's Strength Cooldown"}, "choice": "rt", "left_pr": 0.24992636229749632, "right_pr": 0.7500736377025037, "win_rate": 0.5353, "left_win_rate": 0.5527, "right_win_rate": 0.5353}, {"pr": 0.8017949369232071, "lvl": 20, "left": {"pr": 0.8017949369232071, "name": "special_bonus_unique_sven_7", "slot": 5, "wins": 5379, "count": 9470, "isInnate": false, "isTalent": true, "win_rate": 0.568, "pick_rate": 0.8017949369232071, "ability_id": 716, "description": [], "displayName": "+8 Warcry Armor"}, "slot": 5, "wins": 5379, "count": 9470, "right": {"pr": 0.1982050630767928, "name": "special_bonus_unique_sven_stormhammer_cooldown", "slot": 4, "wins": 1409, "count": 2341, "isInnate": false, "isTalent": true, "win_rate": 0.6019, "pick_rate": 0.1982050630767928, "ability_id": 1790, "description": [], "displayName": "-25% Storm Hammer Cooldown and Mana Cost"}, "choice": "lt", "left_pr": 0.8017949369232071, "right_pr": 0.1982050630767928, "win_rate": 0.568, "left_win_rate": 0.568, "right_win_rate": 0.6019}, {"pr": 0.8245708879578322, "lvl": 25, "left": {"pr": 0.17542911204216785, "name": "special_bonus_unique_sven_4", "slot": 7, "wins": 810, "count": 1298, "isInnate": false, "isTalent": true, "win_rate": 0.624, "pick_rate": 0.17542911204216785, "ability_id": 7112, "description": [], "displayName": "+1s Storm Hammer Stun Duration"}, "slot": 6, "wins": 3711, "count": 6101, "right": {"pr": 0.8245708879578322, "name": "special_bonus_unique_sven_2", "slot": 6, "wins": 3711, "count": 6101, "isInnate": false, "isTalent": true, "win_rate": 0.6083, "pick_rate": 0.8245708879578322, "ability_id": 6910, "description": [], "displayName": "+50% God's Strength Damage"}, "choice": "rt", "left_pr": 0.17542911204216785, "right_pr": 0.8245708879578322, "win_rate": 0.6083, "left_win_rate": 0.624, "right_win_rate": 0.6083}], "num_wins": 7400, "win_rate": 0.5265404866941796, "abilities": [{"ability_id": 5094, "name": "sven_storm_bolt", "displayName": "Storm Hammer", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5096, "name": "sven_warcry", "displayName": "Warcry", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5095, "name": "sven_great_cleave", "displayName": "Great Cleave", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5095, "name": "sven_great_cleave", "displayName": "Great Cleave", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5095, "name": "sven_great_cleave", "displayName": "Great Cleave", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5097, "name": "sven_gods_strength", "displayName": "God's Strength", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5095, "name": "sven_great_cleave", "displayName": "Great Cleave", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5094, "name": "sven_storm_bolt", "displayName": "Storm Hammer", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5094, "name": "sven_storm_bolt", "displayName": "Storm Hammer", "description": [], "isTalent": false, "isInnate": false, "slot": null}, {"ability_id": 5094, "name": "sven_storm_bolt", "displayName": "Storm Hammer", "description": [], "isTalent": false, "isInnate": false, "slot": null}], "pick_rate": 1.0, "data_scope": {"last_match_ts": 1792738875, "first_match_ts": 1791532564, "patch_versions": ["7.41f"], "analysis_end_ts": 1792742057, "analysis_start_ts": 1791532457, "configured_window_days": 14}, "num_matches": 14054, "anchor_build": [[73, 36, 63, 26, 172, 252, 1, 116, 149, 141, 939, 156, 603, 135, 609, 133], 479984], "anchor_items": [{"pr": 0.9901095773445282, "key": "63::1", "wins": 0, "count": 13915, "rel_pr": 0.9901095773445282, "win_rate": 0.5265540783327345, "rel_count": 13915, "avg_minute": 5.448365073661517, "std_minute": 1.325599961265434, "raw_item_id": 63, "rel_num_matches": 14054}, {"pr": 0.9126938949765192, "key": "26::1", "wins": 0, "count": 12827, "rel_pr": 0.9126938949765192, "win_rate": 0.5259998440788961, "rel_count": 12827, "avg_minute": 7.931472674826538, "std_minute": 3.7615730774412577, "raw_item_id": 26, "rel_num_matches": 14054}, {"pr": 0.9911768891418812, "key": "172::1", "wins": 0, "count": 13930, "rel_pr": 0.9911768891418812, "win_rate": 0.5277099784637473, "rel_count": 13930, "avg_minute": 9.58808327351041, "std_minute": 1.338223255104584, "raw_item_id": 172, "rel_num_matches": 14054}, {"pr": 0.9800768464494094, "key": "252::1", "wins": 0, "count": 13774, "rel_pr": 0.980972063854048, "win_rate": 0.5320168433280092, "rel_count": 13765, "avg_minute": 14.057354435893712, "std_minute": 1.7289607318858826, "raw_item_id": 252, "rel_num_matches": 14032}, {"pr": 0.9477728760495232, "key": "1::1", "wins": 0, "count": 13320, "rel_pr": 0.9571304849884528, "win_rate": 0.5418168168168168, "rel_count": 13262, "avg_minute": 17.233183183183183, "std_minute": 2.385197926090014, "raw_item_id": 1, "rel_num_matches": 13856}, {"pr": 0.8497936530525118, "key": "116::1", "wins": 0, "count": 11943, "rel_pr": 0.9086462606500474, "win_rate": 0.5529598928242485, "rel_count": 11518, "avg_minute": 22.86343464791091, "std_minute": 3.249282724560375, "raw_item_id": 116, "rel_num_matches": 12676}, {"pr": 0.8038280916465064, "key": "149::1", "wins": 0, "count": 11297, "rel_pr": 0.8643621399176955, "win_rate": 0.5755510312472337, "rel_count": 10502, "avg_minute": 23.49588386297247, "std_minute": 3.961732263552384, "raw_item_id": 149, "rel_num_matches": 12150}, {"pr": 0.7192258431763199, "key": "141::1", "wins": 0, "count": 10108, "rel_pr": 0.8515262274029438, "win_rate": 0.6193114364859518, "rel_count": 8620, "avg_minute": 27.355164226355363, "std_minute": 4.105322927405949, "raw_item_id": 141, "rel_num_matches": 10123}, {"pr": 0.6256581756083677, "key": "939::1", "wins": 0, "count": 8793, "rel_pr": 0.7686194368755677, "win_rate": 0.6580234277266007, "rel_count": 6770, "avg_minute": 28.20857500284317, "std_minute": 5.133335033085205, "raw_item_id": 939, "rel_num_matches": 8808}], "abilities_new": [[[5094, 5096, 5095, 5095, 5095, 5097, 5095, 5094, 5094, 5094], {"pr": 0.243, "wins": 1753, "count": 3415, "win_rate": 0.5133}], [[5094, 5096, 5095, 5095, 5095, 5097, 5095, 5096, 5096, 5096], {"pr": 0.113, "wins": 812, "count": 1588, "win_rate": 0.5113}], [[5094, 5096, 5094, 5095, 5095, 5097, 5095, 5095, 5094, 5094], {"pr": 0.091, "wins": 683, "count": 1279, "win_rate": 0.534}], [[5094, 5095, 5095, 5096, 5095, 5097, 5095, 5094, 5094, 5094], {"pr": 0.0437, "wins": 324, "count": 613, "win_rate": 0.5285}], [[5094, 5096, 5094, 5095, 5095, 5097, 5095, 5095, 5096, 5096], {"pr": 0.0425, "wins": 335, "count": 596, "win_rate": 0.5621}]], "anchor_items2": [{"pr": 0.9901095773445282, "key": "63::1", "wins": 0, "count": 13915, "rel_pr": 0.9901095773445282, "win_rate": 0.5265540783327345, "rel_count": 13915, "avg_minute": 5.448365073661517, "std_minute": 1.325599961265434, "raw_item_id": 63, "rel_num_matches": 14054}, {"pr": 0.9911768891418812, "key": "172::1", "wins": 0, "count": 13930, "rel_pr": 0.9911768891418812, "win_rate": 0.5277099784637473, "rel_count": 13930, "avg_minute": 9.58808327351041, "std_minute": 1.338223255104584, "raw_item_id": 172, "rel_num_matches": 14054}, {"pr": 0.9800768464494094, "key": "252::1", "wins": 0, "count": 13774, "rel_pr": 0.980972063854048, "win_rate": 0.5320168433280092, "rel_count": 13765, "avg_minute": 14.057354435893712, "std_minute": 1.7289607318858826, "raw_item_id": 252, "rel_num_matches": 14032}, {"pr": 0.9477728760495232, "key": "1::1", "wins": 0, "count": 13320, "rel_pr": 0.9571304849884528, "win_rate": 0.5418168168168168, "rel_count": 13262, "avg_minute": 17.233183183183183, "std_minute": 2.385197926090014, "raw_item_id": 1, "rel_num_matches": 13856}, {"pr": 0.8497936530525118, "key": "116::1", "wins": 0, "count": 11943, "rel_pr": 0.9086462606500474, "win_rate": 0.5529598928242485, "rel_count": 11518, "avg_minute": 22.86343464791091, "std_minute": 3.249282724560375, "raw_item_id": 116, "rel_num_matches": 12676}, {"pr": 0.8038280916465064, "key": "149::1", "wins": 0, "count": 11297, "rel_pr": 0.8643621399176955, "win_rate": 0.5755510312472337, "rel_count": 10502, "avg_minute": 23.49588386297247, "std_minute": 3.961732263552384, "raw_item_id": 149, "rel_num_matches": 12150}, {"pr": 0.7192258431763199, "key": "141::1", "wins": 0, "count": 10108, "rel_pr": 0.8515262274029438, "win_rate": 0.6193114364859518, "rel_count": 8620, "avg_minute": 27.355164226355363, "std_minute": 4.105322927405949, "raw_item_id": 141, "rel_num_matches": 10123}, {"pr": 0.6256581756083677, "key": "939::1", "wins": 0, "count": 8793, "rel_pr": 0.7686194368755677, "win_rate": 0.6580234277266007, "rel_count": 6770, "avg_minute": 28.20857500284317, "std_minute": 5.133335033085205, "raw_item_id": 939, "rel_num_matches": 8808}], "neutral_stats": {"0": {"187": {"wins": 1, "count": 1, "win_rate": 1.0, "pick_rate": 7.120985544399345e-05}, "565": {"wins": 1191, "count": 2264, "win_rate": 0.526060070671378, "pick_rate": 0.16121911272520115}, "577": {"wins": 1402, "count": 2698, "win_rate": 0.519644180874722, "pick_rate": 0.19212418998789432}, "840": {"wins": 0, "count": 1, "win_rate": 0.0, "pick_rate": 7.120985544399345e-05}, "947": {"wins": 303, "count": 570, "win_rate": 0.531578947368421, "pick_rate": 0.040589617603076264}, "950": {"wins": 0, "count": 2, "win_rate": 0.0, "pick_rate": 0.0001424197108879869}, "1077": {"wins": 392, "count": 740, "win_rate": 0.5297297297297298, "pick_rate": 0.052695293028555155}, "1606": {"wins": 420, "count": 849, "win_rate": 0.4946996466431096, "pick_rate": 0.06045716727195044}, "1637": {"wins": 80, "count": 165, "win_rate": 0.48484848484848486, "pick_rate": 0.01174962614825892}, "1638": {"wins": 516, "count": 983, "win_rate": 0.5249237029501526, "pick_rate": 0.06999928790144556}, "1716": {"wins": 1299, "count": 2353, "win_rate": 0.5520611984700382, "pick_rate": 0.1675567898597166}, "1717": {"wins": 187, "count": 402, "win_rate": 0.4651741293532338, "pick_rate": 0.028626361888485368}, "1861": {"wins": 369, "count": 719, "win_rate": 0.5132127955493742, "pick_rate": 0.05119988606423129}, "1868": {"wins": 116, "count": 202, "win_rate": 0.5742574257425742, "pick_rate": 0.014384390799686677}, "2097": {"wins": 1119, "count": 2094, "win_rate": 0.5343839541547278, "pick_rate": 0.1491134372997223}}, "1": {"71": {"wins": 657, "count": 1263, "win_rate": 0.5201900237529691, "pick_rate": 0.09107954135717893}, "187": {"wins": 610, "count": 1153, "win_rate": 0.5290546400693842, "pick_rate": 0.08314703973462176}, "359": {"wins": 152, "count": 284, "win_rate": 0.5352112676056338, "pick_rate": 0.02048027691642028}, "565": {"wins": 153, "count": 335, "win_rate": 0.45671641791044776, "pick_rate": 0.02415807312324223}, "577": {"wins": 252, "count": 499, "win_rate": 0.5050100200400801, "pick_rate": 0.0359847119059638}, "840": {"wins": 832, "count": 1587, "win_rate": 0.5242596093257719, "pick_rate": 0.11444436431816545}, "945": {"wins": 12, "count": 30, "win_rate": 0.4, "pick_rate": 0.002163409533424677}, "947": {"wins": 14, "count": 33, "win_rate": 0.42424242424242425, "pick_rate": 0.002379750486767145}, "950": {"wins": 2393, "count": 4421, "win_rate": 0.5412802533363492, "pick_rate": 0.3188144515756833}, "1077": {"wins": 62, "count": 140, "win_rate": 0.4428571428571429, "pick_rate": 0.010095911155981827}, "1599": {"wins": 628, "count": 1083, "win_rate": 0.579870729455217, "pick_rate": 0.07809908415663085}, "1601": {"wins": 505, "count": 998, "win_rate": 0.5060120240480962, "pick_rate": 0.0719694238119276}, "1603": {"wins": 1, "count": 3, "win_rate": 0.3333333333333333, "pick_rate": 0.00021634095334246772}, "1604": {"wins": 11, "count": 29, "win_rate": 0.3793103448275862, "pick_rate": 0.0020912958823105215}, "1605": {"wins": 0, "count": 1, "win_rate": 0.0, "pick_rate": 7.211365111415591e-05}, "1606": {"wins": 4, "count": 8, "win_rate": 0.5, "pick_rate": 0.0005769092089132473}, "1637": {"wins": 8, "count": 15, "win_rate": 0.5333333333333333, "pick_rate": 0.0010817047667123383}, "1638": {"wins": 210, "count": 407, "win_rate": 0.515970515970516, "pick_rate": 0.029350256003461455}, "1716": {"wins": 340, "count": 631, "win_rate": 0.5388272583201268, "pick_rate": 0.04550371385303238}, "1717": {"wins": 3, "count": 12, "win_rate": 0.25, "pick_rate": 0.0008653638133698709}, "1861": {"wins": 77, "count": 131, "win_rate": 0.5877862595419847, "pick_rate": 0.009446888295954425}, "1868": {"wins": 11, "count": 18, "win_rate": 0.6111111111111112, "pick_rate": 0.0012980457200548064}, "2097": {"wins": 396, "count": 786, "win_rate": 0.5038167938931297, "pick_rate": 0.05668132977572655}}, "2": {"71": {"wins": 28, "count": 49, "win_rate": 0.5714285714285714, "pick_rate": 0.004240955513242167}, "187": {"wins": 36, "count": 75, "win_rate": 0.48, "pick_rate": 0.00649125843863597}, "359": {"wins": 7, "count": 11, "win_rate": 0.6363636363636364, "pick_rate": 0.0009520512376666088}, "565": {"wins": 10, "count": 25, "win_rate": 0.4, "pick_rate": 0.002163752812878657}, "574": {"wins": 450, "count": 881, "win_rate": 0.5107832009080591, "pick_rate": 0.07625064912584387}, "577": {"wins": 35, "count": 77, "win_rate": 0.4545454545454546, "pick_rate": 0.006664358663666263}, "585": {"wins": 103, "count": 186, "win_rate": 0.553763440860215, "pick_rate": 0.016098320927817208}, "675": {"wins": 12, "count": 28, "win_rate": 0.42857142857142855, "pick_rate": 0.0024234031504240957}, "840": {"wins": 51, "count": 108, "win_rate": 0.4722222222222222, "pick_rate": 0.009347412151635795}, "947": {"wins": 1, "count": 3, "win_rate": 0.3333333333333333, "pick_rate": 0.0002596503375454388}, "950": {"wins": 717, "count": 1273, "win_rate": 0.5632364493322859, "pick_rate": 0.1101782932317812}, "1077": {"wins": 9, "count": 23, "win_rate": 0.391304347826087, "pick_rate": 0.001990652587848364}, "1598": {"wins": 366, "count": 619, "win_rate": 0.5912762520193862, "pick_rate": 0.05357451964687554}, "1599": {"wins": 31, "count": 43, "win_rate": 0.7209302325581395, "pick_rate": 0.0037216548381512897}, "1601": {"wins": 37, "count": 75, "win_rate": 0.49333333333333335, "pick_rate": 0.00649125843863597}, "1603": {"wins": 1812, "count": 3488, "win_rate": 0.5194954128440367, "pick_rate": 0.3018867924528302}, "1605": {"wins": 2001, "count": 3859, "win_rate": 0.5185281160922519, "pick_rate": 0.3339968841959495}, "1638": {"wins": 67, "count": 131, "win_rate": 0.5114503816793893, "pick_rate": 0.011338064739484162}, "1640": {"wins": 33, "count": 72, "win_rate": 0.4583333333333333, "pick_rate": 0.006231608101090531}, "1716": {"wins": 52, "count": 86, "win_rate": 0.6046511627906976, "pick_rate": 0.007443309676302579}, "1721": {"wins": 0, "count": 1, "win_rate": 0.0, "pick_rate": 8.655011251514626e-05}, "1859": {"wins": 10, "count": 21, "win_rate": 0.47619047619047616, "pick_rate": 0.0018175523628180716}, "1861": {"wins": 7, "count": 13, "win_rate": 0.5384615384615384, "pick_rate": 0.0011251514626969014}, "1868": {"wins": 1, "count": 3, "win_rate": 0.3333333333333333, "pick_rate": 0.0002596503375454388}, "1873": {"wins": 92, "count": 188, "win_rate": 0.4893617021276595, "pick_rate": 0.0162714211528475}, "2097": {"wins": 101, "count": 216, "win_rate": 0.4675925925925926, "pick_rate": 0.01869482430327159}}, "3": {"71": {"wins": 2, "count": 3, "win_rate": 0.6666666666666666, "pick_rate": 0.0005407354001441961}, "187": {"wins": 1, "count": 1, "win_rate": 1.0, "pick_rate": 0.0001802451333813987}, "359": {"wins": 1, "count": 1, "win_rate": 1.0, "pick_rate": 0.0001802451333813987}, "574": {"wins": 17, "count": 34, "win_rate": 0.5, "pick_rate": 0.0061283345349675555}, "840": {"wins": 1, "count": 4, "win_rate": 0.25, "pick_rate": 0.0007209805335255948}, "950": {"wins": 119, "count": 201, "win_rate": 0.5920398009950248, "pick_rate": 0.03622927180966114}, "1077": {"wins": 0, "count": 1, "win_rate": 0.0, "pick_rate": 0.0001802451333813987}, "1168": {"wins": 87, "count": 171, "win_rate": 0.5087719298245614, "pick_rate": 0.030821917808219176}, "1598": {"wins": 3, "count": 7, "win_rate": 0.42857142857142855, "pick_rate": 0.0012617159336697908}, "1599": {"wins": 1, "count": 1, "win_rate": 1.0, "pick_rate": 0.0001802451333813987}, "1601": {"wins": 2, "count": 2, "win_rate": 1.0, "pick_rate": 0.0003604902667627974}, "1603": {"wins": 207, "count": 395, "win_rate": 0.5240506329113924, "pick_rate": 0.07119682768565248}, "1605": {"wins": 295, "count": 566, "win_rate": 0.5212014134275619, "pick_rate": 0.10201874549387166}, "1638": {"wins": 4, "count": 10, "win_rate": 0.4, "pick_rate": 0.001802451333813987}, "1643": {"wins": 990, "count": 1939, "win_rate": 0.5105724600309438, "pick_rate": 0.3494953136265321}, "1716": {"wins": 3, "count": 4, "win_rate": 0.75, "pick_rate": 0.0007209805335255948}, "1719": {"wins": 34, "count": 53, "win_rate": 0.6415094339622641, "pick_rate": 0.00955299206921413}, "1720": {"wins": 93, "count": 184, "win_rate": 0.5054347826086957, "pick_rate": 0.03316510454217736}, "1721": {"wins": 580, "count": 1165, "win_rate": 0.4978540772532189, "pick_rate": 0.2099855803893295}, "1860": {"wins": 198, "count": 424, "win_rate": 0.4669811320754717, "pick_rate": 0.07642393655371305}, "1861": {"wins": 1, "count": 2, "win_rate": 0.5, "pick_rate": 0.0003604902667627974}, "1862": {"wins": 121, "count": 258, "win_rate": 0.4689922480620155, "pick_rate": 0.04650324441240086}, "1864": {"wins": 8, "count": 13, "win_rate": 0.6153846153846154, "pick_rate": 0.002343186733958183}, "1873": {"wins": 10, "count": 17, "win_rate": 0.5882352941176471, "pick_rate": 0.0030641672674837778}, "2097": {"wins": 10, "count": 24, "win_rate": 0.4166666666666667, "pick_rate": 0.004325883201153569}, "2190": {"wins": 33, "count": 68, "win_rate": 0.4852941176470588, "pick_rate": 0.012256669069935113}}, "4": {"71": {"wins": 1, "count": 1, "win_rate": 1.0, "pick_rate": 0.005025125628140704}, "292": {"wins": 41, "count": 67, "win_rate": 0.6119402985074627, "pick_rate": 0.33668341708542715}, "326": {"wins": 11, "count": 20, "win_rate": 0.55, "pick_rate": 0.10050251256281408}, "370": {"wins": 1, "count": 3, "win_rate": 0.3333333333333333, "pick_rate": 0.01507537688442211}, "371": {"wins": 13, "count": 25, "win_rate": 0.52, "pick_rate": 0.12562814070351758}, "377": {"wins": 18, "count": 34, "win_rate": 0.5294117647058824, "pick_rate": 0.1708542713567839}, "837": {"wins": 2, "count": 5, "win_rate": 0.4, "pick_rate": 0.02512562814070352}, "950": {"wins": 1, "count": 2, "win_rate": 0.5, "pick_rate": 0.010050251256281407}, "1605": {"wins": 0, "count": 1, "win_rate": 0.0, "pick_rate": 0.005025125628140704}, "1643": {"wins": 0, "count": 1, "win_rate": 0.0, "pick_rate": 0.005025125628140704}, "1644": {"wins": 13, "count": 33, "win_rate": 0.3939393939393939, "pick_rate": 0.1658291457286432}, "1718": {"wins": 1, "count": 2, "win_rate": 0.5, "pick_rate": 0.010050251256281407}, "1721": {"wins": 1, "count": 1, "win_rate": 1.0, "pick_rate": 0.005025125628140704}, "1860": {"wins": 0, "count": 1, "win_rate": 0.0, "pick_rate": 0.005025125628140704}, "1862": {"wins": 2, "count": 3, "win_rate": 0.6666666666666666, "pick_rate": 0.01507537688442211}}}, "items_mid_late": [{"pr": 0.9800768464494094, "key": "252::1", "wins": 0, "count": 13774, "rel_pr": 0.980972063854048, "win_rate": 0.5320168433280092, "rel_count": 13765, "avg_minute": 14.057354435893712, "std_minute": 1.7289607318858826, "raw_item_id": 252, "rel_num_matches": 14032}, {"pr": 0.9477728760495232, "key": "1::1", "wins": 0, "count": 13320, "rel_pr": 0.9571304849884528, "win_rate": 0.5418168168168168, "rel_count": 13262, "avg_minute": 17.233183183183183, "std_minute": 2.385197926090014, "raw_item_id": 1, "rel_num_matches": 13856}, {"pr": 0.8497936530525118, "key": "116::1", "wins": 0, "count": 11943, "rel_pr": 0.9086462606500474, "win_rate": 0.5529598928242485, "rel_count": 11518, "avg_minute": 22.86343464791091, "std_minute": 3.249282724560375, "raw_item_id": 116, "rel_num_matches": 12676}, {"pr": 0.7192258431763199, "key": "141::1", "wins": 0, "count": 10108, "rel_pr": 0.8515262274029438, "win_rate": 0.6193114364859518, "rel_count": 8620, "avg_minute": 27.355164226355363, "std_minute": 4.105322927405949, "raw_item_id": 141, "rel_num_matches": 10123}, {"pr": 0.6256581756083677, "key": "939::1", "wins": 0, "count": 8793, "rel_pr": 0.7686194368755677, "win_rate": 0.6580234277266007, "rel_count": 6770, "avg_minute": 28.20857500284317, "std_minute": 5.133335033085205, "raw_item_id": 939, "rel_num_matches": 8808}, {"pr": 0.023480859541767467, "key": "249::1", "wins": 0, "count": 330, "rel_pr": 0.05102319236016371, "win_rate": 0.5121212121212121, "rel_count": 187, "avg_minute": 32.86060606060606, "std_minute": 9.690293156085236, "raw_item_id": 249, "rel_num_matches": 3665}, {"pr": 0.23431051657890992, "key": "135::1", "wins": 0, "count": 3293, "rel_pr": 0.4657327586206896, "win_rate": 0.5438809596112967, "rel_count": 2161, "avg_minute": 34.18858184026723, "std_minute": 6.612889223335555, "raw_item_id": 135, "rel_num_matches": 4640}, {"pr": 0.03913476590294578, "key": "112::1", "wins": 0, "count": 550, "rel_pr": 0.06717640633533588, "win_rate": 0.7181818181818181, "rel_count": 246, "avg_minute": 34.40909090909091, "std_minute": 8.166556473085775, "raw_item_id": 112, "rel_num_matches": 3662}, {"pr": 0.3841610929272805, "key": "603::1", "wins": 0, "count": 5399, "rel_pr": 0.7105369398465886, "win_rate": 0.6884608260789035, "rel_count": 3520, "avg_minute": 35.106501203926655, "std_minute": 5.030519226780288, "raw_item_id": 603, "rel_num_matches": 4954}, {"pr": 0.30973388359186, "key": "156::1", "wins": 0, "count": 4353, "rel_pr": 0.6264831514000949, "win_rate": 0.6942338617045716, "rel_count": 2640, "avg_minute": 35.91913622788881, "std_minute": 5.567362803876517, "raw_item_id": 156, "rel_num_matches": 4214}, {"pr": 0.17205066173331435, "key": "609::1", "wins": 0, "count": 2418, "rel_pr": 0.4502596883739513, "win_rate": 0.674110835401158, "rel_count": 1127, "avg_minute": 37.587262200165426, "std_minute": 8.068772010148997, "raw_item_id": 609, "rel_num_matches": 2503}, {"pr": 0.022271239504767327, "key": "139::1", "wins": 0, "count": 313, "rel_pr": 0.06112984822934233, "win_rate": 0.6485623003194888, "rel_count": 145, "avg_minute": 38.50479233226837, "std_minute": 7.566582578795419, "raw_item_id": 139, "rel_num_matches": 2372}, {"pr": 0.008538494378824533, "key": "208::1", "wins": 0, "count": 120, "rel_pr": 0.059293044469783354, "win_rate": 0.5583333333333333, "rel_count": 52, "avg_minute": 44.025, "std_minute": 9.124566199734284, "raw_item_id": 208, "rel_num_matches": 877}, {"pr": 0.014088515725060482, "key": "133::1", "wins": 0, "count": 198, "rel_pr": 0.14123006833712984, "win_rate": 0.494949494949495, "rel_count": 62, "avg_minute": 47.398989898989896, "std_minute": 10.29991659228262, "raw_item_id": 133, "rel_num_matches": 439}, {"pr": 0.005265404866941796, "key": "48::1", "wins": 0, "count": 74, "rel_pr": 0.06951871657754011, "win_rate": 0.8108108108108109, "rel_count": 26, "avg_minute": 47.91891891891892, "std_minute": 10.768769606192889, "raw_item_id": 48, "rel_num_matches": 374}, {"pr": 0.0030596271524121247, "key": "220::1", "wins": 0, "count": 43, "rel_pr": 0.06756756756756757, "win_rate": 0.7209302325581395, "rel_count": 15, "avg_minute": 51.25581395348837, "std_minute": 10.927015855221883, "raw_item_id": 220, "rel_num_matches": 222}, {"pr": 0.004696171908353494, "key": "110::1", "wins": 0, "count": 66, "rel_pr": 0.13513513513513514, "win_rate": 0.5909090909090909, "rel_count": 35, "avg_minute": 54.06060606060606, "std_minute": 7.337902408311429, "raw_item_id": 110, "rel_num_matches": 259}, {"pr": 0.00014230823964707555, "key": "1154::1", "wins": 0, "count": 2, "rel_pr": 0.05128205128205128, "win_rate": 0.5, "rel_count": 2, "avg_minute": 61.0, "std_minute": 10.0, "raw_item_id": 1154, "rel_num_matches": 39}], "starting_items": [{"pr": 0.76, "key": "11::1", "count": 10623, "raw_item_id": 11}, {"pr": 0.56, "key": "44::1", "count": 7868, "raw_item_id": 44}, {"pr": 0.43, "key": "34::1", "count": 6062, "raw_item_id": 34}, {"pr": 0.39, "key": "237::1", "count": 5427, "raw_item_id": 237}, {"pr": 0.35, "key": "16::2", "count": 4886, "raw_item_id": 16}, {"pr": 0.26, "key": "13::3", "count": 3595, "raw_item_id": 13}, {"pr": 0.22, "key": "16::1", "count": 3122, "raw_item_id": 16}, {"pr": 0.22, "key": "13::2", "count": 3066, "raw_item_id": 13}, {"pr": 0.17, "key": "13::1", "count": 2397, "raw_item_id": 13}, {"pr": 0.14, "key": "20::1", "count": 1911, "raw_item_id": 20}, {"pr": 0.11, "key": "13::4", "count": 1483, "raw_item_id": 13}, {"pr": 0.04, "key": "36::1", "count": 630, "raw_item_id": 36}, {"pr": 0.04, "key": "16::3", "count": 610, "raw_item_id": 16}, {"pr": 0.01, "key": "237::2", "count": 197, "raw_item_id": 237}, {"pr": 0.01, "key": "44::2", "count": 175, "raw_item_id": 44}, {"pr": 0.01, "key": "42::1", "count": 164, "raw_item_id": 42}, {"pr": 0.01, "key": "20::2", "count": 121, "raw_item_id": 20}, {"pr": 0.01, "key": "17::1", "count": 105, "raw_item_id": 17}, {"pr": 0.01, "key": "73::1", "count": 103, "raw_item_id": 73}, {"pr": 0.01, "key": "216::1", "count": 82, "raw_item_id": 216}, {"pr": 0.0, "key": "241::1", "count": 51, "raw_item_id": 241}, {"pr": 0.0, "key": "43::1", "count": 24, "raw_item_id": 43}, {"pr": 0.0, "key": "14::1", "count": 20, "raw_item_id": 14}, {"pr": 0.0, "key": "39::1", "count": 19, "raw_item_id": 39}, {"pr": 0.0, "key": "20::3", "count": 18, "raw_item_id": 20}, {"pr": 0.0, "key": "188::1", "count": 17, "raw_item_id": 188}, {"pr": 0.0, "key": "44::3", "count": 16, "raw_item_id": 44}, {"pr": 0.0, "key": "16::4", "count": 16, "raw_item_id": 16}, {"pr": 0.0, "key": "29::1", "count": 12, "raw_item_id": 29}, {"pr": 0.0, "key": "38::1", "count": 11, "raw_item_id": 38}, {"pr": 0.0, "key": "237::3", "count": 8, "raw_item_id": 237}, {"pr": 0.0, "key": "244::1", "count": 6, "raw_item_id": 244}, {"pr": 0.0, "key": "1123::1", "count": 5, "raw_item_id": 1123}, {"pr": 0.0, "key": "25::1", "count": 4, "raw_item_id": 25}, {"pr": 0.0, "key": "75::1", "count": 3, "raw_item_id": 75}, {"pr": 0.0, "key": "39::2", "count": 2, "raw_item_id": 39}, {"pr": 0.0, "key": "11::2", "count": 2, "raw_item_id": 11}, {"pr": 0.0, "key": "2::1", "count": 2, "raw_item_id": 2}, {"pr": 0.0, "key": "44::4", "count": 1, "raw_item_id": 44}, {"pr": 0.0, "key": "43::3", "count": 1, "raw_item_id": 43}, {"pr": 0.0, "key": "14::2", "count": 1, "raw_item_id": 14}, {"pr": 0.0, "key": "13::5", "count": 1, "raw_item_id": 13}, {"pr": 0.0, "key": "237::5", "count": 1, "raw_item_id": 237}, {"pr": 0.0, "key": "42::2", "count": 1, "raw_item_id": 42}, {"pr": 0.0, "key": "16::5", "count": 1, "raw_item_id": 16}, {"pr": 0.0, "key": "216::2", "count": 1, "raw_item_id": 216}, {"pr": 0.0, "key": "15::1", "count": 1, "raw_item_id": 15}, {"pr": 0.0, "key": "4::1", "count": 1, "raw_item_id": 4}, {"pr": 0.0, "key": "43::2", "count": 1, "raw_item_id": 43}, {"pr": 0.0, "key": "188::2", "count": 1, "raw_item_id": 188}, {"pr": 0.0, "key": "40::1", "count": 1, "raw_item_id": 40}, {"pr": 0.0, "key": "12::1", "count": 1, "raw_item_id": 12}], "has_anchor_build": true, "anchor_item_stats": {"1": {"pr": 100.0, "wins": 4285, "win_rate": 0.6622, "purchases": 6471, "avg_minute": 16.9, "max_minute": 56, "min_minute": 11, "std_minute": 2.3, "purchase_rate": 0}, "26": {"pr": 100.0309, "wins": 4285, "win_rate": 0.662, "purchases": 6473, "avg_minute": 8.0, "max_minute": 57, "min_minute": 2, "std_minute": 4.3, "purchase_rate": 0}, "36": {"pr": 38.3712, "wins": 1662, "win_rate": 0.6694, "purchases": 2483, "avg_minute": 4.6, "max_minute": 37, "min_minute": -2, "std_minute": 4.8, "purchase_rate": 0}, "41": {"pr": 0.68, "wins": 31, "win_rate": 0.7045, "purchases": 44, "avg_minute": 34.2, "max_minute": 56, "min_minute": 5, "std_minute": 9.3, "purchase_rate": 0}, "48": {"pr": 0.7881, "wins": 43, "win_rate": 0.8431, "purchases": 51, "avg_minute": 49.3, "max_minute": 77, "min_minute": 29, "std_minute": 11.1, "purchase_rate": 0}, "50": {"pr": 0.0618, "wins": 4, "win_rate": 1.0, "purchases": 4, "avg_minute": 33.5, "max_minute": 45, "min_minute": 21, "std_minute": 8.8, "purchase_rate": 0}, "63": {"pr": 100.0, "wins": 4285, "win_rate": 0.6622, "purchases": 6471, "avg_minute": 5.3, "max_minute": 16, "min_minute": 2, "std_minute": 1.2, "purchase_rate": 0}, "65": {"pr": 0.1082, "wins": 4, "win_rate": 0.5714, "purchases": 7, "avg_minute": 12.4, "max_minute": 16, "min_minute": 9, "std_minute": 2.3, "purchase_rate": 0}, "73": {"pr": 13.7073, "wins": 584, "win_rate": 0.6584, "purchases": 887, "avg_minute": 2.1, "max_minute": 21, "min_minute": -2, "std_minute": 1.9, "purchase_rate": 0}, "75": {"pr": 0.1545, "wins": 5, "win_rate": 0.5, "purchases": 10, "avg_minute": 4.1, "max_minute": 19, "min_minute": 1, "std_minute": 5.2, "purchase_rate": 0}, "77": {"pr": 0.0309, "wins": 0, "win_rate": 0.0, "purchases": 2, "avg_minute": 35.0, "max_minute": 37, "min_minute": 33, "std_minute": 2.0, "purchase_rate": 0}, "92": {"pr": 0.0155, "wins": 0, "win_rate": 0.0, "purchases": 1, "avg_minute": 13.0, "max_minute": 13, "min_minute": 13, "std_minute": 0.0, "purchase_rate": 0}, "96": {"pr": 0.0464, "wins": 1, "win_rate": 0.3333, "purchases": 3, "avg_minute": 47.3, "max_minute": 59, "min_minute": 40, "std_minute": 8.3, "purchase_rate": 0}, "98": {"pr": 0.6027, "wins": 25, "win_rate": 0.641, "purchases": 39, "avg_minute": 37.2, "max_minute": 51, "min_minute": 25, "std_minute": 6.4, "purchase_rate": 0}, "100": {"pr": 0.0618, "wins": 3, "win_rate": 0.75, "purchases": 4, "avg_minute": 43.8, "max_minute": 55, "min_minute": 19, "std_minute": 14.8, "purchase_rate": 0}, "102": {"pr": 0.0309, "wins": 1, "win_rate": 0.5, "purchases": 2, "avg_minute": 37.0, "max_minute": 41, "min_minute": 33, "std_minute": 4.0, "purchase_rate": 0}, "108": {"pr": 1.6381, "wins": 65, "win_rate": 0.6132, "purchases": 106, "avg_minute": 37.6, "max_minute": 65, "min_minute": 19, "std_minute": 8.5, "purchase_rate": 0}, "110": {"pr": 0.8345, "wins": 36, "win_rate": 0.6667, "purchases": 54, "avg_minute": 54.4, "max_minute": 70, "min_minute": 39, "std_minute": 6.7, "purchase_rate": 0}, "112": {"pr": 3.3071, "wins": 163, "win_rate": 0.7617, "purchases": 214, "avg_minute": 38.5, "max_minute": 66, "min_minute": 22, "std_minute": 7.7, "purchase_rate": 0}, "114": {"pr": 0.2627, "wins": 10, "win_rate": 0.5882, "purchases": 17, "avg_minute": 40.8, "max_minute": 67, "min_minute": 28, "std_minute": 9.7, "purchase_rate": 0}, "116": {"pr": 100.0, "wins": 4285, "win_rate": 0.6622, "purchases": 6471, "avg_minute": 22.5, "max_minute": 54, "min_minute": 16, "std_minute": 3.2, "purchase_rate": 0}, "119": {"pr": 0.0773, "wins": 3, "win_rate": 0.6, "purchases": 5, "avg_minute": 37.8, "max_minute": 42, "min_minute": 31, "std_minute": 4.1, "purchase_rate": 0}, "123": {"pr": 0.8499, "wins": 35, "win_rate": 0.6364, "purchases": 55, "avg_minute": 39.3, "max_minute": 62, "min_minute": 24, "std_minute": 7.6, "purchase_rate": 0}, "133": {"pr": 2.3335, "wins": 79, "win_rate": 0.5232, "purchases": 151, "avg_minute": 49.2, "max_minute": 84, "min_minute": 28, "std_minute": 9.9, "purchase_rate": 0}, "135": {"pr": 25.8847, "wins": 996, "win_rate": 0.5946, "purchases": 1675, "avg_minute": 36.9, "max_minute": 66, "min_minute": 19, "std_minute": 6.4, "purchase_rate": 0}, "137": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 31.0, "max_minute": 31, "min_minute": 31, "std_minute": 0.0, "purchase_rate": 0}, "139": {"pr": 2.5035, "wins": 102, "win_rate": 0.6296, "purchases": 162, "avg_minute": 41.1, "max_minute": 66, "min_minute": 26, "std_minute": 7.2, "purchase_rate": 0}, "141": {"pr": 100.0309, "wins": 4287, "win_rate": 0.6623, "purchases": 6473, "avg_minute": 27.3, "max_minute": 63, "min_minute": 16, "std_minute": 3.7, "purchase_rate": 0}, "143": {"pr": 0.6954, "wins": 27, "win_rate": 0.6, "purchases": 45, "avg_minute": 39.8, "max_minute": 58, "min_minute": 26, "std_minute": 7.7, "purchase_rate": 0}, "147": {"pr": 0.0773, "wins": 4, "win_rate": 0.8, "purchases": 5, "avg_minute": 26.0, "max_minute": 42, "min_minute": 21, "std_minute": 8.1, "purchase_rate": 0}, "149": {"pr": 100.0, "wins": 4285, "win_rate": 0.6622, "purchases": 6471, "avg_minute": 23.4, "max_minute": 62, "min_minute": 13, "std_minute": 3.6, "purchase_rate": 0}, "152": {"pr": 1.2363, "wins": 34, "win_rate": 0.425, "purchases": 80, "avg_minute": 38.5, "max_minute": 70, "min_minute": 17, "std_minute": 10.5, "purchase_rate": 0}, "154": {"pr": 0.5409, "wins": 23, "win_rate": 0.6571, "purchases": 35, "avg_minute": 33.0, "max_minute": 62, "min_minute": 18, "std_minute": 10.3, "purchase_rate": 0}, "156": {"pr": 46.1598, "wins": 2112, "win_rate": 0.7071, "purchases": 2987, "avg_minute": 36.3, "max_minute": 69, "min_minute": 24, "std_minute": 5.5, "purchase_rate": 0}, "160": {"pr": 0.0927, "wins": 6, "win_rate": 1.0, "purchases": 6, "avg_minute": 47.3, "max_minute": 63, "min_minute": 36, "std_minute": 8.1, "purchase_rate": 0}, "162": {"pr": 0.2163, "wins": 7, "win_rate": 0.5, "purchases": 14, "avg_minute": 34.3, "max_minute": 50, "min_minute": 16, "std_minute": 11.5, "purchase_rate": 0}, "166": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 37.0, "max_minute": 37, "min_minute": 37, "std_minute": 0.0, "purchase_rate": 0}, "168": {"pr": 0.2473, "wins": 15, "win_rate": 0.9375, "purchases": 16, "avg_minute": 37.1, "max_minute": 59, "min_minute": 24, "std_minute": 9.3, "purchase_rate": 0}, "170": {"pr": 0.2009, "wins": 8, "win_rate": 0.6154, "purchases": 13, "avg_minute": 20.2, "max_minute": 34, "min_minute": 14, "std_minute": 4.6, "purchase_rate": 0}, "172": {"pr": 100.0, "wins": 4285, "win_rate": 0.6622, "purchases": 6471, "avg_minute": 9.4, "max_minute": 19, "min_minute": 5, "std_minute": 1.2, "purchase_rate": 0}, "174": {"pr": 0.0773, "wins": 4, "win_rate": 0.8, "purchases": 5, "avg_minute": 41.6, "max_minute": 55, "min_minute": 36, "std_minute": 7.0, "purchase_rate": 0}, "178": {"pr": 0.3091, "wins": 11, "win_rate": 0.55, "purchases": 20, "avg_minute": 13.0, "max_minute": 45, "min_minute": 2, "std_minute": 9.8, "purchase_rate": 0}, "180": {"pr": 0.1082, "wins": 5, "win_rate": 0.7143, "purchases": 7, "avg_minute": 35.0, "max_minute": 42, "min_minute": 22, "std_minute": 6.9, "purchase_rate": 0}, "208": {"pr": 1.1127, "wins": 41, "win_rate": 0.5694, "purchases": 72, "avg_minute": 46.6, "max_minute": 68, "min_minute": 30, "std_minute": 8.4, "purchase_rate": 0}, "214": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 17.0, "max_minute": 17, "min_minute": 17, "std_minute": 0.0, "purchase_rate": 0}, "220": {"pr": 0.4791, "wins": 21, "win_rate": 0.6774, "purchases": 31, "avg_minute": 52.2, "max_minute": 70, "min_minute": 37, "std_minute": 10.1, "purchase_rate": 0}, "223": {"pr": 0.0309, "wins": 2, "win_rate": 1.0, "purchases": 2, "avg_minute": 48.0, "max_minute": 55, "min_minute": 41, "std_minute": 7.0, "purchase_rate": 0}, "225": {"pr": 1.4217, "wins": 46, "win_rate": 0.5, "purchases": 92, "avg_minute": 41.3, "max_minute": 70, "min_minute": 27, "std_minute": 7.7, "purchase_rate": 0}, "229": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 38.0, "max_minute": 38, "min_minute": 38, "std_minute": 0.0, "purchase_rate": 0}, "232": {"pr": 0.0464, "wins": 0, "win_rate": 0.0, "purchases": 3, "avg_minute": 33.0, "max_minute": 37, "min_minute": 28, "std_minute": 3.7, "purchase_rate": 0}, "235": {"pr": 0.0309, "wins": 2, "win_rate": 1.0, "purchases": 2, "avg_minute": 50.5, "max_minute": 60, "min_minute": 41, "std_minute": 9.5, "purchase_rate": 0}, "236": {"pr": 0.0309, "wins": 1, "win_rate": 0.5, "purchases": 2, "avg_minute": 30.0, "max_minute": 34, "min_minute": 26, "std_minute": 4.0, "purchase_rate": 0}, "247": {"pr": 1.6072, "wins": 74, "win_rate": 0.7115, "purchases": 104, "avg_minute": 43.0, "max_minute": 68, "min_minute": 27, "std_minute": 8.3, "purchase_rate": 0}, "249": {"pr": 1.8235, "wins": 60, "win_rate": 0.5085, "purchases": 118, "avg_minute": 39.9, "max_minute": 68, "min_minute": 19, "std_minute": 8.6, "purchase_rate": 0}, "250": {"pr": 1.0663, "wins": 42, "win_rate": 0.6087, "purchases": 69, "avg_minute": 41.0, "max_minute": 59, "min_minute": 28, "std_minute": 7.2, "purchase_rate": 0}, "252": {"pr": 100.0, "wins": 4285, "win_rate": 0.6622, "purchases": 6471, "avg_minute": 13.8, "max_minute": 29, "min_minute": 8, "std_minute": 1.5, "purchase_rate": 0}, "254": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 38.0, "max_minute": 38, "min_minute": 38, "std_minute": 0.0, "purchase_rate": 0}, "256": {"pr": 0.0618, "wins": 3, "win_rate": 0.75, "purchases": 4, "avg_minute": 43.2, "max_minute": 61, "min_minute": 36, "std_minute": 10.3, "purchase_rate": 0}, "259": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 37.0, "max_minute": 37, "min_minute": 37, "std_minute": 0.0, "purchase_rate": 0}, "263": {"pr": 0.0155, "wins": 0, "win_rate": 0.0, "purchases": 1, "avg_minute": 30.0, "max_minute": 30, "min_minute": 30, "std_minute": 0.0, "purchase_rate": 0}, "267": {"pr": 0.0464, "wins": 2, "win_rate": 0.6667, "purchases": 3, "avg_minute": 30.0, "max_minute": 37, "min_minute": 19, "std_minute": 7.9, "purchase_rate": 0}, "273": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 21.0, "max_minute": 21, "min_minute": 21, "std_minute": 0.0, "purchase_rate": 0}, "277": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 42.0, "max_minute": 42, "min_minute": 42, "std_minute": 0.0, "purchase_rate": 0}, "534": {"pr": 0.0155, "wins": 0, "win_rate": 0.0, "purchases": 1, "avg_minute": 33.0, "max_minute": 33, "min_minute": 33, "std_minute": 0.0, "purchase_rate": 0}, "600": {"pr": 1.5144, "wins": 73, "win_rate": 0.7449, "purchases": 98, "avg_minute": 35.7, "max_minute": 59, "min_minute": 28, "std_minute": 5.8, "purchase_rate": 0}, "603": {"pr": 59.4653, "wins": 2707, "win_rate": 0.7035, "purchases": 3848, "avg_minute": 35.3, "max_minute": 67, "min_minute": 24, "std_minute": 5.0, "purchase_rate": 0}, "609": {"pr": 27.291, "wins": 1202, "win_rate": 0.6806, "purchases": 1766, "avg_minute": 38.2, "max_minute": 71, "min_minute": 18, "std_minute": 7.9, "purchase_rate": 0}, "610": {"pr": 0.0773, "wins": 4, "win_rate": 0.8, "purchases": 5, "avg_minute": 49.4, "max_minute": 60, "min_minute": 36, "std_minute": 8.6, "purchase_rate": 0}, "911": {"pr": 0.0155, "wins": 1, "win_rate": 1.0, "purchases": 1, "avg_minute": 30.0, "max_minute": 30, "min_minute": 30, "std_minute": 0.0, "purchase_rate": 0}, "939": {"pr": 100.0, "wins": 4285, "win_rate": 0.6622, "purchases": 6471, "avg_minute": 28.9, "max_minute": 64, "min_minute": 14, "std_minute": 4.9, "purchase_rate": 0}, "1097": {"pr": 0.3245, "wins": 13, "win_rate": 0.619, "purchases": 21, "avg_minute": 42.4, "max_minute": 57, "min_minute": 29, "std_minute": 5.7, "purchase_rate": 0}, "1154": {"pr": 0.0309, "wins": 1, "win_rate": 0.5, "purchases": 2, "avg_minute": 61.0, "max_minute": 71, "min_minute": 51, "std_minute": 10.0, "purchase_rate": 0}, "1852": {"pr": 0.0155, "wins": 0, "win_rate": 0.0, "purchases": 1, "avg_minute": 28.0, "max_minute": 28, "min_minute": 28, "std_minute": 0.0, "purchase_rate": 0}}, "enhancement_stats": {"0": {"1577": {"wins": 2104, "count": 3877, "win_rate": 0.542687645086407, "pick_rate": 0.2760806095563626}, "1585": {"wins": 338, "count": 659, "win_rate": 0.5128983308042488, "pick_rate": 0.04692729473759168}, "1586": {"wins": 4388, "count": 8423, "win_rate": 0.5209545292651074, "pick_rate": 0.5998006124047568}, "1865": {"wins": 565, "count": 1084, "win_rate": 0.5212177121771218, "pick_rate": 0.0771914833012889}}, "1": {"1577": {"wins": 1227, "count": 2253, "win_rate": 0.5446071904127829, "pick_rate": 0.16247205596019326}, "1585": {"wins": 116, "count": 246, "win_rate": 0.4715447154471545, "pick_rate": 0.017739958174082353}, "1586": {"wins": 5243, "count": 9994, "win_rate": 0.5246147688613167, "pick_rate": 0.7207038292348742}, "1589": {"wins": 741, "count": 1364, "win_rate": 0.5432551319648093, "pick_rate": 0.09836302011970866}, "1593": {"wins": 4, "count": 10, "win_rate": 0.4, "pick_rate": 0.0007211365111415591}}, "2": {"1577": {"wins": 651, "count": 1169, "win_rate": 0.5568862275449101, "pick_rate": 0.101177081530206}, "1585": {"wins": 77, "count": 162, "win_rate": 0.47530864197530864, "pick_rate": 0.014021118227453696}, "1586": {"wins": 4494, "count": 8681, "win_rate": 0.517682294666513, "pick_rate": 0.7513415267439848}, "1589": {"wins": 846, "count": 1537, "win_rate": 0.5504229017566689, "pick_rate": 0.13302752293577982}, "1593": {"wins": 1, "count": 5, "win_rate": 0.2, "pick_rate": 0.00043275056257573136}}, "3": {"1577": {"wins": 503, "count": 917, "win_rate": 0.5485278080697928, "pick_rate": 0.1652847873107426}, "1585": {"wins": 49, "count": 112, "win_rate": 0.4375, "pick_rate": 0.020187454938716657}, "1586": {"wins": 1793, "count": 3589, "win_rate": 0.4995820562830872, "pick_rate": 0.6468997837058399}, "1589": {"wins": 475, "count": 928, "win_rate": 0.5118534482758621, "pick_rate": 0.167267483777938}, "1592": {"wins": 1, "count": 2, "win_rate": 0.5, "pick_rate": 0.0003604902667627974}}, "4": {"1588": {"wins": 26, "count": 43, "win_rate": 0.6046511627906976, "pick_rate": 0.21608040201005024}, "1594": {"wins": 2, "count": 7, "win_rate": 0.2857142857142857, "pick_rate": 0.035175879396984924}, "1596": {"wins": 77, "count": 149, "win_rate": 0.5167785234899329, "pick_rate": 0.7487437185929648}}}, "anchor_start_items": [[[11, 13, 13, 13, 237], 964], [[11, 16, 16, 34, 44, 237], 798], [[11, 13, 13, 16, 16, 44], 728]], "starting_items_new": [[[11, 13, 13, 13, 237], {"count": 1972, "win_rate": 0.5197768762677485, "lane_advantage": -0.81, "lane_advantage_matches": 1972}], [[11, 16, 16, 34, 44, 237], {"count": 1745, "win_rate": 0.5037249283667622, "lane_advantage": -2.18, "lane_advantage_matches": 1745}], [[11, 13, 13, 16, 16, 44], {"count": 1538, "win_rate": 0.5162548764629389, "lane_advantage": -0.27, "lane_advantage_matches": 1538}]], "anchor_build_matches": [{"imp": 0, "mmr": 6691, "kills": 18, "deaths": 7, "minute": 2, "player": {"name": "Насильник", "is_pro": null, "twitch": null, "est_mmr": 0, "account_id": 1187167847}, "assists": 13, "hero_id": 18, "duration": 3625, "match_id": 9036059970, "position": "pos 1", "inventory": [116, 141, 603, 156, 135, 250]}, {"imp": 0, "mmr": 8019, "kills": 15, "deaths": 2, "minute": 4, "player": {"name": "Tope", "is_pro": 0, "twitch": "", "est_mmr": 0, "account_id": 139576209}, "assists": 4, "hero_id": 18, "duration": 1991, "match_id": 9036066770, "position": "pos 1", "inventory": [63, 939, 116, 141, 156, 603]}, {"imp": 0, "mmr": 6833, "kills": 17, "deaths": 6, "minute": 4, "player": {"name": "Invictus", "is_pro": 0, "twitch": "", "est_mmr": 0, "account_id": 885567541}, "assists": 14, "hero_id": 18, "duration": 2548, "match_id": 9036067948, "position": "pos 1", "inventory": [116, 939, 141, 603, 156, 135]}, {"imp": 0, "mmr": 7297, "kills": 14, "deaths": 4, "minute": 4, "player": {"name": "Es ist mir egal", "is_pro": 0, "twitch": "", "est_mmr": 7179, "account_id": 223932883}, "assists": 7, "hero_id": 18, "duration": 2276, "match_id": 9036069308, "position": "pos 1", "inventory": [63, 116, 939, 141, 156, 603]}, {"imp": 0, "mmr": 7772, "kills": 13, "deaths": 9, "minute": 5, "player": {"name": "tv/Haero_x", "is_pro": 0, "twitch": "haero_x", "est_mmr": 7111, "account_id": 169375107}, "assists": 7, "hero_id": 18, "duration": 2555, "match_id": 9036075653, "position": "pos 1", "inventory": [63, 172, 116, 141, 939, 603]}, {"imp": 0, "mmr": 6517, "kills": 16, "deaths": 7, "minute": 5, "player": {"name": "888", "is_pro": 0, "twitch": "", "est_mmr": 7011, "account_id": 1035987388}, "assists": 12, "hero_id": 18, "duration": 2633, "match_id": 9036077799, "position": "pos 1", "inventory": [116, 141, 603, 156, 939, 225]}, {"imp": 0, "mmr": 6738, "kills": 17, "deaths": 4, "minute": 3, "player": {"name": "EvilMeRFi", "is_pro": 0, "twitch": "", "est_mmr": 6772, "account_id": 192049992}, "assists": 17, "hero_id": 18, "duration": 3632, "match_id": 9036106794, "position": "pos 1", "inventory": [116, 141, 939, 603, 225, 156]}, {"imp": 0, "mmr": 6693, "kills": 11, "deaths": 2, "minute": 5, "player": {"name": "3:16", "is_pro": 0, "twitch": "spl1tgg", "est_mmr": 6488, "account_id": 175781181}, "assists": 7, "hero_id": 18, "duration": 2229, "match_id": 9036116609, "position": "pos 1", "inventory": [63, 116, 141, 939, 156, 603]}, {"imp": 0, "mmr": 6773, "kills": 16, "deaths": 8, "minute": 5, "player": {"name": "Invictus", "is_pro": 0, "twitch": "", "est_mmr": 0, "account_id": 885567541}, "assists": 11, "hero_id": 18, "duration": 2676, "match_id": 9036114928, "position": "pos 1", "inventory": [141, 939, 116, 603, 156, 135]}, {"imp": 0, "mmr": 6660, "kills": 12, "deaths": 2, "minute": 2, "player": {"name": "?", "is_pro": 0, "twitch": "", "est_mmr": 6784, "account_id": 250744808}, "assists": 16, "hero_id": 18, "duration": 2259, "match_id": 9036121665, "position": "pos 1", "inventory": [63, 116, 141, 939, 603, 156]}], "anchor_start_items_new": [[[11, 13, 13, 13, 237], {"count": 964, "win_rate": 0.6369294605809128, "lane_advantage": 0.31, "lane_advantage_matches": 964}], [[11, 16, 16, 34, 44, 237], {"count": 798, "win_rate": 0.6666666666666666, "lane_advantage": -1.14, "lane_advantage_matches": 798}], [[11, 13, 13, 16, 16, 44], {"count": 728, "win_rate": 0.6510989010989011, "lane_advantage": 0.7, "lane_advantage_matches": 728}]], "starting_inventory_options": [[[{"slot": "item1", "charges": 0, "item_id": 11, "secondary_charges": 0}, {"slot": "item3", "charges": 0, "item_id": 13, "secondary_charges": 0}, {"slot": "item4", "charges": 0, "item_id": 13, "secondary_charges": 0}, {"slot": "item5", "charges": 0, "item_id": 13, "secondary_charges": 0}, {"slot": "item2", "charges": 1, "item_id": 237, "secondary_charges": 0}], {"count": 1890, "win_rate": 0.5190476190476191, "lane_advantage": -0.62, "lane_advantage_matches": 1890}], [[{"slot": "item0", "charges": 0, "item_id": 11, "secondary_charges": 0}, {"slot": "item2", "charges": 0, "item_id": 16, "secondary_charges": 0}, {"slot": "item3", "charges": 0, "item_id": 16, "secondary_charges": 0}, {"slot": "item5", "charges": 0, "item_id": 34, "secondary_charges": 0}, {"slot": "item1", "charges": 3, "item_id": 44, "secondary_charges": 0}, {"slot": "item4", "charges": 1, "item_id": 237, "secondary_charges": 0}], {"count": 1758, "win_rate": 0.5073947667804323, "lane_advantage": -2.13, "lane_advantage_matches": 1758}], [[{"slot": "item2", "charges": 0, "item_id": 13, "secondary_charges": 0}, {"slot": "item3", "charges": 0, "item_id": 13, "secondary_charges": 0}, {"slot": "item4", "charges": 0, "item_id": 13, "secondary_charges": 0}, {"slot": "item5", "charges": 0, "item_id": 13, "secondary_charges": 0}], {"count": 1417, "win_rate": 0.5377558221594919, "lane_advantage": 0.22, "lane_advantage_matches": 1417}]], "anchor_lategame_inventories": {"30+": [1, 63, 116, 141, 172, 939], "45+": [63, 116, 141, 156, 603, 939], "55+": [116, 135, 141, 156, 603, 939]}, "starting_inventory_coverage": {"matches": 14052, "build_matches": 14054}}, "updated_at": "2026-10-23T08:08:52", "source": "pubs", "data_scope": {"last_match_ts": 1792738875, "first_match_ts": 1791532564, "patch_versions": ["7.41f"], "analysis_end_ts": 1792742057, "analysis_start_ts": 1791532457, "configured_window_days": 14}}]
+[
+  {
+    "hero_id": 18,
+    "position": "pos 1",
+    "facet_id": 0,
+    "build_id": 0,
+    "num_matches": 14070,
+    "num_wins": 7429,
+    "pick_rate": 100.0,
+    "build_data": {
+      "sixslot": [
+        {
+          "item_id": 63,
+          "pick_rate": 0.31411677753141165,
+          "num_matches": 850
+        },
+        {
+          "item_id": 145,
+          "pick_rate": 0.0011086474501108647,
+          "num_matches": 3
+        },
+        {
+          "item_id": 154,
+          "pick_rate": 0.0262379896526238,
+          "num_matches": 71
+        },
+        {
+          "item_id": 151,
+          "pick_rate": 0.0011086474501108647,
+          "num_matches": 3
+        },
+        {
+          "item_id": 114,
+          "pick_rate": 0.005912786400591279,
+          "num_matches": 16
+        },
+        {
+          "item_id": 116,
+          "pick_rate": 0.9482631189948264,
+          "num_matches": 2566
+        },
+        {
+          "item_id": 939,
+          "pick_rate": 0.7893569844789357,
+          "num_matches": 2136
+        },
+        {
+          "item_id": 156,
+          "pick_rate": 0.6917960088691796,
+          "num_matches": 1872
+        },
+        {
+          "item_id": 603,
+          "pick_rate": 0.8178122690317813,
+          "num_matches": 2213
+        },
+        {
+          "item_id": 135,
+          "pick_rate": 0.5306725794530672,
+          "num_matches": 1436
+        },
+        {
+          "item_id": 252,
+          "pick_rate": 0.058758314855875834,
+          "num_matches": 159
+        },
+        {
+          "item_id": 41,
+          "pick_rate": 0.0003695491500369549,
+          "num_matches": 1
+        },
+        {
+          "item_id": 1,
+          "pick_rate": 0.14818920916481892,
+          "num_matches": 401
+        },
+        {
+          "item_id": 112,
+          "pick_rate": 0.07206208425720621,
+          "num_matches": 195
+        },
+        {
+          "item_id": 139,
+          "pick_rate": 0.05949741315594974,
+          "num_matches": 161
+        },
+        {
+          "item_id": 149,
+          "pick_rate": 0.005543237250554324,
+          "num_matches": 15
+        },
+        {
+          "item_id": 600,
+          "pick_rate": 0.019216555801921657,
+          "num_matches": 52
+        },
+        {
+          "item_id": 1097,
+          "pick_rate": 0.009977827050997782,
+          "num_matches": 27
+        },
+        {
+          "item_id": 133,
+          "pick_rate": 0.03325942350332594,
+          "num_matches": 90
+        },
+        {
+          "item_id": 110,
+          "pick_rate": 0.005173688100517369,
+          "num_matches": 14
+        },
+        {
+          "item_id": 225,
+          "pick_rate": 0.02993348115299335,
+          "num_matches": 81
+        },
+        {
+          "item_id": 247,
+          "pick_rate": 0.015521064301552107,
+          "num_matches": 42
+        },
+        {
+          "item_id": 152,
+          "pick_rate": 0.0066518847006651885,
+          "num_matches": 18
+        },
+        {
+          "item_id": 160,
+          "pick_rate": 0.003695491500369549,
+          "num_matches": 10
+        },
+        {
+          "item_id": 123,
+          "pick_rate": 0.024390243902439025,
+          "num_matches": 66
+        },
+        {
+          "item_id": 26,
+          "pick_rate": 0.004434589800443459,
+          "num_matches": 12
+        },
+        {
+          "item_id": 100,
+          "pick_rate": 0.0003695491500369549,
+          "num_matches": 1
+        },
+        {
+          "item_id": 168,
+          "pick_rate": 0.0011086474501108647,
+          "num_matches": 3
+        },
+        {
+          "item_id": 98,
+          "pick_rate": 0.0033259423503325942,
+          "num_matches": 9
+        },
+        {
+          "item_id": 108,
+          "pick_rate": 0.01441241685144124,
+          "num_matches": 39
+        },
+        {
+          "item_id": 96,
+          "pick_rate": 0.0011086474501108647,
+          "num_matches": 3
+        },
+        {
+          "item_id": 610,
+          "pick_rate": 0.0018477457501847744,
+          "num_matches": 5
+        },
+        {
+          "item_id": 65,
+          "pick_rate": 0.0003695491500369549,
+          "num_matches": 1
+        },
+        {
+          "item_id": 143,
+          "pick_rate": 0.0018477457501847744,
+          "num_matches": 5
+        },
+        {
+          "item_id": 604,
+          "pick_rate": 0.0003695491500369549,
+          "num_matches": 1
+        },
+        {
+          "item_id": 147,
+          "pick_rate": 0.0025868440502586844,
+          "num_matches": 7
+        },
+        {
+          "item_id": 256,
+          "pick_rate": 0.0007390983000739098,
+          "num_matches": 2
+        },
+        {
+          "item_id": 119,
+          "pick_rate": 0.0003695491500369549,
+          "num_matches": 1
+        },
+        {
+          "item_id": 37,
+          "pick_rate": 0.0003695491500369549,
+          "num_matches": 1
+        },
+        {
+          "item_id": 235,
+          "pick_rate": 0.0003695491500369549,
+          "num_matches": 1
+        }
+      ],
+      "talents": [
+        {
+          "pr": 0.8091363311920057,
+          "lvl": 10,
+          "left": {
+            "pr": 0.1908636688079943,
+            "name": "special_bonus_unique_sven_gods_strength_slow_resist",
+            "slot": 1,
+            "wins": 1364,
+            "count": 2674,
+            "isInnate": false,
+            "isTalent": true,
+            "win_rate": 0.5101,
+            "pick_rate": 0.1908636688079943,
+            "ability_id": 1188,
+            "description": [],
+            "displayName": "+20% God's Strength Slow Resistance"
+          },
+          "slot": 0,
+          "wins": 6060,
+          "count": 11336,
+          "right": {
+            "pr": 0.8091363311920057,
+            "name": "special_bonus_unique_sven_5",
+            "slot": 0,
+            "wins": 6060,
+            "count": 11336,
+            "isInnate": false,
+            "isTalent": true,
+            "win_rate": 0.5346,
+            "pick_rate": 0.8091363311920057,
+            "ability_id": 673,
+            "description": [],
+            "displayName": "+5s Warcry Duration"
+          },
+          "choice": "rt",
+          "left_pr": 0.1908636688079943,
+          "right_pr": 0.8091363311920057,
+          "win_rate": 0.5346,
+          "left_win_rate": 0.5101,
+          "right_win_rate": 0.5346
+        },
+        {
+          "pr": 0.7468354430379747,
+          "lvl": 15,
+          "left": {
+            "pr": 0.25316455696202533,
+            "name": "special_bonus_unique_sven_8",
+            "slot": 3,
+            "wins": 1895,
+            "count": 3440,
+            "isInnate": false,
+            "isTalent": true,
+            "win_rate": 0.5509,
+            "pick_rate": 0.25316455696202533,
+            "ability_id": 763,
+            "description": [],
+            "displayName": "+25% Great Cleave Damage"
+          },
+          "slot": 2,
+          "wins": 5461,
+          "count": 10148,
+          "right": {
+            "pr": 0.7468354430379747,
+            "name": "special_bonus_unique_sven_3",
+            "slot": 2,
+            "wins": 5461,
+            "count": 10148,
+            "isInnate": false,
+            "isTalent": true,
+            "win_rate": 0.5381,
+            "pick_rate": 0.7468354430379747,
+            "ability_id": 6911,
+            "description": [],
+            "displayName": "-12s God's Strength Cooldown"
+          },
+          "choice": "rt",
+          "left_pr": 0.25316455696202533,
+          "right_pr": 0.7468354430379747,
+          "win_rate": 0.5381,
+          "left_win_rate": 0.5509,
+          "right_win_rate": 0.5381
+        },
+        {
+          "pr": 0.8,
+          "lvl": 20,
+          "left": {
+            "pr": 0.8,
+            "name": "special_bonus_unique_sven_7",
+            "slot": 5,
+            "wins": 5416,
+            "count": 9512,
+            "isInnate": false,
+            "isTalent": true,
+            "win_rate": 0.5694,
+            "pick_rate": 0.8,
+            "ability_id": 716,
+            "description": [],
+            "displayName": "+8 Warcry Armor"
+          },
+          "slot": 5,
+          "wins": 5416,
+          "count": 9512,
+          "right": {
+            "pr": 0.2,
+            "name": "special_bonus_unique_sven_stormhammer_cooldown",
+            "slot": 4,
+            "wins": 1417,
+            "count": 2378,
+            "isInnate": false,
+            "isTalent": true,
+            "win_rate": 0.5959,
+            "pick_rate": 0.2,
+            "ability_id": 1790,
+            "description": [],
+            "displayName": "-25% Storm Hammer Cooldown and Mana Cost"
+          },
+          "choice": "lt",
+          "left_pr": 0.8,
+          "right_pr": 0.2,
+          "win_rate": 0.5694,
+          "left_win_rate": 0.5694,
+          "right_win_rate": 0.5959
+        },
+        {
+          "pr": 0.8256375838926174,
+          "lvl": 25,
+          "left": {
+            "pr": 0.17436241610738254,
+            "name": "special_bonus_unique_sven_4",
+            "slot": 7,
+            "wins": 809,
+            "count": 1299,
+            "isInnate": false,
+            "isTalent": true,
+            "win_rate": 0.6228,
+            "pick_rate": 0.17436241610738254,
+            "ability_id": 7112,
+            "description": [],
+            "displayName": "+1s Storm Hammer Stun Duration"
+          },
+          "slot": 6,
+          "wins": 3762,
+          "count": 6151,
+          "right": {
+            "pr": 0.8256375838926174,
+            "name": "special_bonus_unique_sven_2",
+            "slot": 6,
+            "wins": 3762,
+            "count": 6151,
+            "isInnate": false,
+            "isTalent": true,
+            "win_rate": 0.6116,
+            "pick_rate": 0.8256375838926174,
+            "ability_id": 6910,
+            "description": [],
+            "displayName": "+50% God's Strength Damage"
+          },
+          "choice": "rt",
+          "left_pr": 0.17436241610738254,
+          "right_pr": 0.8256375838926174,
+          "win_rate": 0.6116,
+          "left_win_rate": 0.6228,
+          "right_win_rate": 0.6116
+        }
+      ],
+      "num_wins": 7429,
+      "win_rate": 0.5280028429282161,
+      "abilities": [
+        {
+          "ability_id": 5094,
+          "name": "sven_storm_bolt",
+          "displayName": "Storm Hammer",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5096,
+          "name": "sven_warcry",
+          "displayName": "Warcry",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5095,
+          "name": "sven_great_cleave",
+          "displayName": "Great Cleave",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5095,
+          "name": "sven_great_cleave",
+          "displayName": "Great Cleave",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5095,
+          "name": "sven_great_cleave",
+          "displayName": "Great Cleave",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5097,
+          "name": "sven_gods_strength",
+          "displayName": "God's Strength",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5095,
+          "name": "sven_great_cleave",
+          "displayName": "Great Cleave",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5094,
+          "name": "sven_storm_bolt",
+          "displayName": "Storm Hammer",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5094,
+          "name": "sven_storm_bolt",
+          "displayName": "Storm Hammer",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        },
+        {
+          "ability_id": 5094,
+          "name": "sven_storm_bolt",
+          "displayName": "Storm Hammer",
+          "description": [],
+          "isTalent": false,
+          "isInnate": false,
+          "slot": null
+        }
+      ],
+      "pick_rate": 1.0,
+      "data_scope": {
+        "last_match_ts": 1792912303,
+        "first_match_ts": 1791705303,
+        "patch_versions": [
+          "7.41f"
+        ],
+        "analysis_end_ts": 1792914857,
+        "analysis_start_ts": 1791705257,
+        "configured_window_days": 14
+      },
+      "num_matches": 14070,
+      "anchor_build": [
+        [
+          73,
+          36,
+          63,
+          26,
+          172,
+          252,
+          1,
+          116,
+          149,
+          141,
+          939,
+          156,
+          603,
+          135,
+          609,
+          133
+        ],
+        485588
+      ],
+      "anchor_items": [
+        {
+          "pr": 0.9898365316275765,
+          "key": "63::1",
+          "wins": 0,
+          "count": 13927,
+          "rel_pr": 0.9898365316275765,
+          "win_rate": 0.5281108637897609,
+          "rel_count": 13927,
+          "avg_minute": 5.450204638472033,
+          "std_minute": 1.315335775041626,
+          "raw_item_id": 63,
+          "rel_num_matches": 14070
+        },
+        {
+          "pr": 0.9159203980099504,
+          "key": "26::1",
+          "wins": 0,
+          "count": 12887,
+          "rel_pr": 0.9159203980099504,
+          "win_rate": 0.5275859393186932,
+          "rel_count": 12887,
+          "avg_minute": 7.915729029254288,
+          "std_minute": 3.6555596634012746,
+          "raw_item_id": 26,
+          "rel_num_matches": 14070
+        },
+        {
+          "pr": 0.9911158493248046,
+          "key": "172::1",
+          "wins": 0,
+          "count": 13945,
+          "rel_pr": 0.9911158493248046,
+          "win_rate": 0.5291502330584439,
+          "rel_count": 13945,
+          "avg_minute": 9.595123700250983,
+          "std_minute": 1.3540126258145944,
+          "raw_item_id": 172,
+          "rel_num_matches": 14070
+        },
+        {
+          "pr": 0.9784648187633262,
+          "key": "252::1",
+          "wins": 0,
+          "count": 13767,
+          "rel_pr": 0.979286781977365,
+          "win_rate": 0.5336674656787971,
+          "rel_count": 13758,
+          "avg_minute": 14.052734800610155,
+          "std_minute": 1.7389716115877554,
+          "raw_item_id": 252,
+          "rel_num_matches": 14049
+        },
+        {
+          "pr": 0.9474769012082443,
+          "key": "1::1",
+          "wins": 0,
+          "count": 13331,
+          "rel_pr": 0.9568729265830088,
+          "win_rate": 0.5433200810141775,
+          "rel_count": 13268,
+          "avg_minute": 17.23224064211237,
+          "std_minute": 2.390235038028789,
+          "raw_item_id": 1,
+          "rel_num_matches": 13866
+        },
+        {
+          "pr": 0.8489694385216773,
+          "key": "116::1",
+          "wins": 0,
+          "count": 11945,
+          "rel_pr": 0.9077578051087984,
+          "win_rate": 0.5551276684805357,
+          "rel_count": 11514,
+          "avg_minute": 22.871410632063625,
+          "std_minute": 3.2710468871657605,
+          "raw_item_id": 116,
+          "rel_num_matches": 12684
+        },
+        {
+          "pr": 0.8062544420753376,
+          "key": "149::1",
+          "wins": 0,
+          "count": 11344,
+          "rel_pr": 0.8672689938398357,
+          "win_rate": 0.5763399153737658,
+          "rel_count": 10559,
+          "avg_minute": 23.481752468265164,
+          "std_minute": 3.982178019722257,
+          "raw_item_id": 149,
+          "rel_num_matches": 12175
+        },
+        {
+          "pr": 0.7228855721393035,
+          "key": "141::1",
+          "wins": 0,
+          "count": 10171,
+          "rel_pr": 0.8500195541650372,
+          "win_rate": 0.6203913086225543,
+          "rel_count": 8694,
+          "avg_minute": 27.32985940418838,
+          "std_minute": 4.1009808124308105,
+          "raw_item_id": 141,
+          "rel_num_matches": 10228
+        },
+        {
+          "pr": 0.6230277185501066,
+          "key": "939::1",
+          "wins": 0,
+          "count": 8766,
+          "rel_pr": 0.7633449949215664,
+          "win_rate": 0.6587953456536618,
+          "rel_count": 6764,
+          "avg_minute": 28.22381930184805,
+          "std_minute": 5.109890586705014,
+          "raw_item_id": 939,
+          "rel_num_matches": 8861
+        }
+      ],
+      "abilities_new": [
+        [
+          [
+            5094,
+            5096,
+            5095,
+            5095,
+            5095,
+            5097,
+            5095,
+            5094,
+            5094,
+            5094
+          ],
+          {
+            "pr": 0.2424,
+            "wins": 1762,
+            "count": 3410,
+            "win_rate": 0.5167
+          }
+        ],
+        [
+          [
+            5094,
+            5096,
+            5095,
+            5095,
+            5095,
+            5097,
+            5095,
+            5096,
+            5096,
+            5096
+          ],
+          {
+            "pr": 0.1125,
+            "wins": 805,
+            "count": 1582,
+            "win_rate": 0.5088
+          }
+        ],
+        [
+          [
+            5094,
+            5096,
+            5094,
+            5095,
+            5095,
+            5097,
+            5095,
+            5095,
+            5094,
+            5094
+          ],
+          {
+            "pr": 0.0926,
+            "wins": 701,
+            "count": 1302,
+            "win_rate": 0.5384
+          }
+        ],
+        [
+          [
+            5094,
+            5095,
+            5095,
+            5096,
+            5095,
+            5097,
+            5095,
+            5094,
+            5094,
+            5094
+          ],
+          {
+            "pr": 0.0431,
+            "wins": 321,
+            "count": 604,
+            "win_rate": 0.5315
+          }
+        ],
+        [
+          [
+            5094,
+            5096,
+            5094,
+            5095,
+            5095,
+            5097,
+            5095,
+            5095,
+            5096,
+            5096
+          ],
+          {
+            "pr": 0.0402,
+            "wins": 310,
+            "count": 565,
+            "win_rate": 0.5487
+          }
+        ]
+      ],
+      "anchor_items2": [
+        {
+          "pr": 0.9898365316275765,
+          "key": "63::1",
+          "wins": 0,
+          "count": 13927,
+          "rel_pr": 0.9898365316275765,
+          "win_rate": 0.5281108637897609,
+          "rel_count": 13927,
+          "avg_minute": 5.450204638472033,
+          "std_minute": 1.315335775041626,
+          "raw_item_id": 63,
+          "rel_num_matches": 14070
+        },
+        {
+          "pr": 0.9911158493248046,
+          "key": "172::1",
+          "wins": 0,
+          "count": 13945,
+          "rel_pr": 0.9911158493248046,
+          "win_rate": 0.5291502330584439,
+          "rel_count": 13945,
+          "avg_minute": 9.595123700250983,
+          "std_minute": 1.3540126258145944,
+          "raw_item_id": 172,
+          "rel_num_matches": 14070
+        },
+        {
+          "pr": 0.9784648187633262,
+          "key": "252::1",
+          "wins": 0,
+          "count": 13767,
+          "rel_pr": 0.979286781977365,
+          "win_rate": 0.5336674656787971,
+          "rel_count": 13758,
+          "avg_minute": 14.052734800610155,
+          "std_minute": 1.7389716115877554,
+          "raw_item_id": 252,
+          "rel_num_matches": 14049
+        },
+        {
+          "pr": 0.9474769012082443,
+          "key": "1::1",
+          "wins": 0,
+          "count": 13331,
+          "rel_pr": 0.9568729265830088,
+          "win_rate": 0.5433200810141775,
+          "rel_count": 13268,
+          "avg_minute": 17.23224064211237,
+          "std_minute": 2.390235038028789,
+          "raw_item_id": 1,
+          "rel_num_matches": 13866
+        },
+        {
+          "pr": 0.8489694385216773,
+          "key": "116::1",
+          "wins": 0,
+          "count": 11945,
+          "rel_pr": 0.9077578051087984,
+          "win_rate": 0.5551276684805357,
+          "rel_count": 11514,
+          "avg_minute": 22.871410632063625,
+          "std_minute": 3.2710468871657605,
+          "raw_item_id": 116,
+          "rel_num_matches": 12684
+        },
+        {
+          "pr": 0.8062544420753376,
+          "key": "149::1",
+          "wins": 0,
+          "count": 11344,
+          "rel_pr": 0.8672689938398357,
+          "win_rate": 0.5763399153737658,
+          "rel_count": 10559,
+          "avg_minute": 23.481752468265164,
+          "std_minute": 3.982178019722257,
+          "raw_item_id": 149,
+          "rel_num_matches": 12175
+        },
+        {
+          "pr": 0.7228855721393035,
+          "key": "141::1",
+          "wins": 0,
+          "count": 10171,
+          "rel_pr": 0.8500195541650372,
+          "win_rate": 0.6203913086225543,
+          "rel_count": 8694,
+          "avg_minute": 27.32985940418838,
+          "std_minute": 4.1009808124308105,
+          "raw_item_id": 141,
+          "rel_num_matches": 10228
+        },
+        {
+          "pr": 0.6230277185501066,
+          "key": "939::1",
+          "wins": 0,
+          "count": 8766,
+          "rel_pr": 0.7633449949215664,
+          "win_rate": 0.6587953456536618,
+          "rel_count": 6764,
+          "avg_minute": 28.22381930184805,
+          "std_minute": 5.109890586705014,
+          "raw_item_id": 939,
+          "rel_num_matches": 8861
+        }
+      ],
+      "neutral_stats": {
+        "0": {
+          "187": {
+            "wins": 1,
+            "count": 1,
+            "win_rate": 1.0,
+            "pick_rate": 7.113387395077535e-05
+          },
+          "565": {
+            "wins": 1182,
+            "count": 2252,
+            "win_rate": 0.5248667850799289,
+            "pick_rate": 0.1601934841371461
+          },
+          "577": {
+            "wins": 1403,
+            "count": 2710,
+            "win_rate": 0.5177121771217712,
+            "pick_rate": 0.1927727984066012
+          },
+          "947": {
+            "wins": 294,
+            "count": 552,
+            "win_rate": 0.532608695652174,
+            "pick_rate": 0.039265898420828
+          },
+          "1077": {
+            "wins": 406,
+            "count": 758,
+            "win_rate": 0.5356200527704486,
+            "pick_rate": 0.05391947645468772
+          },
+          "1606": {
+            "wins": 432,
+            "count": 858,
+            "win_rate": 0.5034965034965035,
+            "pick_rate": 0.06103286384976526
+          },
+          "1637": {
+            "wins": 85,
+            "count": 168,
+            "win_rate": 0.5059523809523809,
+            "pick_rate": 0.01195049082373026
+          },
+          "1638": {
+            "wins": 518,
+            "count": 979,
+            "win_rate": 0.5291113381001021,
+            "pick_rate": 0.06964006259780908
+          },
+          "1716": {
+            "wins": 1269,
+            "count": 2322,
+            "win_rate": 0.5465116279069767,
+            "pick_rate": 0.16517285531370038
+          },
+          "1717": {
+            "wins": 199,
+            "count": 404,
+            "win_rate": 0.49257425742574257,
+            "pick_rate": 0.028738085076113244
+          },
+          "1861": {
+            "wins": 378,
+            "count": 739,
+            "win_rate": 0.5115020297699594,
+            "pick_rate": 0.05256793284962299
+          },
+          "1868": {
+            "wins": 117,
+            "count": 213,
+            "win_rate": 0.5492957746478874,
+            "pick_rate": 0.015151515151515152
+          },
+          "2097": {
+            "wins": 1140,
+            "count": 2102,
+            "win_rate": 0.5423406279733587,
+            "pick_rate": 0.1495234030445298
+          }
+        },
+        "1": {
+          "71": {
+            "wins": 654,
+            "count": 1258,
+            "win_rate": 0.519872813990461,
+            "pick_rate": 0.09068627450980392
+          },
+          "187": {
+            "wins": 597,
+            "count": 1151,
+            "win_rate": 0.5186794092093832,
+            "pick_rate": 0.08297289504036909
+          },
+          "359": {
+            "wins": 153,
+            "count": 299,
+            "win_rate": 0.5117056856187291,
+            "pick_rate": 0.02155420991926182
+          },
+          "565": {
+            "wins": 163,
+            "count": 339,
+            "win_rate": 0.4808259587020649,
+            "pick_rate": 0.024437716262975775
+          },
+          "577": {
+            "wins": 250,
+            "count": 509,
+            "win_rate": 0.4911591355599214,
+            "pick_rate": 0.03669261822376009
+          },
+          "840": {
+            "wins": 833,
+            "count": 1593,
+            "win_rate": 0.5229127432517263,
+            "pick_rate": 0.1148356401384083
+          },
+          "945": {
+            "wins": 12,
+            "count": 28,
+            "win_rate": 0.42857142857142855,
+            "pick_rate": 0.002018454440599769
+          },
+          "947": {
+            "wins": 13,
+            "count": 29,
+            "win_rate": 0.4482758620689655,
+            "pick_rate": 0.002090542099192618
+          },
+          "950": {
+            "wins": 2404,
+            "count": 4432,
+            "win_rate": 0.5424187725631769,
+            "pick_rate": 0.31949250288350634
+          },
+          "1077": {
+            "wins": 61,
+            "count": 133,
+            "win_rate": 0.45864661654135336,
+            "pick_rate": 0.009587658592848904
+          },
+          "1599": {
+            "wins": 625,
+            "count": 1062,
+            "win_rate": 0.588512241054614,
+            "pick_rate": 0.07655709342560553
+          },
+          "1601": {
+            "wins": 518,
+            "count": 1013,
+            "win_rate": 0.5113524185587365,
+            "pick_rate": 0.07302479815455594
+          },
+          "1603": {
+            "wins": 1,
+            "count": 1,
+            "win_rate": 1.0,
+            "pick_rate": 7.20876585928489e-05
+          },
+          "1604": {
+            "wins": 13,
+            "count": 29,
+            "win_rate": 0.4482758620689655,
+            "pick_rate": 0.002090542099192618
+          },
+          "1605": {
+            "wins": 0,
+            "count": 1,
+            "win_rate": 0.0,
+            "pick_rate": 7.20876585928489e-05
+          },
+          "1606": {
+            "wins": 3,
+            "count": 7,
+            "win_rate": 0.42857142857142855,
+            "pick_rate": 0.0005046136101499423
+          },
+          "1637": {
+            "wins": 8,
+            "count": 15,
+            "win_rate": 0.5333333333333333,
+            "pick_rate": 0.0010813148788927337
+          },
+          "1638": {
+            "wins": 214,
+            "count": 410,
+            "win_rate": 0.5219512195121951,
+            "pick_rate": 0.02955594002306805
+          },
+          "1716": {
+            "wins": 349,
+            "count": 634,
+            "win_rate": 0.5504731861198738,
+            "pick_rate": 0.04570357554786621
+          },
+          "1717": {
+            "wins": 3,
+            "count": 9,
+            "win_rate": 0.3333333333333333,
+            "pick_rate": 0.0006487889273356401
+          },
+          "1861": {
+            "wins": 75,
+            "count": 126,
+            "win_rate": 0.5952380952380952,
+            "pick_rate": 0.009083044982698962
+          },
+          "1868": {
+            "wins": 14,
+            "count": 25,
+            "win_rate": 0.56,
+            "pick_rate": 0.0018021914648212224
+          },
+          "2097": {
+            "wins": 391,
+            "count": 769,
+            "win_rate": 0.5084525357607282,
+            "pick_rate": 0.055435409457900806
+          }
+        },
+        "2": {
+          "71": {
+            "wins": 30,
+            "count": 51,
+            "win_rate": 0.5882352941176471,
+            "pick_rate": 0.00440224428139836
+          },
+          "187": {
+            "wins": 35,
+            "count": 81,
+            "win_rate": 0.43209876543209874,
+            "pick_rate": 0.006991799741044454
+          },
+          "359": {
+            "wins": 7,
+            "count": 12,
+            "win_rate": 0.5833333333333334,
+            "pick_rate": 0.0010358221838584376
+          },
+          "565": {
+            "wins": 9,
+            "count": 23,
+            "win_rate": 0.391304347826087,
+            "pick_rate": 0.001985325852395339
+          },
+          "574": {
+            "wins": 452,
+            "count": 890,
+            "win_rate": 0.5078651685393258,
+            "pick_rate": 0.07682347863616745
+          },
+          "577": {
+            "wins": 36,
+            "count": 78,
+            "win_rate": 0.4615384615384616,
+            "pick_rate": 0.006732844195079845
+          },
+          "585": {
+            "wins": 98,
+            "count": 177,
+            "win_rate": 0.5536723163841808,
+            "pick_rate": 0.015278377211911956
+          },
+          "675": {
+            "wins": 15,
+            "count": 33,
+            "win_rate": 0.4545454545454546,
+            "pick_rate": 0.0028485110056107035
+          },
+          "840": {
+            "wins": 47,
+            "count": 103,
+            "win_rate": 0.4563106796116505,
+            "pick_rate": 0.008890807078118257
+          },
+          "947": {
+            "wins": 2,
+            "count": 4,
+            "win_rate": 0.5,
+            "pick_rate": 0.0003452740612861459
+          },
+          "950": {
+            "wins": 722,
+            "count": 1294,
+            "win_rate": 0.5579598145285936,
+            "pick_rate": 0.1116961588260682
+          },
+          "1077": {
+            "wins": 11,
+            "count": 22,
+            "win_rate": 0.5,
+            "pick_rate": 0.0018990073370738023
+          },
+          "1598": {
+            "wins": 355,
+            "count": 628,
+            "win_rate": 0.5652866242038217,
+            "pick_rate": 0.054208027621924906
+          },
+          "1599": {
+            "wins": 31,
+            "count": 42,
+            "win_rate": 0.7380952380952381,
+            "pick_rate": 0.003625377643504532
+          },
+          "1601": {
+            "wins": 43,
+            "count": 78,
+            "win_rate": 0.5512820512820513,
+            "pick_rate": 0.006732844195079845
+          },
+          "1603": {
+            "wins": 1817,
+            "count": 3468,
+            "win_rate": 0.5239331026528259,
+            "pick_rate": 0.2993526111350885
+          },
+          "1605": {
+            "wins": 2020,
+            "count": 3858,
+            "win_rate": 0.5235873509590462,
+            "pick_rate": 0.3330168321104877
+          },
+          "1638": {
+            "wins": 70,
+            "count": 137,
+            "win_rate": 0.5109489051094891,
+            "pick_rate": 0.011825636599050495
+          },
+          "1640": {
+            "wins": 34,
+            "count": 77,
+            "win_rate": 0.44155844155844154,
+            "pick_rate": 0.006646525679758308
+          },
+          "1716": {
+            "wins": 52,
+            "count": 83,
+            "win_rate": 0.6265060240963856,
+            "pick_rate": 0.007164436771687527
+          },
+          "1859": {
+            "wins": 8,
+            "count": 21,
+            "win_rate": 0.380952380952381,
+            "pick_rate": 0.001812688821752266
+          },
+          "1861": {
+            "wins": 9,
+            "count": 15,
+            "win_rate": 0.6,
+            "pick_rate": 0.001294777729823047
+          },
+          "1868": {
+            "wins": 1,
+            "count": 3,
+            "win_rate": 0.3333333333333333,
+            "pick_rate": 0.0002589555459646094
+          },
+          "1873": {
+            "wins": 94,
+            "count": 194,
+            "win_rate": 0.4845360824742268,
+            "pick_rate": 0.016745791972378077
+          },
+          "2097": {
+            "wins": 97,
+            "count": 213,
+            "win_rate": 0.4553990610328638,
+            "pick_rate": 0.01838584376348727
+          }
+        },
+        "3": {
+          "71": {
+            "wins": 2,
+            "count": 3,
+            "win_rate": 0.6666666666666666,
+            "pick_rate": 0.0005362888809438684
+          },
+          "187": {
+            "wins": 1,
+            "count": 1,
+            "win_rate": 1.0,
+            "pick_rate": 0.0001787629603146228
+          },
+          "574": {
+            "wins": 18,
+            "count": 34,
+            "win_rate": 0.5294117647058824,
+            "pick_rate": 0.006077940650697175
+          },
+          "577": {
+            "wins": 2,
+            "count": 3,
+            "win_rate": 0.6666666666666666,
+            "pick_rate": 0.0005362888809438684
+          },
+          "840": {
+            "wins": 0,
+            "count": 3,
+            "win_rate": 0.0,
+            "pick_rate": 0.0005362888809438684
+          },
+          "950": {
+            "wins": 131,
+            "count": 222,
+            "win_rate": 0.5900900900900901,
+            "pick_rate": 0.039685377189846265
+          },
+          "1168": {
+            "wins": 82,
+            "count": 165,
+            "win_rate": 0.49696969696969695,
+            "pick_rate": 0.02949588845191276
+          },
+          "1598": {
+            "wins": 4,
+            "count": 11,
+            "win_rate": 0.3636363636363637,
+            "pick_rate": 0.001966392563460851
+          },
+          "1599": {
+            "wins": 3,
+            "count": 3,
+            "win_rate": 1.0,
+            "pick_rate": 0.0005362888809438684
+          },
+          "1601": {
+            "wins": 2,
+            "count": 2,
+            "win_rate": 1.0,
+            "pick_rate": 0.0003575259206292456
+          },
+          "1603": {
+            "wins": 210,
+            "count": 404,
+            "win_rate": 0.5198019801980198,
+            "pick_rate": 0.07222023596710761
+          },
+          "1605": {
+            "wins": 291,
+            "count": 551,
+            "win_rate": 0.5281306715063521,
+            "pick_rate": 0.09849839113335716
+          },
+          "1638": {
+            "wins": 3,
+            "count": 11,
+            "win_rate": 0.2727272727272727,
+            "pick_rate": 0.001966392563460851
+          },
+          "1640": {
+            "wins": 0,
+            "count": 1,
+            "win_rate": 0.0,
+            "pick_rate": 0.0001787629603146228
+          },
+          "1643": {
+            "wins": 987,
+            "count": 1933,
+            "win_rate": 0.5106052767718572,
+            "pick_rate": 0.34554880228816587
+          },
+          "1716": {
+            "wins": 3,
+            "count": 5,
+            "win_rate": 0.6,
+            "pick_rate": 0.000893814801573114
+          },
+          "1719": {
+            "wins": 34,
+            "count": 53,
+            "win_rate": 0.6415094339622641,
+            "pick_rate": 0.00947443689667501
+          },
+          "1720": {
+            "wins": 87,
+            "count": 179,
+            "win_rate": 0.4860335195530726,
+            "pick_rate": 0.03199856989631748
+          },
+          "1721": {
+            "wins": 590,
+            "count": 1188,
+            "win_rate": 0.49663299663299665,
+            "pick_rate": 0.2123703968537719
+          },
+          "1860": {
+            "wins": 207,
+            "count": 439,
+            "win_rate": 0.4715261958997722,
+            "pick_rate": 0.07847693957811941
+          },
+          "1861": {
+            "wins": 1,
+            "count": 2,
+            "win_rate": 0.5,
+            "pick_rate": 0.0003575259206292456
+          },
+          "1862": {
+            "wins": 124,
+            "count": 257,
+            "win_rate": 0.48249027237354086,
+            "pick_rate": 0.045942080800858064
+          },
+          "1864": {
+            "wins": 11,
+            "count": 16,
+            "win_rate": 0.6875,
+            "pick_rate": 0.002860207365033965
+          },
+          "1873": {
+            "wins": 11,
+            "count": 20,
+            "win_rate": 0.55,
+            "pick_rate": 0.003575259206292456
+          },
+          "2097": {
+            "wins": 10,
+            "count": 26,
+            "win_rate": 0.38461538461538464,
+            "pick_rate": 0.004647836968180193
+          },
+          "2190": {
+            "wins": 30,
+            "count": 62,
+            "win_rate": 0.4838709677419355,
+            "pick_rate": 0.011083303539506614
+          }
+        },
+        "4": {
+          "71": {
+            "wins": 1,
+            "count": 1,
+            "win_rate": 1.0,
+            "pick_rate": 0.005050505050505051
+          },
+          "292": {
+            "wins": 38,
+            "count": 65,
+            "win_rate": 0.5846153846153846,
+            "pick_rate": 0.3282828282828283
+          },
+          "326": {
+            "wins": 11,
+            "count": 19,
+            "win_rate": 0.5789473684210527,
+            "pick_rate": 0.09595959595959597
+          },
+          "370": {
+            "wins": 0,
+            "count": 3,
+            "win_rate": 0.0,
+            "pick_rate": 0.015151515151515152
+          },
+          "371": {
+            "wins": 15,
+            "count": 28,
+            "win_rate": 0.5357142857142857,
+            "pick_rate": 0.1414141414141414
+          },
+          "377": {
+            "wins": 18,
+            "count": 32,
+            "win_rate": 0.5625,
+            "pick_rate": 0.16161616161616163
+          },
+          "837": {
+            "wins": 4,
+            "count": 7,
+            "win_rate": 0.5714285714285714,
+            "pick_rate": 0.03535353535353535
+          },
+          "950": {
+            "wins": 1,
+            "count": 2,
+            "win_rate": 0.5,
+            "pick_rate": 0.010101010101010102
+          },
+          "1605": {
+            "wins": 0,
+            "count": 1,
+            "win_rate": 0.0,
+            "pick_rate": 0.005050505050505051
+          },
+          "1643": {
+            "wins": 0,
+            "count": 1,
+            "win_rate": 0.0,
+            "pick_rate": 0.005050505050505051
+          },
+          "1644": {
+            "wins": 13,
+            "count": 31,
+            "win_rate": 0.41935483870967744,
+            "pick_rate": 0.15656565656565655
+          },
+          "1718": {
+            "wins": 2,
+            "count": 4,
+            "win_rate": 0.5,
+            "pick_rate": 0.020202020202020204
+          },
+          "1721": {
+            "wins": 1,
+            "count": 1,
+            "win_rate": 1.0,
+            "pick_rate": 0.005050505050505051
+          },
+          "1860": {
+            "wins": 0,
+            "count": 1,
+            "win_rate": 0.0,
+            "pick_rate": 0.005050505050505051
+          },
+          "1862": {
+            "wins": 1,
+            "count": 2,
+            "win_rate": 0.5,
+            "pick_rate": 0.010101010101010102
+          }
+        }
+      },
+      "items_mid_late": [
+        {
+          "pr": 0.9784648187633262,
+          "key": "252::1",
+          "wins": 0,
+          "count": 13767,
+          "rel_pr": 0.979286781977365,
+          "win_rate": 0.5336674656787971,
+          "rel_count": 13758,
+          "avg_minute": 14.052734800610155,
+          "std_minute": 1.7389716115877554,
+          "raw_item_id": 252,
+          "rel_num_matches": 14049
+        },
+        {
+          "pr": 0.9474769012082443,
+          "key": "1::1",
+          "wins": 0,
+          "count": 13331,
+          "rel_pr": 0.9568729265830088,
+          "win_rate": 0.5433200810141775,
+          "rel_count": 13268,
+          "avg_minute": 17.23224064211237,
+          "std_minute": 2.390235038028789,
+          "raw_item_id": 1,
+          "rel_num_matches": 13866
+        },
+        {
+          "pr": 0.8489694385216773,
+          "key": "116::1",
+          "wins": 0,
+          "count": 11945,
+          "rel_pr": 0.9077578051087984,
+          "win_rate": 0.5551276684805357,
+          "rel_count": 11514,
+          "avg_minute": 22.871410632063625,
+          "std_minute": 3.2710468871657605,
+          "raw_item_id": 116,
+          "rel_num_matches": 12684
+        },
+        {
+          "pr": 0.7228855721393035,
+          "key": "141::1",
+          "wins": 0,
+          "count": 10171,
+          "rel_pr": 0.8500195541650372,
+          "win_rate": 0.6203913086225543,
+          "rel_count": 8694,
+          "avg_minute": 27.32985940418838,
+          "std_minute": 4.1009808124308105,
+          "raw_item_id": 141,
+          "rel_num_matches": 10228
+        },
+        {
+          "pr": 0.6230277185501066,
+          "key": "939::1",
+          "wins": 0,
+          "count": 8766,
+          "rel_pr": 0.7633449949215664,
+          "win_rate": 0.6587953456536618,
+          "rel_count": 6764,
+          "avg_minute": 28.22381930184805,
+          "std_minute": 5.109890586705014,
+          "raw_item_id": 939,
+          "rel_num_matches": 8861
+        },
+        {
+          "pr": 0.2360341151385927,
+          "key": "135::1",
+          "wins": 0,
+          "count": 3321,
+          "rel_pr": 0.4681847201532241,
+          "win_rate": 0.5404998494429388,
+          "rel_count": 2200,
+          "avg_minute": 34.17916290274014,
+          "std_minute": 6.520724103991078,
+          "raw_item_id": 135,
+          "rel_num_matches": 4699
+        },
+        {
+          "pr": 0.039232409381663114,
+          "key": "112::1",
+          "wins": 0,
+          "count": 552,
+          "rel_pr": 0.06566347469220246,
+          "win_rate": 0.7192028985507246,
+          "rel_count": 240,
+          "avg_minute": 34.481884057971016,
+          "std_minute": 8.11308422122933,
+          "raw_item_id": 112,
+          "rel_num_matches": 3655
+        },
+        {
+          "pr": 0.38550106609808105,
+          "key": "603::1",
+          "wins": 0,
+          "count": 5424,
+          "rel_pr": 0.7138511458122084,
+          "win_rate": 0.6897123893805309,
+          "rel_count": 3520,
+          "avg_minute": 35.130715339233035,
+          "std_minute": 5.080842083055775,
+          "raw_item_id": 603,
+          "rel_num_matches": 4931
+        },
+        {
+          "pr": 0.30909737029140016,
+          "key": "156::1",
+          "wins": 0,
+          "count": 4349,
+          "rel_pr": 0.6186716209939619,
+          "win_rate": 0.6944125086226719,
+          "rel_count": 2664,
+          "avg_minute": 35.874913773281214,
+          "std_minute": 5.518087341061119,
+          "raw_item_id": 156,
+          "rel_num_matches": 4306
+        },
+        {
+          "pr": 0.16901208244491828,
+          "key": "609::1",
+          "wins": 0,
+          "count": 2378,
+          "rel_pr": 0.4517311608961304,
+          "win_rate": 0.6761984861227922,
+          "rel_count": 1109,
+          "avg_minute": 37.72455845248108,
+          "std_minute": 8.111724731963925,
+          "raw_item_id": 609,
+          "rel_num_matches": 2455
+        },
+        {
+          "pr": 0.02302771855010661,
+          "key": "139::1",
+          "wins": 0,
+          "count": 324,
+          "rel_pr": 0.06362854686156492,
+          "win_rate": 0.6481481481481481,
+          "rel_count": 148,
+          "avg_minute": 38.68827160493827,
+          "std_minute": 7.606347948353134,
+          "raw_item_id": 139,
+          "rel_num_matches": 2326
+        },
+        {
+          "pr": 0.009168443496801706,
+          "key": "208::1",
+          "wins": 0,
+          "count": 129,
+          "rel_pr": 0.05955056179775281,
+          "win_rate": 0.6046511627906976,
+          "rel_count": 53,
+          "avg_minute": 44.16279069767442,
+          "std_minute": 8.796396987627633,
+          "raw_item_id": 208,
+          "rel_num_matches": 890
+        },
+        {
+          "pr": 0.014072494669509597,
+          "key": "133::1",
+          "wins": 0,
+          "count": 198,
+          "rel_pr": 0.1509433962264151,
+          "win_rate": 0.4898989898989899,
+          "rel_count": 64,
+          "avg_minute": 47.64646464646464,
+          "std_minute": 10.330217644957171,
+          "raw_item_id": 133,
+          "rel_num_matches": 424
+        },
+        {
+          "pr": 0.005188343994314144,
+          "key": "48::1",
+          "wins": 0,
+          "count": 73,
+          "rel_pr": 0.08646616541353383,
+          "win_rate": 0.8082191780821918,
+          "rel_count": 23,
+          "avg_minute": 49.986301369863014,
+          "std_minute": 11.383108310706955,
+          "raw_item_id": 48,
+          "rel_num_matches": 266
+        },
+        {
+          "pr": 0.002914001421464108,
+          "key": "220::1",
+          "wins": 0,
+          "count": 41,
+          "rel_pr": 0.10179640718562874,
+          "win_rate": 0.7073170731707317,
+          "rel_count": 17,
+          "avg_minute": 52.926829268292686,
+          "std_minute": 11.13200230472102,
+          "raw_item_id": 220,
+          "rel_num_matches": 167
+        },
+        {
+          "pr": 0.004761904761904762,
+          "key": "110::1",
+          "wins": 0,
+          "count": 67,
+          "rel_pr": 0.1375,
+          "win_rate": 0.5671641791044776,
+          "rel_count": 33,
+          "avg_minute": 54.492537313432834,
+          "std_minute": 7.353287688557905,
+          "raw_item_id": 110,
+          "rel_num_matches": 240
+        }
+      ],
+      "starting_items": [
+        {
+          "pr": 0.75,
+          "key": "11::1",
+          "count": 10591,
+          "raw_item_id": 11
+        },
+        {
+          "pr": 0.55,
+          "key": "44::1",
+          "count": 7787,
+          "raw_item_id": 44
+        },
+        {
+          "pr": 0.42,
+          "key": "34::1",
+          "count": 5966,
+          "raw_item_id": 34
+        },
+        {
+          "pr": 0.39,
+          "key": "237::1",
+          "count": 5440,
+          "raw_item_id": 237
+        },
+        {
+          "pr": 0.34,
+          "key": "16::2",
+          "count": 4840,
+          "raw_item_id": 16
+        },
+        {
+          "pr": 0.26,
+          "key": "13::3",
+          "count": 3693,
+          "raw_item_id": 13
+        },
+        {
+          "pr": 0.22,
+          "key": "16::1",
+          "count": 3116,
+          "raw_item_id": 16
+        },
+        {
+          "pr": 0.22,
+          "key": "13::2",
+          "count": 3098,
+          "raw_item_id": 13
+        },
+        {
+          "pr": 0.17,
+          "key": "13::1",
+          "count": 2376,
+          "raw_item_id": 13
+        },
+        {
+          "pr": 0.13,
+          "key": "20::1",
+          "count": 1838,
+          "raw_item_id": 20
+        },
+        {
+          "pr": 0.11,
+          "key": "13::4",
+          "count": 1491,
+          "raw_item_id": 13
+        },
+        {
+          "pr": 0.04,
+          "key": "36::1",
+          "count": 615,
+          "raw_item_id": 36
+        },
+        {
+          "pr": 0.04,
+          "key": "16::3",
+          "count": 592,
+          "raw_item_id": 16
+        },
+        {
+          "pr": 0.01,
+          "key": "237::2",
+          "count": 204,
+          "raw_item_id": 237
+        },
+        {
+          "pr": 0.01,
+          "key": "44::2",
+          "count": 175,
+          "raw_item_id": 44
+        },
+        {
+          "pr": 0.01,
+          "key": "42::1",
+          "count": 160,
+          "raw_item_id": 42
+        },
+        {
+          "pr": 0.01,
+          "key": "17::1",
+          "count": 124,
+          "raw_item_id": 17
+        },
+        {
+          "pr": 0.01,
+          "key": "20::2",
+          "count": 117,
+          "raw_item_id": 20
+        },
+        {
+          "pr": 0.01,
+          "key": "73::1",
+          "count": 104,
+          "raw_item_id": 73
+        },
+        {
+          "pr": 0.01,
+          "key": "216::1",
+          "count": 91,
+          "raw_item_id": 216
+        },
+        {
+          "pr": 0.0,
+          "key": "241::1",
+          "count": 50,
+          "raw_item_id": 241
+        },
+        {
+          "pr": 0.0,
+          "key": "43::1",
+          "count": 24,
+          "raw_item_id": 43
+        },
+        {
+          "pr": 0.0,
+          "key": "39::1",
+          "count": 20,
+          "raw_item_id": 39
+        },
+        {
+          "pr": 0.0,
+          "key": "14::1",
+          "count": 19,
+          "raw_item_id": 14
+        },
+        {
+          "pr": 0.0,
+          "key": "16::4",
+          "count": 17,
+          "raw_item_id": 16
+        },
+        {
+          "pr": 0.0,
+          "key": "188::1",
+          "count": 16,
+          "raw_item_id": 188
+        },
+        {
+          "pr": 0.0,
+          "key": "20::3",
+          "count": 16,
+          "raw_item_id": 20
+        },
+        {
+          "pr": 0.0,
+          "key": "44::3",
+          "count": 16,
+          "raw_item_id": 44
+        },
+        {
+          "pr": 0.0,
+          "key": "29::1",
+          "count": 13,
+          "raw_item_id": 29
+        },
+        {
+          "pr": 0.0,
+          "key": "237::3",
+          "count": 9,
+          "raw_item_id": 237
+        },
+        {
+          "pr": 0.0,
+          "key": "38::1",
+          "count": 9,
+          "raw_item_id": 38
+        },
+        {
+          "pr": 0.0,
+          "key": "244::1",
+          "count": 6,
+          "raw_item_id": 244
+        },
+        {
+          "pr": 0.0,
+          "key": "25::1",
+          "count": 4,
+          "raw_item_id": 25
+        },
+        {
+          "pr": 0.0,
+          "key": "13::5",
+          "count": 3,
+          "raw_item_id": 13
+        },
+        {
+          "pr": 0.0,
+          "key": "75::1",
+          "count": 3,
+          "raw_item_id": 75
+        },
+        {
+          "pr": 0.0,
+          "key": "1123::1",
+          "count": 3,
+          "raw_item_id": 1123
+        },
+        {
+          "pr": 0.0,
+          "key": "216::2",
+          "count": 2,
+          "raw_item_id": 216
+        },
+        {
+          "pr": 0.0,
+          "key": "15::1",
+          "count": 2,
+          "raw_item_id": 15
+        },
+        {
+          "pr": 0.0,
+          "key": "11::2",
+          "count": 2,
+          "raw_item_id": 11
+        },
+        {
+          "pr": 0.0,
+          "key": "43::2",
+          "count": 1,
+          "raw_item_id": 43
+        },
+        {
+          "pr": 0.0,
+          "key": "188::2",
+          "count": 1,
+          "raw_item_id": 188
+        },
+        {
+          "pr": 0.0,
+          "key": "14::2",
+          "count": 1,
+          "raw_item_id": 14
+        },
+        {
+          "pr": 0.0,
+          "key": "237::5",
+          "count": 1,
+          "raw_item_id": 237
+        },
+        {
+          "pr": 0.0,
+          "key": "42::2",
+          "count": 1,
+          "raw_item_id": 42
+        },
+        {
+          "pr": 0.0,
+          "key": "16::5",
+          "count": 1,
+          "raw_item_id": 16
+        },
+        {
+          "pr": 0.0,
+          "key": "39::2",
+          "count": 1,
+          "raw_item_id": 39
+        },
+        {
+          "pr": 0.0,
+          "key": "4::1",
+          "count": 1,
+          "raw_item_id": 4
+        },
+        {
+          "pr": 0.0,
+          "key": "40::1",
+          "count": 1,
+          "raw_item_id": 40
+        },
+        {
+          "pr": 0.0,
+          "key": "2::1",
+          "count": 1,
+          "raw_item_id": 2
+        },
+        {
+          "pr": 0.0,
+          "key": "12::1",
+          "count": 1,
+          "raw_item_id": 12
+        },
+        {
+          "pr": 0.0,
+          "key": "237::4",
+          "count": 1,
+          "raw_item_id": 237
+        }
+      ],
+      "has_anchor_build": true,
+      "anchor_item_stats": {
+        "1": {
+          "pr": 100.0,
+          "wins": 4303,
+          "win_rate": 0.6621,
+          "purchases": 6499,
+          "avg_minute": 16.9,
+          "max_minute": 56,
+          "min_minute": 11,
+          "std_minute": 2.2,
+          "purchase_rate": 0
+        },
+        "26": {
+          "pr": 100.0308,
+          "wins": 4303,
+          "win_rate": 0.6619,
+          "purchases": 6501,
+          "avg_minute": 7.9,
+          "max_minute": 57,
+          "min_minute": 2,
+          "std_minute": 4.1,
+          "purchase_rate": 0
+        },
+        "36": {
+          "pr": 37.8058,
+          "wins": 1661,
+          "win_rate": 0.676,
+          "purchases": 2457,
+          "avg_minute": 4.5,
+          "max_minute": 37,
+          "min_minute": -2,
+          "std_minute": 4.8,
+          "purchase_rate": 0
+        },
+        "41": {
+          "pr": 0.6924,
+          "wins": 32,
+          "win_rate": 0.7111,
+          "purchases": 45,
+          "avg_minute": 34.1,
+          "max_minute": 56,
+          "min_minute": 5,
+          "std_minute": 9.6,
+          "purchase_rate": 0
+        },
+        "48": {
+          "pr": 0.7693,
+          "wins": 42,
+          "win_rate": 0.84,
+          "purchases": 50,
+          "avg_minute": 51.8,
+          "max_minute": 78,
+          "min_minute": 29,
+          "std_minute": 12.0,
+          "purchase_rate": 0
+        },
+        "50": {
+          "pr": 0.0615,
+          "wins": 4,
+          "win_rate": 1.0,
+          "purchases": 4,
+          "avg_minute": 33.5,
+          "max_minute": 45,
+          "min_minute": 21,
+          "std_minute": 8.8,
+          "purchase_rate": 0
+        },
+        "63": {
+          "pr": 100.0,
+          "wins": 4303,
+          "win_rate": 0.6621,
+          "purchases": 6499,
+          "avg_minute": 5.4,
+          "max_minute": 15,
+          "min_minute": 2,
+          "std_minute": 1.2,
+          "purchase_rate": 0
+        },
+        "65": {
+          "pr": 0.0923,
+          "wins": 4,
+          "win_rate": 0.6667,
+          "purchases": 6,
+          "avg_minute": 14.0,
+          "max_minute": 18,
+          "min_minute": 10,
+          "std_minute": 2.6,
+          "purchase_rate": 0
+        },
+        "73": {
+          "pr": 13.5559,
+          "wins": 576,
+          "win_rate": 0.6538,
+          "purchases": 881,
+          "avg_minute": 2.1,
+          "max_minute": 21,
+          "min_minute": -2,
+          "std_minute": 1.8,
+          "purchase_rate": 0
+        },
+        "75": {
+          "pr": 0.1693,
+          "wins": 7,
+          "win_rate": 0.6364,
+          "purchases": 11,
+          "avg_minute": 5.4,
+          "max_minute": 19,
+          "min_minute": 1,
+          "std_minute": 6.6,
+          "purchase_rate": 0
+        },
+        "77": {
+          "pr": 0.0308,
+          "wins": 0,
+          "win_rate": 0.0,
+          "purchases": 2,
+          "avg_minute": 35.0,
+          "max_minute": 37,
+          "min_minute": 33,
+          "std_minute": 2.0,
+          "purchase_rate": 0
+        },
+        "92": {
+          "pr": 0.0154,
+          "wins": 0,
+          "win_rate": 0.0,
+          "purchases": 1,
+          "avg_minute": 13.0,
+          "max_minute": 13,
+          "min_minute": 13,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "96": {
+          "pr": 0.0462,
+          "wins": 1,
+          "win_rate": 0.3333,
+          "purchases": 3,
+          "avg_minute": 47.3,
+          "max_minute": 59,
+          "min_minute": 40,
+          "std_minute": 8.3,
+          "purchase_rate": 0
+        },
+        "98": {
+          "pr": 0.6616,
+          "wins": 27,
+          "win_rate": 0.6279,
+          "purchases": 43,
+          "avg_minute": 37.3,
+          "max_minute": 51,
+          "min_minute": 25,
+          "std_minute": 6.1,
+          "purchase_rate": 0
+        },
+        "100": {
+          "pr": 0.0615,
+          "wins": 3,
+          "win_rate": 0.75,
+          "purchases": 4,
+          "avg_minute": 43.8,
+          "max_minute": 55,
+          "min_minute": 19,
+          "std_minute": 14.8,
+          "purchase_rate": 0
+        },
+        "102": {
+          "pr": 0.0308,
+          "wins": 1,
+          "win_rate": 0.5,
+          "purchases": 2,
+          "avg_minute": 37.0,
+          "max_minute": 41,
+          "min_minute": 33,
+          "std_minute": 4.0,
+          "purchase_rate": 0
+        },
+        "108": {
+          "pr": 1.8464,
+          "wins": 75,
+          "win_rate": 0.625,
+          "purchases": 120,
+          "avg_minute": 37.8,
+          "max_minute": 65,
+          "min_minute": 19,
+          "std_minute": 8.3,
+          "purchase_rate": 0
+        },
+        "110": {
+          "pr": 0.8463,
+          "wins": 35,
+          "win_rate": 0.6364,
+          "purchases": 55,
+          "avg_minute": 54.9,
+          "max_minute": 70,
+          "min_minute": 39,
+          "std_minute": 6.7,
+          "purchase_rate": 0
+        },
+        "112": {
+          "pr": 3.262,
+          "wins": 161,
+          "win_rate": 0.7594,
+          "purchases": 212,
+          "avg_minute": 38.6,
+          "max_minute": 67,
+          "min_minute": 22,
+          "std_minute": 7.7,
+          "purchase_rate": 0
+        },
+        "114": {
+          "pr": 0.2616,
+          "wins": 11,
+          "win_rate": 0.6471,
+          "purchases": 17,
+          "avg_minute": 39.9,
+          "max_minute": 67,
+          "min_minute": 28,
+          "std_minute": 8.5,
+          "purchase_rate": 0
+        },
+        "116": {
+          "pr": 100.0,
+          "wins": 4303,
+          "win_rate": 0.6621,
+          "purchases": 6499,
+          "avg_minute": 22.5,
+          "max_minute": 54,
+          "min_minute": 16,
+          "std_minute": 3.2,
+          "purchase_rate": 0
+        },
+        "119": {
+          "pr": 0.0615,
+          "wins": 3,
+          "win_rate": 0.75,
+          "purchases": 4,
+          "avg_minute": 36.8,
+          "max_minute": 42,
+          "min_minute": 31,
+          "std_minute": 3.9,
+          "purchase_rate": 0
+        },
+        "123": {
+          "pr": 0.8924,
+          "wins": 40,
+          "win_rate": 0.6897,
+          "purchases": 58,
+          "avg_minute": 39.6,
+          "max_minute": 62,
+          "min_minute": 24,
+          "std_minute": 7.9,
+          "purchase_rate": 0
+        },
+        "133": {
+          "pr": 2.3388,
+          "wins": 79,
+          "win_rate": 0.5197,
+          "purchases": 152,
+          "avg_minute": 49.5,
+          "max_minute": 84,
+          "min_minute": 30,
+          "std_minute": 9.9,
+          "purchase_rate": 0
+        },
+        "135": {
+          "pr": 26.0194,
+          "wins": 996,
+          "win_rate": 0.589,
+          "purchases": 1691,
+          "avg_minute": 36.8,
+          "max_minute": 66,
+          "min_minute": 19,
+          "std_minute": 6.3,
+          "purchase_rate": 0
+        },
+        "137": {
+          "pr": 0.0154,
+          "wins": 1,
+          "win_rate": 1.0,
+          "purchases": 1,
+          "avg_minute": 31.0,
+          "max_minute": 31,
+          "min_minute": 31,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "139": {
+          "pr": 2.585,
+          "wins": 109,
+          "win_rate": 0.6488,
+          "purchases": 168,
+          "avg_minute": 41.1,
+          "max_minute": 66,
+          "min_minute": 26,
+          "std_minute": 7.3,
+          "purchase_rate": 0
+        },
+        "141": {
+          "pr": 100.0308,
+          "wins": 4305,
+          "win_rate": 0.6622,
+          "purchases": 6501,
+          "avg_minute": 27.3,
+          "max_minute": 63,
+          "min_minute": 16,
+          "std_minute": 3.7,
+          "purchase_rate": 0
+        },
+        "143": {
+          "pr": 0.7386,
+          "wins": 30,
+          "win_rate": 0.625,
+          "purchases": 48,
+          "avg_minute": 39.6,
+          "max_minute": 58,
+          "min_minute": 26,
+          "std_minute": 7.2,
+          "purchase_rate": 0
+        },
+        "147": {
+          "pr": 0.0615,
+          "wins": 3,
+          "win_rate": 0.75,
+          "purchases": 4,
+          "avg_minute": 26.5,
+          "max_minute": 42,
+          "min_minute": 21,
+          "std_minute": 9.0,
+          "purchase_rate": 0
+        },
+        "149": {
+          "pr": 100.0,
+          "wins": 4303,
+          "win_rate": 0.6621,
+          "purchases": 6499,
+          "avg_minute": 23.4,
+          "max_minute": 62,
+          "min_minute": 13,
+          "std_minute": 3.6,
+          "purchase_rate": 0
+        },
+        "152": {
+          "pr": 1.2156,
+          "wins": 39,
+          "win_rate": 0.4937,
+          "purchases": 79,
+          "avg_minute": 38.3,
+          "max_minute": 70,
+          "min_minute": 17,
+          "std_minute": 11.1,
+          "purchase_rate": 0
+        },
+        "154": {
+          "pr": 0.6001,
+          "wins": 25,
+          "win_rate": 0.641,
+          "purchases": 39,
+          "avg_minute": 35.9,
+          "max_minute": 72,
+          "min_minute": 18,
+          "std_minute": 12.5,
+          "purchase_rate": 0
+        },
+        "156": {
+          "pr": 45.6686,
+          "wins": 2089,
+          "win_rate": 0.7038,
+          "purchases": 2968,
+          "avg_minute": 36.3,
+          "max_minute": 69,
+          "min_minute": 24,
+          "std_minute": 5.4,
+          "purchase_rate": 0
+        },
+        "160": {
+          "pr": 0.1077,
+          "wins": 7,
+          "win_rate": 1.0,
+          "purchases": 7,
+          "avg_minute": 45.6,
+          "max_minute": 63,
+          "min_minute": 35,
+          "std_minute": 8.7,
+          "purchase_rate": 0
+        },
+        "162": {
+          "pr": 0.1693,
+          "wins": 5,
+          "win_rate": 0.4545,
+          "purchases": 11,
+          "avg_minute": 34.5,
+          "max_minute": 50,
+          "min_minute": 16,
+          "std_minute": 12.5,
+          "purchase_rate": 0
+        },
+        "166": {
+          "pr": 0.0154,
+          "wins": 1,
+          "win_rate": 1.0,
+          "purchases": 1,
+          "avg_minute": 37.0,
+          "max_minute": 37,
+          "min_minute": 37,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "168": {
+          "pr": 0.2616,
+          "wins": 16,
+          "win_rate": 0.9412,
+          "purchases": 17,
+          "avg_minute": 36.8,
+          "max_minute": 59,
+          "min_minute": 24,
+          "std_minute": 9.0,
+          "purchase_rate": 0
+        },
+        "170": {
+          "pr": 0.1693,
+          "wins": 6,
+          "win_rate": 0.5455,
+          "purchases": 11,
+          "avg_minute": 20.5,
+          "max_minute": 34,
+          "min_minute": 17,
+          "std_minute": 4.5,
+          "purchase_rate": 0
+        },
+        "172": {
+          "pr": 100.0,
+          "wins": 4303,
+          "win_rate": 0.6621,
+          "purchases": 6499,
+          "avg_minute": 9.4,
+          "max_minute": 19,
+          "min_minute": 5,
+          "std_minute": 1.2,
+          "purchase_rate": 0
+        },
+        "174": {
+          "pr": 0.0769,
+          "wins": 4,
+          "win_rate": 0.8,
+          "purchases": 5,
+          "avg_minute": 41.6,
+          "max_minute": 55,
+          "min_minute": 36,
+          "std_minute": 7.0,
+          "purchase_rate": 0
+        },
+        "178": {
+          "pr": 0.3539,
+          "wins": 10,
+          "win_rate": 0.4348,
+          "purchases": 23,
+          "avg_minute": 13.4,
+          "max_minute": 45,
+          "min_minute": 2,
+          "std_minute": 10.8,
+          "purchase_rate": 0
+        },
+        "180": {
+          "pr": 0.0923,
+          "wins": 5,
+          "win_rate": 0.8333,
+          "purchases": 6,
+          "avg_minute": 37.0,
+          "max_minute": 42,
+          "min_minute": 27,
+          "std_minute": 5.2,
+          "purchase_rate": 0
+        },
+        "208": {
+          "pr": 1.2002,
+          "wins": 46,
+          "win_rate": 0.5897,
+          "purchases": 78,
+          "avg_minute": 46.4,
+          "max_minute": 69,
+          "min_minute": 30,
+          "std_minute": 8.2,
+          "purchase_rate": 0
+        },
+        "214": {
+          "pr": 0.0154,
+          "wins": 1,
+          "win_rate": 1.0,
+          "purchases": 1,
+          "avg_minute": 17.0,
+          "max_minute": 17,
+          "min_minute": 17,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "220": {
+          "pr": 0.4308,
+          "wins": 19,
+          "win_rate": 0.6786,
+          "purchases": 28,
+          "avg_minute": 54.2,
+          "max_minute": 70,
+          "min_minute": 37,
+          "std_minute": 10.0,
+          "purchase_rate": 0
+        },
+        "223": {
+          "pr": 0.0308,
+          "wins": 2,
+          "win_rate": 1.0,
+          "purchases": 2,
+          "avg_minute": 48.0,
+          "max_minute": 55,
+          "min_minute": 41,
+          "std_minute": 7.0,
+          "purchase_rate": 0
+        },
+        "225": {
+          "pr": 1.3233,
+          "wins": 46,
+          "win_rate": 0.5349,
+          "purchases": 86,
+          "avg_minute": 41.5,
+          "max_minute": 70,
+          "min_minute": 24,
+          "std_minute": 8.1,
+          "purchase_rate": 0
+        },
+        "229": {
+          "pr": 0.0154,
+          "wins": 1,
+          "win_rate": 1.0,
+          "purchases": 1,
+          "avg_minute": 38.0,
+          "max_minute": 38,
+          "min_minute": 38,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "232": {
+          "pr": 0.0308,
+          "wins": 0,
+          "win_rate": 0.0,
+          "purchases": 2,
+          "avg_minute": 35.5,
+          "max_minute": 37,
+          "min_minute": 34,
+          "std_minute": 1.5,
+          "purchase_rate": 0
+        },
+        "235": {
+          "pr": 0.0308,
+          "wins": 2,
+          "win_rate": 1.0,
+          "purchases": 2,
+          "avg_minute": 50.5,
+          "max_minute": 60,
+          "min_minute": 41,
+          "std_minute": 9.5,
+          "purchase_rate": 0
+        },
+        "236": {
+          "pr": 0.0308,
+          "wins": 1,
+          "win_rate": 0.5,
+          "purchases": 2,
+          "avg_minute": 30.0,
+          "max_minute": 34,
+          "min_minute": 26,
+          "std_minute": 4.0,
+          "purchase_rate": 0
+        },
+        "247": {
+          "pr": 1.7233,
+          "wins": 83,
+          "win_rate": 0.7411,
+          "purchases": 112,
+          "avg_minute": 43.1,
+          "max_minute": 68,
+          "min_minute": 27,
+          "std_minute": 8.4,
+          "purchase_rate": 0
+        },
+        "249": {
+          "pr": 1.7387,
+          "wins": 64,
+          "win_rate": 0.5664,
+          "purchases": 113,
+          "avg_minute": 39.0,
+          "max_minute": 68,
+          "min_minute": 19,
+          "std_minute": 8.8,
+          "purchase_rate": 0
+        },
+        "250": {
+          "pr": 1.0463,
+          "wins": 41,
+          "win_rate": 0.6029,
+          "purchases": 68,
+          "avg_minute": 40.2,
+          "max_minute": 57,
+          "min_minute": 28,
+          "std_minute": 6.4,
+          "purchase_rate": 0
+        },
+        "252": {
+          "pr": 100.0,
+          "wins": 4303,
+          "win_rate": 0.6621,
+          "purchases": 6499,
+          "avg_minute": 13.8,
+          "max_minute": 29,
+          "min_minute": 8,
+          "std_minute": 1.5,
+          "purchase_rate": 0
+        },
+        "254": {
+          "pr": 0.0308,
+          "wins": 2,
+          "win_rate": 1.0,
+          "purchases": 2,
+          "avg_minute": 32.5,
+          "max_minute": 38,
+          "min_minute": 27,
+          "std_minute": 5.5,
+          "purchase_rate": 0
+        },
+        "256": {
+          "pr": 0.0769,
+          "wins": 3,
+          "win_rate": 0.6,
+          "purchases": 5,
+          "avg_minute": 44.4,
+          "max_minute": 61,
+          "min_minute": 36,
+          "std_minute": 9.5,
+          "purchase_rate": 0
+        },
+        "259": {
+          "pr": 0.0154,
+          "wins": 1,
+          "win_rate": 1.0,
+          "purchases": 1,
+          "avg_minute": 37.0,
+          "max_minute": 37,
+          "min_minute": 37,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "263": {
+          "pr": 0.0154,
+          "wins": 0,
+          "win_rate": 0.0,
+          "purchases": 1,
+          "avg_minute": 30.0,
+          "max_minute": 30,
+          "min_minute": 30,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "267": {
+          "pr": 0.0462,
+          "wins": 2,
+          "win_rate": 0.6667,
+          "purchases": 3,
+          "avg_minute": 30.0,
+          "max_minute": 37,
+          "min_minute": 19,
+          "std_minute": 7.9,
+          "purchase_rate": 0
+        },
+        "273": {
+          "pr": 0.0154,
+          "wins": 1,
+          "win_rate": 1.0,
+          "purchases": 1,
+          "avg_minute": 21.0,
+          "max_minute": 21,
+          "min_minute": 21,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "277": {
+          "pr": 0.0154,
+          "wins": 1,
+          "win_rate": 1.0,
+          "purchases": 1,
+          "avg_minute": 42.0,
+          "max_minute": 42,
+          "min_minute": 42,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "534": {
+          "pr": 0.0154,
+          "wins": 0,
+          "win_rate": 0.0,
+          "purchases": 1,
+          "avg_minute": 33.0,
+          "max_minute": 33,
+          "min_minute": 33,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "600": {
+          "pr": 1.4925,
+          "wins": 70,
+          "win_rate": 0.7216,
+          "purchases": 97,
+          "avg_minute": 35.9,
+          "max_minute": 66,
+          "min_minute": 28,
+          "std_minute": 6.3,
+          "purchase_rate": 0
+        },
+        "603": {
+          "pr": 59.3168,
+          "wins": 2713,
+          "win_rate": 0.7038,
+          "purchases": 3855,
+          "avg_minute": 35.3,
+          "max_minute": 67,
+          "min_minute": 24,
+          "std_minute": 5.0,
+          "purchase_rate": 0
+        },
+        "609": {
+          "pr": 26.7272,
+          "wins": 1191,
+          "win_rate": 0.6857,
+          "purchases": 1737,
+          "avg_minute": 38.3,
+          "max_minute": 70,
+          "min_minute": 18,
+          "std_minute": 8.0,
+          "purchase_rate": 0
+        },
+        "610": {
+          "pr": 0.0769,
+          "wins": 4,
+          "win_rate": 0.8,
+          "purchases": 5,
+          "avg_minute": 49.4,
+          "max_minute": 60,
+          "min_minute": 36,
+          "std_minute": 8.6,
+          "purchase_rate": 0
+        },
+        "911": {
+          "pr": 0.0154,
+          "wins": 1,
+          "win_rate": 1.0,
+          "purchases": 1,
+          "avg_minute": 30.0,
+          "max_minute": 30,
+          "min_minute": 30,
+          "std_minute": 0.0,
+          "purchase_rate": 0
+        },
+        "939": {
+          "pr": 100.0,
+          "wins": 4303,
+          "win_rate": 0.6621,
+          "purchases": 6499,
+          "avg_minute": 28.9,
+          "max_minute": 64,
+          "min_minute": 14,
+          "std_minute": 4.9,
+          "purchase_rate": 0
+        },
+        "1097": {
+          "pr": 0.3847,
+          "wins": 14,
+          "win_rate": 0.56,
+          "purchases": 25,
+          "avg_minute": 43.8,
+          "max_minute": 57,
+          "min_minute": 29,
+          "std_minute": 6.3,
+          "purchase_rate": 0
+        },
+        "1154": {
+          "pr": 0.0308,
+          "wins": 1,
+          "win_rate": 0.5,
+          "purchases": 2,
+          "avg_minute": 61.0,
+          "max_minute": 71,
+          "min_minute": 51,
+          "std_minute": 10.0,
+          "purchase_rate": 0
+        }
+      },
+      "enhancement_stats": {
+        "0": {
+          "1577": {
+            "wins": 2038,
+            "count": 3808,
+            "win_rate": 0.5351890756302521,
+            "pick_rate": 0.2708777920045526
+          },
+          "1585": {
+            "wins": 335,
+            "count": 655,
+            "win_rate": 0.5114503816793893,
+            "pick_rate": 0.04659268743775786
+          },
+          "1586": {
+            "wins": 4477,
+            "count": 8490,
+            "win_rate": 0.5273262661955241,
+            "pick_rate": 0.6039265898420828
+          },
+          "1865": {
+            "wins": 574,
+            "count": 1105,
+            "win_rate": 0.5194570135746607,
+            "pick_rate": 0.07860293071560677
+          }
+        },
+        "1": {
+          "1577": {
+            "wins": 1175,
+            "count": 2183,
+            "win_rate": 0.538250114521301,
+            "pick_rate": 0.15736735870818916
+          },
+          "1585": {
+            "wins": 118,
+            "count": 248,
+            "win_rate": 0.4758064516129033,
+            "pick_rate": 0.01787773933102653
+          },
+          "1586": {
+            "wins": 5314,
+            "count": 10056,
+            "win_rate": 0.5284407319013524,
+            "pick_rate": 0.7249134948096886
+          },
+          "1589": {
+            "wins": 743,
+            "count": 1374,
+            "win_rate": 0.5407569141193596,
+            "pick_rate": 0.0990484429065744
+          },
+          "1593": {
+            "wins": 4,
+            "count": 11,
+            "win_rate": 0.3636363636363637,
+            "pick_rate": 0.0007929642445213379
+          }
+        },
+        "2": {
+          "1577": {
+            "wins": 623,
+            "count": 1150,
+            "win_rate": 0.5417391304347826,
+            "pick_rate": 0.09926629261976694
+          },
+          "1585": {
+            "wins": 83,
+            "count": 182,
+            "win_rate": 0.456043956043956,
+            "pick_rate": 0.01570996978851964
+          },
+          "1586": {
+            "wins": 4534,
+            "count": 8691,
+            "win_rate": 0.5216891036704637,
+            "pick_rate": 0.7501942166594735
+          },
+          "1589": {
+            "wins": 854,
+            "count": 1557,
+            "win_rate": 0.548490687219011,
+            "pick_rate": 0.13439792835563227
+          },
+          "1593": {
+            "wins": 1,
+            "count": 5,
+            "win_rate": 0.2,
+            "pick_rate": 0.0004315925766076823
+          }
+        },
+        "3": {
+          "1577": {
+            "wins": 487,
+            "count": 893,
+            "win_rate": 0.5453527435610303,
+            "pick_rate": 0.15963532356095816
+          },
+          "1585": {
+            "wins": 49,
+            "count": 115,
+            "win_rate": 0.4260869565217391,
+            "pick_rate": 0.020557740436181624
+          },
+          "1586": {
+            "wins": 1819,
+            "count": 3615,
+            "win_rate": 0.5031811894882434,
+            "pick_rate": 0.6462281015373614
+          },
+          "1589": {
+            "wins": 486,
+            "count": 967,
+            "win_rate": 0.5025853154084798,
+            "pick_rate": 0.17286378262424026
+          },
+          "1592": {
+            "wins": 3,
+            "count": 4,
+            "win_rate": 0.75,
+            "pick_rate": 0.0007150518412584912
+          }
+        },
+        "4": {
+          "1588": {
+            "wins": 25,
+            "count": 44,
+            "win_rate": 0.5681818181818182,
+            "pick_rate": 0.2222222222222222
+          },
+          "1594": {
+            "wins": 3,
+            "count": 9,
+            "win_rate": 0.3333333333333333,
+            "pick_rate": 0.045454545454545456
+          },
+          "1596": {
+            "wins": 77,
+            "count": 145,
+            "win_rate": 0.5310344827586206,
+            "pick_rate": 0.7323232323232324
+          }
+        }
+      },
+      "anchor_start_items": [
+        [
+          [
+            11,
+            13,
+            13,
+            13,
+            237
+          ],
+          979
+        ],
+        [
+          [
+            11,
+            16,
+            16,
+            34,
+            44,
+            237
+          ],
+          769
+        ],
+        [
+          [
+            11,
+            13,
+            13,
+            16,
+            16,
+            44
+          ],
+          746
+        ]
+      ],
+      "starting_items_new": [
+        [
+          [
+            11,
+            13,
+            13,
+            13,
+            237
+          ],
+          {
+            "count": 2013,
+            "win_rate": 0.524093392945852,
+            "lane_advantage": -0.79,
+            "lane_advantage_matches": 2013
+          }
+        ],
+        [
+          [
+            11,
+            16,
+            16,
+            34,
+            44,
+            237
+          ],
+          {
+            "count": 1705,
+            "win_rate": 0.5055718475073314,
+            "lane_advantage": -2.3,
+            "lane_advantage_matches": 1705
+          }
+        ],
+        [
+          [
+            11,
+            13,
+            13,
+            16,
+            16,
+            44
+          ],
+          {
+            "count": 1560,
+            "win_rate": 0.5128205128205128,
+            "lane_advantage": -0.47,
+            "lane_advantage_matches": 1560
+          }
+        ]
+      ],
+      "anchor_build_matches": [
+        {
+          "imp": 0,
+          "mmr": 6694,
+          "kills": 11,
+          "deaths": 4,
+          "minute": 2,
+          "player": {
+            "name": "agua",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 6300,
+            "account_id": 838543989
+          },
+          "assists": 13,
+          "hero_id": 18,
+          "duration": 2478,
+          "match_id": 9039538805,
+          "position": "pos 1",
+          "inventory": [
+            63,
+            116,
+            141,
+            939,
+            603,
+            156
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 6840,
+          "kills": 4,
+          "deaths": 1,
+          "minute": 5,
+          "player": {
+            "name": "ЗУБОВ БОЯТЬСЯ В Р",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 6662,
+            "account_id": 1059889711
+          },
+          "assists": 2,
+          "hero_id": 18,
+          "duration": 1928,
+          "match_id": 9039542377,
+          "position": "pos 1",
+          "inventory": [
+            63,
+            1,
+            116,
+            141,
+            939,
+            156
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 6683,
+          "kills": 10,
+          "deaths": 10,
+          "minute": 1,
+          "player": {
+            "name": "envylovv",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 6747,
+            "account_id": 1085051649
+          },
+          "assists": 10,
+          "hero_id": 18,
+          "duration": 3072,
+          "match_id": 9039553748,
+          "position": "pos 1",
+          "inventory": [
+            63,
+            116,
+            141,
+            939,
+            156,
+            603
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 7548,
+          "kills": 8,
+          "deaths": 5,
+          "minute": 2,
+          "player": {
+            "name": "Paring",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 7012,
+            "account_id": 436228091
+          },
+          "assists": 12,
+          "hero_id": 18,
+          "duration": 2714,
+          "match_id": 9039554890,
+          "position": "pos 1",
+          "inventory": [
+            116,
+            141,
+            939,
+            603,
+            135
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 6600,
+          "kills": 6,
+          "deaths": 1,
+          "minute": 2,
+          "player": {
+            "name": "Pancone",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 0,
+            "account_id": 916439332
+          },
+          "assists": 6,
+          "hero_id": 18,
+          "duration": 2060,
+          "match_id": 9039565336,
+          "position": "pos 1",
+          "inventory": [
+            63,
+            172,
+            1,
+            116,
+            141,
+            939
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 6815,
+          "kills": 17,
+          "deaths": 4,
+          "minute": 5,
+          "player": {
+            "name": "папа не пей",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 6727,
+            "account_id": 422612661
+          },
+          "assists": 7,
+          "hero_id": 18,
+          "duration": 3131,
+          "match_id": 9039567485,
+          "position": "pos 1",
+          "inventory": [
+            116,
+            141,
+            939,
+            603,
+            135,
+            156
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 7127,
+          "kills": 19,
+          "deaths": 2,
+          "minute": 2,
+          "player": {
+            "name": "Monkey",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 6879,
+            "account_id": 158331487
+          },
+          "assists": 7,
+          "hero_id": 18,
+          "duration": 3062,
+          "match_id": 9039567034,
+          "position": "pos 1",
+          "inventory": [
+            116,
+            141,
+            939,
+            135,
+            603,
+            156
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 7182,
+          "kills": 29,
+          "deaths": 4,
+          "minute": 4,
+          "player": {
+            "name": "Rumbling",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 7021,
+            "account_id": 429347373
+          },
+          "assists": 15,
+          "hero_id": 18,
+          "duration": 2427,
+          "match_id": 9039567596,
+          "position": "pos 1",
+          "inventory": [
+            939,
+            141,
+            603,
+            156,
+            135
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 6821,
+          "kills": 5,
+          "deaths": 4,
+          "minute": 3,
+          "player": {
+            "name": "я сейчас в трапе это не капкан",
+            "is_pro": null,
+            "twitch": null,
+            "est_mmr": 6573,
+            "account_id": 884970919
+          },
+          "assists": 9,
+          "hero_id": 18,
+          "duration": 2862,
+          "match_id": 9039569190,
+          "position": "pos 1",
+          "inventory": [
+            1,
+            116,
+            141,
+            939,
+            249,
+            156
+          ]
+        },
+        {
+          "imp": 0,
+          "mmr": 6544,
+          "kills": 13,
+          "deaths": 2,
+          "minute": 2,
+          "player": {
+            "name": "hate_only",
+            "is_pro": 0,
+            "twitch": "",
+            "est_mmr": 6608,
+            "account_id": 1235395578
+          },
+          "assists": 9,
+          "hero_id": 18,
+          "duration": 2059,
+          "match_id": 9039571932,
+          "position": "pos 1",
+          "inventory": [
+            63,
+            172,
+            116,
+            939,
+            141,
+            600
+          ]
+        }
+      ],
+      "anchor_start_items_new": [
+        [
+          [
+            11,
+            13,
+            13,
+            13,
+            237
+          ],
+          {
+            "count": 979,
+            "win_rate": 0.6353421859039836,
+            "lane_advantage": 0.17,
+            "lane_advantage_matches": 979
+          }
+        ],
+        [
+          [
+            11,
+            16,
+            16,
+            34,
+            44,
+            237
+          ],
+          {
+            "count": 769,
+            "win_rate": 0.6736020806241872,
+            "lane_advantage": -1.08,
+            "lane_advantage_matches": 769
+          }
+        ],
+        [
+          [
+            11,
+            13,
+            13,
+            16,
+            16,
+            44
+          ],
+          {
+            "count": 746,
+            "win_rate": 0.6514745308310992,
+            "lane_advantage": 0.97,
+            "lane_advantage_matches": 746
+          }
+        ]
+      ],
+      "starting_inventory_options": [
+        [
+          [
+            {
+              "slot": "item0",
+              "charges": 0,
+              "item_id": 11,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item2",
+              "charges": 0,
+              "item_id": 13,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item3",
+              "charges": 0,
+              "item_id": 13,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item4",
+              "charges": 0,
+              "item_id": 13,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item1",
+              "charges": 1,
+              "item_id": 237,
+              "secondary_charges": 0
+            }
+          ],
+          {
+            "count": 1932,
+            "win_rate": 0.5212215320910973,
+            "lane_advantage": -0.64,
+            "lane_advantage_matches": 1932
+          }
+        ],
+        [
+          [
+            {
+              "slot": "item0",
+              "charges": 0,
+              "item_id": 11,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item3",
+              "charges": 0,
+              "item_id": 16,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item5",
+              "charges": 0,
+              "item_id": 16,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item1",
+              "charges": 0,
+              "item_id": 34,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item2",
+              "charges": 3,
+              "item_id": 44,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item4",
+              "charges": 1,
+              "item_id": 237,
+              "secondary_charges": 0
+            }
+          ],
+          {
+            "count": 1703,
+            "win_rate": 0.5085143863769818,
+            "lane_advantage": -2.21,
+            "lane_advantage_matches": 1703
+          }
+        ],
+        [
+          [
+            {
+              "slot": "item1",
+              "charges": 0,
+              "item_id": 13,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item2",
+              "charges": 0,
+              "item_id": 13,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item3",
+              "charges": 0,
+              "item_id": 13,
+              "secondary_charges": 0
+            },
+            {
+              "slot": "item4",
+              "charges": 0,
+              "item_id": 13,
+              "secondary_charges": 0
+            }
+          ],
+          {
+            "count": 1430,
+            "win_rate": 0.5384615384615384,
+            "lane_advantage": 0.27,
+            "lane_advantage_matches": 1430
+          }
+        ]
+      ],
+      "anchor_lategame_inventories": {
+        "30+": [
+          1,
+          63,
+          116,
+          141,
+          172,
+          939
+        ],
+        "45+": [
+          63,
+          116,
+          141,
+          156,
+          603,
+          939
+        ],
+        "55+": [
+          116,
+          135,
+          141,
+          156,
+          603,
+          939
+        ]
+      },
+      "starting_inventory_coverage": {
+        "matches": 14070,
+        "build_matches": 14070
+      }
+    },
+    "updated_at": "2026-10-25T08:08:09",
+    "source": "pubs",
+    "data_scope": {
+      "last_match_ts": 1792912303,
+      "first_match_ts": 1791705303,
+      "patch_versions": [
+        "7.41f"
+      ],
+      "analysis_end_ts": 1792914857,
+      "analysis_start_ts": 1791705257,
+      "configured_window_days": 14
+    }
+  }
+]

@@ -4,6 +4,8 @@
 PORTA_GSI = 4000
 SEM_SINAL_S = 90
 ANTECEDENCIA_MIN, ANTECEDENCIA_MAX = 5, 55
+PRAZO_INICIALIZACAO_DOTA_S = 30
+INTERVALO_VERIFICACAO_DOTA_S = 0.5
 
 HEADERS_API = {"User-Agent": "AssistenteDota2/1.0 (uso pessoal)"}
 OPENDOTA_BASE = "https://api.opendota.com/api"
