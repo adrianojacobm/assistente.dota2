@@ -3,20 +3,30 @@ from __future__ import annotations
 import logging
 import tkinter as tk
 from collections.abc import Callable
-from tkinter import ttk
+from tkinter import messagebox, ttk
 
+from assistente.aplicacao.configurar_integracao_gsi import EstadoConfiguracaoGSI, ResultadoConfiguracaoGSI
 from assistente.aplicacao.consultar_recomendacoes import ConsultaRecomendacoes, ResultadoConsulta
 from assistente.aplicacao.contratos import (
     ArmazenamentoPreferencias,
+    ConfiguracaoGSIEmSegundoPlano,
     ConsultasEmSegundoPlano,
+    InicializacaoEmSegundoPlano,
     PlataformaJanelas,
 )
+from assistente.aplicacao.iniciar_dota import EstadoExecucao
 from assistente.aplicacao.processar_partida import ProcessarPartida
 from assistente.dominio.catalogo import HEROIS_DISPONIVEIS, IDS_HEROIS
 from assistente.dominio.modelos import Funcao
 from assistente.dominio.partida import EVENTOS
 
-from .formatacao import formatar_painel
+from .formatacao import (
+    formatar_configuracao_gsi,
+    formatar_execucao,
+    formatar_painel,
+    formatar_sinal_gsi,
+    resumo_configuracao_gsi,
+)
 from .sobreposicoes import (
     SobreposicaoBase,
     SobreposicaoBuild,
@@ -37,16 +47,22 @@ class PainelPrincipal:
         self, janela: tk.Tk, assistente: ProcessarPartida, consultas: ConsultasEmSegundoPlano,
         preferencias: ArmazenamentoPreferencias, plataforma: PlataformaJanelas,
         antecedencia_minima: int = 5, antecedencia_maxima: int = 55,
+        inicializacao: InicializacaoEmSegundoPlano | None = None,
+        integracao_gsi: ConfiguracaoGSIEmSegundoPlano | None = None,
     ) -> None:
         self.janela, self.assistente = janela, assistente
         self.consultas, self.preferencias, self.plataforma = consultas, preferencias, plataforma
+        self.inicializacao = inicializacao
+        self.integracao_gsi = integracao_gsi
+        self._resultado_integracao_gsi: ResultadoConfiguracaoGSI | None = None
+        self._gsi_ocupado = False
         self.antecedencia_minima, self.antecedencia_maxima = antecedencia_minima, antecedencia_maxima
         self._fechado = False
         self._agendamentos: set[str] = set()
         self._identificador_consulta = 0
         self._resultado_atual: ResultadoConsulta | None = None
         janela.title("Assistente Dota 2 — builds por função e matchup")
-        janela.geometry("440x600")
+        janela.geometry("480x720")
         janela.configure(bg="#12141a")
         self.temporizadores = SobreposicaoTemporizadores(janela, plataforma)
         self.estatisticas = SobreposicaoEstatisticas(janela, plataforma)
@@ -69,6 +85,11 @@ class PainelPrincipal:
         self._agendar(400, self._atualizar_interface)
         self._agendar(100, self._receber_resultados)
         self._agendar(800, self._consultar)
+        if self.inicializacao is not None:
+            self._agendar(100, self._receber_inicializacao)
+        if self.integracao_gsi is not None:
+            self._solicitar_configuracao_gsi()
+            self._agendar(100, self._receber_configuracao_gsi)
 
     def _agendar(self, atraso: int, executar: Callable[[], None]) -> None:
         if self._fechado:
@@ -88,6 +109,28 @@ class PainelPrincipal:
             font=("Segoe UI", 10, "bold"),
         )
         self.rotulo_status.pack(fill="x", padx=6, pady=6)
+        if self.inicializacao is not None:
+            self.botao_iniciar = tk.Button(
+                self.janela, text="Iniciar / verificar Dota 2", command=self._solicitar_dota,
+                bg="#2563eb", fg="white",
+            )
+            self.botao_iniciar.pack(fill="x", padx=6)
+            self.rotulo_execucao = tk.Label(
+                self.janela, text="Abertura manual pela Steam.", bg="#12141a", fg="#d1d5db",
+                wraplength=450, justify="left",
+            )
+            self.rotulo_execucao.pack(fill="x", padx=6, pady=4)
+        if self.integracao_gsi is not None:
+            self.rotulo_resumo_gsi = tk.Label(
+                self.janela, text=resumo_configuracao_gsi(None), bg="#12141a", fg="#fbbf24",
+                wraplength=450, justify="left",
+            )
+            self.rotulo_resumo_gsi.pack(fill="x", padx=6, pady=4)
+        if self.plataforma.avisos:
+            tk.Label(
+                self.janela, text="\n".join(self.plataforma.avisos), bg="#12141a", fg="#fbbf24",
+                wraplength=450, justify="left",
+            ).pack(fill="x", padx=6, pady=4)
         estilo = ttk.Style()
         estilo.theme_use("default")
         estilo.configure("TNotebook", background="#12141a", borderwidth=0)
@@ -100,6 +143,44 @@ class PainelPrincipal:
         abas.add(voz, text="Voz & Tempos")
         self._montar_geral(geral)
         self._montar_voz(voz)
+        if self.integracao_gsi is not None:
+            integracao = tk.Frame(abas, bg="#1b1e26")
+            abas.add(integracao, text="Integração Dota")
+            self._montar_integracao_gsi(integracao)
+
+    def _montar_integracao_gsi(self, quadro: tk.Frame) -> None:
+        self.rotulo_configuracao_gsi = tk.Label(
+            quadro, text="Verificando configuração…", bg="#1b1e26", fg="#d1d5db",
+            wraplength=420, justify="left",
+        )
+        self.rotulo_configuracao_gsi.pack(fill="x", padx=10, pady=10)
+        self.rotulo_caminho_gsi = tk.Label(
+            quadro, text="Localizando a instalação Steam…", bg="#1b1e26", fg="#9ca3af",
+            wraplength=420, justify="left",
+        )
+        self.rotulo_caminho_gsi.pack(fill="x", padx=10, pady=4)
+        self.botao_configurar_gsi = tk.Button(
+            quadro, text="Configurar integração", bg="#2563eb", fg="white",
+            command=lambda: self._solicitar_configuracao_gsi(configurar=True),
+        )
+        self.botao_configurar_gsi.pack(fill="x", padx=10, pady=6)
+        self.botao_verificar_gsi = tk.Button(
+            quadro, text="Verificar configuração", command=self._solicitar_configuracao_gsi,
+        )
+        self.botao_verificar_gsi.pack(fill="x", padx=10, pady=6)
+        self.rotulo_sinal_gsi = tk.Label(
+            quadro, text="GSI: aguardando dados do jogo.", bg="#1b1e26", fg="#fbbf24",
+            wraplength=420, justify="left",
+        )
+        self.rotulo_sinal_gsi.pack(fill="x", padx=10, pady=10)
+        tk.Label(
+            quadro, text=(
+                "A verificação é automática ao abrir o assistente. A gravação ocorre somente ao clicar "
+                "em Configurar integração. Outros arquivos GSI não são alterados.\n\n"
+                "Os dados são enviados para este computador (127.0.0.1). Após criar ou reparar, "
+                "reinicie o Dota se ele já estava aberto; não é necessário interromper sua partida agora."
+            ), bg="#1b1e26", fg="#9ca3af", wraplength=420, justify="left",
+        ).pack(fill="x", padx=10, pady=10)
 
     def _montar_geral(self, quadro: tk.Frame) -> None:
         linha_funcao = tk.Frame(quadro, bg="#1b1e26")
@@ -154,9 +235,10 @@ class PainelPrincipal:
         self.resultado_texto.pack(fill="both", expand=True, padx=10, pady=(0, 8))
 
     def _montar_voz(self, quadro: tk.Frame) -> None:
-        tk.Label(quadro, text="🔊 Avisos de Voz Ativos:", bg="#1b1e26", fg="#fbbf24").pack(
-            anchor="w", padx=10, pady=10,
+        self.rotulo_voz = tk.Label(
+            quadro, text="🔊 Avisos de Voz:", bg="#1b1e26", fg="#fbbf24",
         )
+        self.rotulo_voz.pack(anchor="w", padx=10, pady=10)
         botoes = tk.Frame(quadro, bg="#1b1e26")
         botoes.pack(fill="x", padx=10)
         configuracao = self.assistente.obter_configuracao()
@@ -252,6 +334,66 @@ class PainelPrincipal:
                 self._escrever(formatar_painel(resultado))
         self._agendar(100, self._receber_resultados)
 
+    def _solicitar_dota(self) -> None:
+        if self._fechado or self.inicializacao is None:
+            return
+        if self.inicializacao.solicitar():
+            self.botao_iniciar.configure(state="disabled")
+            self.rotulo_execucao.configure(text="Localizando a instalação e verificando os processos…")
+
+    def _receber_inicializacao(self) -> None:
+        if self._fechado or self.inicializacao is None:
+            return
+        for resultado in self.inicializacao.obter_resultados():
+            self.rotulo_execucao.configure(text=formatar_execucao(resultado))
+            pendente = resultado.estado in (EstadoExecucao.SOLICITADO, EstadoExecucao.INICIADOR_ATIVO)
+            self.botao_iniciar.configure(state="disabled" if pendente else "normal")
+        self._agendar(100, self._receber_inicializacao)
+
+    def _solicitar_configuracao_gsi(self, configurar: bool = False) -> None:
+        if self._fechado or self.integracao_gsi is None or self._gsi_ocupado:
+            return
+        confirmacao = None
+        atual = self._resultado_integracao_gsi
+        if configurar and atual is not None and atual.estado == EstadoConfiguracaoGSI.CONFLITO:
+            if atual.reparo is None or not messagebox.askyesno(
+                "Reparar integração GSI?",
+                f"Arquivo: {atual.caminho}\n\n{atual.erro}\n\n"
+                "Será criada uma cópia de segurança e somente este arquivo será substituído. "
+                "Personalizações deste arquivo não serão mantidas na nova configuração. Continuar?",
+                parent=self.janela,
+            ):
+                return
+            confirmacao = atual.reparo
+        if self.integracao_gsi.solicitar(configurar=configurar, confirmacao=confirmacao):
+            self._gsi_ocupado = True
+            self.botao_configurar_gsi.configure(state="disabled")
+            self.botao_verificar_gsi.configure(state="disabled")
+            self.rotulo_configuracao_gsi.configure(text="Configurando…" if configurar else "Verificando…")
+
+    def _receber_configuracao_gsi(self) -> None:
+        if self._fechado or self.integracao_gsi is None:
+            return
+        for resultado in self.integracao_gsi.obter_resultados():
+            self._resultado_integracao_gsi = resultado
+            self._gsi_ocupado = False
+            pronto = resultado.estado in (
+                EstadoConfiguracaoGSI.CONFIGURADO,
+                EstadoConfiguracaoGSI.CRIADO,
+                EstadoConfiguracaoGSI.REPARADO,
+            )
+            cor = "#10b981" if pronto else "#fbbf24"
+            self.rotulo_resumo_gsi.configure(text=resumo_configuracao_gsi(resultado), fg=cor)
+            self.rotulo_configuracao_gsi.configure(text=formatar_configuracao_gsi(resultado), fg=cor)
+            self.rotulo_caminho_gsi.configure(text=resultado.caminho or "Instalação não localizada.")
+            self.botao_configurar_gsi.configure(
+                state="disabled" if pronto else "normal",
+                text="Reparar integração…" if resultado.estado == EstadoConfiguracaoGSI.CONFLITO
+                else "Configurar integração",
+            )
+            self.botao_verificar_gsi.configure(state="normal")
+        self._agendar(100, self._receber_configuracao_gsi)
+
     def _escrever(self, texto: str) -> None:
         self.resultado_texto.configure(state="normal")
         self.resultado_texto.delete("1.0", "end")
@@ -259,7 +401,16 @@ class PainelPrincipal:
         self.resultado_texto.configure(state="disabled")
 
     def _atualizar_interface(self) -> None:
+        self.rotulo_voz.configure(text=(
+            "🔊 Avisos de Voz Ativos:"
+            if self.assistente.voz.disponivel else "Voz indisponível; consulte o registro."
+        ))
         estado = self.assistente.estado.snapshot()
+        if self.integracao_gsi is not None:
+            self.rotulo_sinal_gsi.configure(
+                text=formatar_sinal_gsi(estado),
+                fg="#10b981" if estado["conectado"] and not estado["sem_sinal"] else "#fbbf24",
+            )
         configuracao = self.assistente.obter_configuracao()
         mostrar = not self.temporizadores.travado or (estado["em_partida"] and self.plataforma.em_foco())
         for chave, sobreposicao in self.sobreposicoes.items():
@@ -278,14 +429,25 @@ class PainelPrincipal:
             self.buybacks_esquerda.atualizar(estado)
             self.buybacks_direita.atualizar(estado)
         else:
-            self.rotulo_status.configure(text="⏳ AGUARDANDO PARTIDA...", fg="#f59e0b")
+            texto = "⏳ AGUARDANDO DADOS GSI..."
+            if estado["sem_sinal"]:
+                texto = "⏳ SEM DADOS GSI RECENTES..."
+            elif estado["conectado"]:
+                texto = "GSI CONECTADO | AGUARDANDO PARTIDA..."
+            self.rotulo_status.configure(text=texto, fg="#f59e0b")
         self._agendar(400, self._atualizar_interface)
 
     def _ao_fechar(self) -> None:
         if self._fechado:
             return
-        self._fechado = True
         self._salvar_preferencias()
+        self.encerrar()
+        self.janela.destroy()
+
+    def encerrar(self) -> None:
+        if self._fechado:
+            return
+        self._fechado = True
         for identificador in tuple(self._agendamentos):
             try:
                 self.janela.after_cancel(identificador)
@@ -293,5 +455,8 @@ class PainelPrincipal:
                 REGISTRO.debug("Agendamento já encerrado: %s", identificador)
         self._agendamentos.clear()
         self.consultas.encerrar()
+        if self.inicializacao is not None:
+            self.inicializacao.encerrar()
+        if self.integracao_gsi is not None:
+            self.integracao_gsi.encerrar()
         self.assistente.encerrar()
-        self.janela.destroy()

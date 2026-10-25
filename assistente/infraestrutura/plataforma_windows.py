@@ -54,6 +54,8 @@ def dota_ou_painel_em_foco() -> bool:
 
 
 class PlataformaWindows:
+    avisos: tuple[str, ...] = ()
+
     def identificar(self, identificador_tk: int) -> int:
         return obter_identificador_janela(identificador_tk)
 
@@ -62,3 +64,6 @@ class PlataformaWindows:
 
     def em_foco(self) -> bool:
         return dota_ou_painel_em_foco()
+
+    def encerrar(self) -> None:
+        """Win32 não mantém uma conexão de janelas aberta pelo adaptador."""

@@ -32,7 +32,10 @@ class TestarArquitetura(TestCase):
                 self.assertFalse(modulo.startswith(proibidos), f"{caminho}: {modulo}")
 
     def test_aplicacao_nao_importa_clientes_concretos(self) -> None:
-        proibidos = ("assistente.infraestrutura", "assistente.apresentacao", "requests", "tkinter")
+        proibidos = (
+            "assistente.infraestrutura", "assistente.apresentacao", "requests", "tkinter",
+            "subprocess", "ctypes", "winreg", "platform", "sys", "os", "pathlib",
+        )
         for caminho in (RAIZ / "assistente/aplicacao").glob("*.py"):
             for modulo in modulos_importados(caminho):
                 self.assertFalse(modulo.startswith(proibidos), f"{caminho}: {modulo}")
@@ -48,14 +51,26 @@ class TestarArquitetura(TestCase):
 import sys
 import threading
 import requests
+import subprocess
+import ctypes
 def proibido(*args, **kwargs):
     raise AssertionError('Efeito colateral durante importação')
 requests.get = proibido
 threading.Thread.start = proibido
+subprocess.Popen = proibido
+ctypes.CDLL = proibido
 import app
 import assistente.configuracao
 import assistente.composicao
 import assistente.infraestrutura.fontes
+import assistente.infraestrutura.steam
+import assistente.infraestrutura.iniciador_linux
+import assistente.infraestrutura.iniciador_windows
+import assistente.infraestrutura.plataforma_linux
+import assistente.infraestrutura.voz_linux
+import assistente.infraestrutura.integracao_gsi_arquivo
+import assistente.infraestrutura.configuracao_gsi_em_segundo_plano
+import assistente.aplicacao.configurar_integracao_gsi
 assert 'tkinter' not in sys.modules
 """
         resultado = subprocess.run(

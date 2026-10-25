@@ -1,9 +1,73 @@
 from collections.abc import Sequence
 from math import isfinite
 
+from assistente.aplicacao.configurar_integracao_gsi import EstadoConfiguracaoGSI, ResultadoConfiguracaoGSI
 from assistente.aplicacao.consultar_recomendacoes import ResultadoConsulta
+from assistente.aplicacao.iniciar_dota import EstadoExecucao, ResultadoExecucao
 from assistente.dominio.catalogo import IDS_HEROIS
 from assistente.dominio.modelos import Build, CounterPick, Funcao, ItemQuantidade
+from assistente.dominio.partida import InstantaneoPartida
+
+
+def resumo_configuracao_gsi(resultado: ResultadoConfiguracaoGSI | None) -> str:
+    if resultado is None:
+        return "GSI: verificando arquivo — aba Integração Dota."
+    if resultado.estado == EstadoConfiguracaoGSI.AUSENTE:
+        return "GSI não configurado — configure na aba Integração Dota."
+    if resultado.estado == EstadoConfiguracaoGSI.CONFLITO:
+        return "Arquivo GSI incompatível — veja a aba Integração Dota."
+    if resultado.estado == EstadoConfiguracaoGSI.FALHA:
+        return "Falha na configuração GSI — veja a aba Integração Dota."
+    return "Arquivo GSI configurado; comunicação verificada separadamente."
+
+
+def formatar_configuracao_gsi(resultado: ResultadoConfiguracaoGSI) -> str:
+    estado = resultado.estado
+    if estado == EstadoConfiguracaoGSI.AUSENTE:
+        texto = "Integração não configurada. Clique em Configurar integração para criar o arquivo."
+    elif estado == EstadoConfiguracaoGSI.CONFLITO:
+        texto = f"Arquivo existente preservado. {resultado.erro} O reparo exige confirmação e cria um backup."
+    elif estado == EstadoConfiguracaoGSI.FALHA:
+        texto = f"Falha na configuração GSI: {resultado.erro}"
+    elif estado == EstadoConfiguracaoGSI.CONFIGURADO:
+        texto = (
+            "Arquivo GSI compatível, preservado sem alterações. "
+            "Isso ainda não confirma o recebimento de dados."
+        )
+    else:
+        acao = "criado" if estado == EstadoConfiguracaoGSI.CRIADO else "reparado"
+        texto = (
+            f"Arquivo GSI {acao}. Se o Dota já estava aberto, reinicie-o após terminar sua partida. "
+            "Aguarde o recebimento de dados para confirmar a comunicação."
+        )
+    if resultado.copia_seguranca:
+        texto += f"\nCópia de segurança: {resultado.copia_seguranca}"
+    return texto
+
+
+def formatar_sinal_gsi(estado: InstantaneoPartida) -> str:
+    if estado["sem_sinal"]:
+        return "GSI: sem dados recentes. Verifique se o jogo está aberto e enviando dados."
+    if not estado["conectado"]:
+        return "GSI: aguardando dados do jogo. Um arquivo configurado não confirma a comunicação."
+    if not estado["em_partida"]:
+        return "GSI: dados recebidos recentemente; aguardando partida."
+    return "GSI: dados da partida recebidos recentemente."
+
+
+def formatar_execucao(resultado: ResultadoExecucao) -> str:
+    if resultado.estado == EstadoExecucao.EM_EXECUCAO:
+        return f"Dota 2 observado em execução (PID {resultado.pid_jogo})."
+    if resultado.estado == EstadoExecucao.FALHA:
+        return f"Falha na inicialização: {resultado.erro}"
+    if resultado.estado == EstadoExecucao.NAO_CONFIRMADO:
+        detalhe = resultado.erro or "O prazo de confirmação terminou. A Steam ainda pode estar carregando."
+        return f"Dota 2 não confirmado. {detalhe} Use o botão para verificar novamente."
+    if resultado.estado == EstadoExecucao.INICIADOR_ATIVO:
+        return f"Iniciador Steam ativo (PID {resultado.pid_iniciador}); Dota 2 ainda não confirmado."
+    if resultado.estado == EstadoExecucao.SOLICITADO:
+        return "Solicitação encaminhada à Steam; aguardando identificar o processo do Dota 2."
+    return "Nenhum processo do Dota 2 observado."
 
 
 def rotulo_referencia(benchmark: dict[str, object] | None, chaves: tuple[str, ...]) -> str:
