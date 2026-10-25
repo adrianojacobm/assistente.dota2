@@ -1,0 +1,31 @@
+{
+  "posicoes": {
+    "timers": {
+      "x": 731,
+      "y": 66
+    },
+    "stats": {
+      "x": 0,
+      "y": 137
+    },
+    "build": {
+      "x": 0,
+      "y": 237
+    },
+    "bb_esquerda": {
+      "x": 551,
+      "y": -7
+    },
+    "bb_direita": {
+      "x": 1065,
+      "y": -7
+    }
+  },
+  "visibilidade": {
+    "timers": true,
+    "stats": true,
+    "build": true,
+    "bb_esquerda": true,
+    "bb_direita": true
+  }
+}
